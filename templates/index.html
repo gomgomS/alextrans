@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ site_name or 'ALEXTRANS' }} - Rental & Tour</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/open-iconic-bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animate.css') }}">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/magnific-popup.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/aos.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashforge/css/font-awesome.min.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap-datepicker.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/jquery.timepicker.css') }}">
+
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/icomoon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+    <style>
+      /* Global navbar tweaks */
+      body { margin-top: 0 !important; }
+      .ftco_navbar { margin-top: 0 !important; }
+      .navbar { margin-bottom: 0 !important; }
+      .logo-oval { border-radius: 12px; height: 48px; object-fit: cover; }
+      /* Ensure 'Pilih Armada' dropdown has black text on white background inside the primary form */
+      .request-form select#car_name,
+      .request-form select#car_name option {
+        color: #000 !important;
+        background-color: #fff !important;
+      }
+      /* Time inputs styled like Bootstrap controls */
+      .request-form .time-input {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        background: transparent;
+        border: 0;
+        padding: 0;
+        max-width: 100%;
+      }
+      .request-form .time-input .form-control {
+        max-width: 64px;
+        flex: 0 0 64px;
+        text-align: center;
+      }
+      .request-form .time-input .input-group-text {
+        background-color: #fff;
+        border-color: #ccc;
+        color: #555;
+        padding: .375rem .5rem;
+        flex: 0 0 auto;
+      }
+      /* Desktop-only space between hero and the content below */
+      @media (min-width: 992px) {
+        #layanan {
+          margin-top: 280px;
+        }
+      }
+      /* Ensure time dropdowns (selects and options) are readable (black on white) */
+      .request-form .time-input select,
+      .request-form .time-input select option {
+        color: #000 !important;
+        background-color: #fff !important;
+      }
+      .request-form .time-input select:focus {
+        color: #000 !important;
+        background-color: #fff !important;
+      }
+      /* Floating WhatsApp button */
+      .wa-float {
+        position: fixed;
+        right: 18px;
+        bottom: 22px;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        background: #25D366;
+        color: #ffffff;
+        border-radius: 999px;
+        padding: 10px 14px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+        text-decoration: none;
+        animation: wa-pulse 1.6s infinite;
+      }
+      .wa-float img {
+        height: 28px;
+        width: 28px;
+        margin-right: 10px;
+      }
+      .wa-float span {
+        font-weight: 600;
+        color: #ffffff;
+      }
+      @keyframes wa-pulse {
+        0%   { transform: translateZ(0) scale(1); }
+        50%  { transform: translateZ(0) scale(1.05); }
+        100% { transform: translateZ(0) scale(1); }
+      }
+      /* Show full image (no crop) on mobile for about sections */
+      @media (max-width: 767.98px) {
+        .ftco-about .img,
+        .ftco-about .img-2,
+        .ftco-about .img-2--tall {
+          background-size: contain !important;
+          background-repeat: no-repeat !important;
+          background-position: center top !important;
+          min-height: 220px;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="{{ url_for('index') }}">
+          <img src="{{ url_for('static', filename='assets/images/logo-removebg.png') }}" alt="{{ site_name or 'ALEXTRANS' }}" class="logo-oval logo-light">
+          <img src="{{ url_for('static', filename='assets/images/logo-removebg-black.png') }}" alt="" class="logo-oval logo-dark" aria-hidden="true">
+        </a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="{{ url_for('index') }}" class="nav-link">Beranda</a></li>
+	          <li class="nav-item"><a href="{{ url_for('layanan') }}" class="nav-link">Layanan</a></li>
+	          <li class="nav-item"><a href="{{ url_for('contact') }}" class="nav-link">Tentang & Kontak</a></li>
+              <li class="nav-item"><a href="https://wa.me/6287712345678?text=hai%20saya%20mau%20cari%20mobil%20ka" target="_blank" rel="noopener" class="nav-link">WA Booking</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <div class="hero-wrap ftco-degree-bg" style="background-image: url('{{ url_for('static', filename='assets/images/home-poster.png') }}'); background-repeat: no-repeat; background-size: contain; " data-stellar-background-ratio="0">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text justify-content-start align-items-center">
+          <div class="col-lg-6 col-md-8 ftco-animate">
+          	<div class="text w-100 text-left mb-md-5 pb-md-5">
+	            <h1 class="mb-4">{{ hero_title or 'Sewa Mobil & City Tour Mudah dan Cepat' }}</h1>
+	            <p style="font-size: 18px;">{{ hero_subtitle or 'Armada lengkap, sopir profesional, harga transparan. Siap antar ke mana saja.' }}</p>
+	            <p class="mt-3">
+	              <a href="booking.html" class="btn btn-primary btn-lg px-4">Pesan Sekarang</a>
+	            </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section ftco-no-pt bg-light" id="layanan">
+    	<div class="container">
+    		<div class="row no-gutters">
+    			<div class="col-md-12	featured-top">
+    				<div class="row no-gutters">
+	  					<div class="col-md-4 d-flex align-items-stretch">
+	  						<form action="{{ url_for('booking') }}" method="get" class="request-form ftco-animate bg-primary w-100 h-100 shadow-lg" style="border-radius: 16px;">
+		          		<h2 class="mb-1">Cek Harga Armada</h2>
+                  <p class="text-light-50 mb-4" style="opacity:.9;">Pilih armada, atur waktu, dapatkan estimasi instan.</p>
+                  <div class="form-group">
+                    <label for="car_name" class="label"><span class="fa fa-car mr-2"></span>Pilih Armada</label>
+                    <select id="car_name" name="car_name" class="form-control bg-white text-dark" style="color:#000 !important; background-color:#fff !important;">
+                      {% for item in pricing %}
+                      <option value="{{ item.name }}"
+                              data-driver-mandatory="{{ '1' if item.driver_mandatory else '0' }}"
+                              {% if form_values.car_name == item.name %}selected{% endif %}>
+                        {% if item.category == 'bigbus' %}[BUS]{% elif item.category == 'minibus' %}[MINIBUS]{% else %}[MOBIL]{% endif %} {{ item.name }}
+                      </option>
+                      {% endfor %}
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="with_driver" class="label"><span class="fa fa-id-badge mr-2"></span>Dengan Supir</label>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="with_driver" name="with_driver" value="1" {% if form_values.with_driver != '0' %}checked{% endif %}>
+                      <label class="custom-control-label text-light" for="with_driver">Dengan Supir / City Tour</label>
+                    </div>
+                    <small id="driver_mandatory_hint" class="text-light" style="display:none;">Armada ini wajib supir.</small>
+                  </div>
+			    				<!-- <div class="form-group">
+			    					<label for="" class="label">Lokasi Jemput</label>
+			    					<input type="text" class="form-control" placeholder="Kota, bandara, stasiun, dll">
+			    				</div>
+			    				<div class="form-group">
+			    					<label for="" class="label">Lokasi Antar</label>
+			    					<input type="text" class="form-control" placeholder="Kota, bandara, stasiun, dll">
+			    				</div> -->
+                  <div class="form-group">
+                    <label class="label"><span class="fa fa-calendar mr-2"></span>Mulai Sewa</label>
+                    <div class="form-row">
+                  
+                      <div class="col-5 col-md-5 mb-2 mb-md-0">
+                        <label class="small d-block mb-1">Tanggal:</label>
+                        <input type="date" class="form-control bg-white text-dark" id="start_date" name="start_date" value="{{ form_values.start_date or '' }}">
+                      </div>
+                      <div class="col-1">
+                      </div>
+                      <div class="col-5 col-md-5 ">
+                        <label class="small d-block mb-1">Jam:</label>
+                        <div class="input-group time-input flex-nowrap w-100">
+                          <select id="start_hour" class="form-control bg-white text-dark">
+                            <option value="">HH</option>
+                            {% for h in range(1,24) %}
+                            <option value="{{ '%02d' % h }}">{{ '%02d' % h }}</option>
+                            {% endfor %}
+                          </select>
+                          <div class="input-group-prepend input-group-append">
+                            <span class="input-group-text">:</span>
+                          </div>
+                          <select id="start_minute" class="form-control bg-white text-dark">
+                            <option value="">MM</option>
+                            {% for m in range(0,60) %}
+                            <option value="{{ '%02d' % m }}">{{ '%02d' % m }}</option>
+                            {% endfor %}
+                          </select>
+                        </div>
+                        <input type="hidden" id="start_time" name="start_time" value="{{ form_values.start_time or '' }}">
+                      </div>
+                  
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label class="label"><span class="fa fa-clock-o mr-2"></span>Selesai Sewa</label>
+                    <div class="form-row">
+                  
+                      <div class="col-5 col-md-5 mb-2 mb-md-0">
+                        <label class="small d-block mb-1">Tanggal:</label>
+                        <input type="date" class="form-control bg-white text-dark" id="end_date" name="end_date" value="{{ form_values.end_date or '' }}">
+
+                      </div>
+                      <div class="col-1">
+                      </div>
+                  
+                      <div class="col-5 col-md-5 ">
+                        <label class="small d-block mb-1">Jam:</label>
+                        <div class="input-group time-input flex-nowrap w-100">
+                          <select id="end_hour" class="form-control bg-white text-dark">
+                            <option value="">HH</option>
+                            {% for h in range(1,24) %}
+                            <option value="{{ '%02d' % h }}">{{ '%02d' % h }}</option>
+                            {% endfor %}
+                          </select>
+                          <div class="input-group-prepend input-group-append">
+                            <span class="input-group-text">:</span>
+                          </div>
+                          <select id="end_minute" class="form-control bg-white text-dark">
+                            <option value="">MM</option>
+                            {% for m in range(0,60) %}
+                            <option value="{{ '%02d' % m }}">{{ '%02d' % m }}</option>
+                            {% endfor %}
+                          </select>
+                        </div>
+                        <input type="hidden" id="end_time" name="end_time" value="{{ form_values.end_time or '' }}">
+                      </div>
+                  
+                    </div>
+                  </div>
+                  
+                  
+			            <div class="form-group mt-3">
+			              <input type="submit" value="Cek Harga" class="btn btn-secondary btn-block py-3 px-4 w-100" style="border-radius: 10px;">
+			            </div>
+			    			</form>
+	  					</div>
+	  					<div class="col-md-8 d-flex align-items-stretch">
+	  						
+                  {% if calc %}
+                    <div class="booking-summary bg-dark p-4 rounded text-white w-100 h-100" id="booking-summary" data-days="{{ calc.days }}">
+                      {% set ns = namespace(base=0, driver=0) %}
+                      {% for p in pricing %}
+                        {% if p.name == calc.car_name %}
+                          {% set ns.base = p.rent_fee %}
+                          {% set ns.driver = p.driver_fee %}
+                        {% endif %}
+                      {% endfor %}
+                      {% set daily_driver = ns.driver if (calc.with_driver or calc.mandatory) else 0 %}
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="h6 mb-0">Ringkasan</span>
+                        <span class="badge badge-light text-dark">{{ calc.days }} hari</span>
+                      </div>
+                      {% if calc and calc.img %}
+                      <div class="mb-3 text-center" style="position: relative; height: 180px; display: flex; align-items: center; justify-content: center; background:#fff; border-radius: .25rem;">
+                        <img src="{{ url_for('static', filename=('assets/' ~ calc.img) if (calc.img and not calc.img.startswith('assets/') and not calc.img.startswith('http')) else calc.img) }}" alt="{{ calc.car_name }}" class="rounded" style="max-height: 100%; max-width: 100%; object-fit: contain; display:block;">
+                        <div style="position: absolute; top: 8px; right: 8px; background: rgba(255,255,255,0.95); color: #000; padding: 4px 8px; border-radius: 12px; font-size: 12px; font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,0.1);">
+                          {{ calc.car_name }}
+                        </div>
+                      </div>
+                      {% endif %}
+                      <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                          <span class="text-muted">Armada</span>
+                          <span>{{ calc.car_name }} {% if calc.mandatory %}<span class="badge badge-warning">wajib supir</span>{% endif %}</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <span class="text-muted">Opsi</span>
+                          <span>{{ 'Dengan Supir' if (calc.with_driver or calc.mandatory) else 'Tanpa Supir' }}</span>
+                        </div>
+                      </div>
+                      <div class="mb-3 small">
+                        <div class="text-muted">Periode</div>
+                        <div class="pl-2">
+                          <div>Mulai: <strong id="start-display">{{ calc.start_display_id }}</strong><span id="start-time-display"></span></div>
+                          <div>Selesai: <strong id="end-display">{{ calc.end_display_id }}</strong><span id="end-time-display"></span></div>
+                        </div>
+                      </div>
+                      <hr class="bg-secondary">
+                      {% if daily_driver %}
+                      <div class="mb-2 d-flex justify-content-between">
+                        <span>Harga harian + Supir</span>
+                        <span>Rp {{ "{:,.0f}".format(ns.base + daily_driver) }}</span>
+                      </div>
+                      {% else %}
+                      <div class="mb-2 d-flex justify-content-between">
+                        <span>Harga harian</span>
+                        <span>Rp {{ "{:,.0f}".format(ns.base) }}</span>
+                      </div>
+                      {% endif %}
+                      <div class="mb-2 d-flex justify-content-between">
+                        <span>Durasi</span>
+                        <span>{{ calc.days }} hari</span>
+                      </div>
+                      <hr class="bg-secondary my-2">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="h6 mb-0">Total</span>
+                        <span class="h5 mb-0 text-success font-weight-bold">Rp {{ "{:,.0f}".format(calc.total_price) }}</span>
+                      </div>
+                      <div class="mt-3 small text-muted">
+                        <p><strong>Dapatkan penawaran sekarang!</strong> Harga dapat berubah untuk paket city tour serta durasi pemesanan (mingguan, atau bulanan). hubungi kami untuk informasi lebih lanjut.</p>
+                        <p>Hubungi admin untuk mendapatkan penawaran terbaik. <em>S&K berlaku.</em></p>
+                      </div>
+                      
+                      
+                    </div>
+                  {% else %}
+                  <div class="w-100 d-flex">
+                    <div class="bg-white rounded shadow-lg p-4 p-md-5 w-100 d-flex flex-column justify-content-center">
+                      <div class="d-flex align-items-center mb-3">
+                        <span class="fa fa-star text-warning mr-2"></span>
+                        <h3 class="mb-0">Kenapa pilih Alextrans?</h3>
+                      </div>
+                      <ul class="list-unstyled mb-4">
+                        <li class="mb-2 d-flex align-items-start">
+                          <span class="fa fa-check-circle text-success mr-2 mt-1"></span>
+                          <span>Armada lengkap dan bersih, siap perjalanan jauh.</span>
+                        </li>
+                        <li class="mb-2 d-flex align-items-start">
+                          <span class="fa fa-check-circle text-success mr-2 mt-1"></span>
+                          <span>Supir profesional, ramah, dan paham rute.</span>
+                        </li>
+                        <li class="mb-2 d-flex align-items-start">
+                          <span class="fa fa-check-circle text-success mr-2 mt-1"></span>
+                          <span>Harga transparan, tanpa biaya tersembunyi.</span>
+                        </li>
+                        <li class="mb-2 d-flex align-items-start">
+                          <span class="fa fa-check-circle text-success mr-2 mt-1"></span>
+                          <span>Proses booking cepat via WhatsApp.</span>
+                        </li>
+                      </ul>
+                      <div>
+                        <a href="#layanan" class="btn btn-primary mr-2 mb-2">Cek Harga Sekarang</a>
+                        <a href="https://wa.me/6287712345678?text=hai%20saya%20mau%20cari%20mobil%20ka" target="_blank" rel="noopener" class="btn btn-outline-primary mb-2"><span class="fa fa-whatsapp mr-1"></span>Chat Admin</a>
+                      </div>
+                    </div>
+                  </div>
+                  {% endif %}
+	  						
+	  					</div>
+	  				</div>
+				</div>
+  		</div>
+	</section>
+  
+  <section class="ftco-section" style="background: linear-gradient(180deg, #e8f3ff 0%, #f6fbff 100%);">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10 text-center">
+          <span class="subheading">Layanan Kami</span>
+          <h2 class="mb-3">Layanan Premium Kami</h2>
+          <p>Bisa sewa lepas kunci maupun dengan driver. Alextrans Sewa mobil bandung memudahkan mobilitas dan memberikan kenyamanan dalam perjalanan anda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    (function() {
+      function enableAutoPicker(inputId) {
+        var el = document.getElementById(inputId);
+        if (!el) return;
+        function openPicker() {
+          if (typeof el.showPicker === 'function') {
+            try { el.showPicker(); } catch (e) {}
+          } else {
+            el.focus();
+            el.click();
+          }
+        }
+        el.addEventListener('focus', openPicker);
+        el.addEventListener('click', openPicker);
+      }
+      enableAutoPicker('start_date');
+      enableAutoPicker('end_date');
+    })();
+  </script>
+
+  <section class="ftco-section ftco-about">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url('{{ url_for('static', filename='assets/images/lepaskunci.png') }}'); background-size: contain; background-repeat: no-repeat; background-position: center;">
+        </div>
+        <div class="col-md-6 wrap-about ftco-animate">
+          <div class="heading-section heading-section-white pl-md-5">
+            <span class="subheading">Layanan Unggulan</span>
+            <h2 class="mb-4">Rental Mobil Lepas Kunci Tanpa Survei</h2>
+
+            <p>Nikmati kebebasan berkendara tanpa survei! Alextrans Rental hadir dengan layanan Rental Mobil Lepas Kunci, praktis dan efisien. Armada terawat, proses cepat, nilai terbaik</p>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ftco-section ftco-about ftco-about--reverse">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-md-6 order-2 order-md-1 wrap-about ftco-animate">
+          <div class="heading-section heading-section-white pr-md-5">
+            <span class="subheading">Layanan Unggulan</span>
+            <h2 class="mb-4">Paket Jemput/Drop Bandara</h2>
+
+            <p>Dapatkan kenyamanan dengan Paket Jemput/Drop Bandara dari Alextrans Travel! Layanan cepat dan andal untuk sempurnakan perjalanan Anda dengan layanan kami.</p>
+
+
+          </div>
+        </div>
+        <div class="col-md-6 order-1 order-md-2 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url('{{ url_for('static', filename='assets/images/bandara.png') }}'); background-size: contain; background-repeat: no-repeat; background-position: center;">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ftco-section ftco-about">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url('{{ url_for('static', filename='assets/images/citytour.png') }}'); background-size: contain; background-repeat: no-repeat; background-position: center;">
+        </div>
+        <div class="col-md-6 wrap-about ftco-animate">
+          <div class="heading-section heading-section-white pl-md-5">
+            <span class="subheading">Layanan Unggulan</span>
+            <h2 class="mb-4">Paket City Tour Nyaman & Terjangkau</h2>
+  
+            <p>Jelajahi berbagai destinasi wisata kota bersama Alextrans Rental! Kami menyediakan layanan City Tour dengan armada nyaman, rute fleksibel, dan harga bersahabat. Cocok untuk keluarga, rombongan, maupun perjalanan pribadi.</p>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+    <section class="ftco-section ftco-no-pt bg-light">
+    	<div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+          	<span class="subheading d-inline-block px-3 py-1 rounded" style="background: rgba(37,211,102,.12); color:#25D366; font-weight:600;">Pilihan Armada</span>
+            <h2 class="mb-2" style="font-weight:800;">Armada Unggulan</h2>
+            <p class="text-muted mb-0">Pilih mobil, minibus, hingga bus sesuai kebutuhan perjalanan Anda.</p>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="col-md-12">
+            <div class="row">
+              {% for item in pricing %}
+              <div class="col-lg-4 col-md-6 d-flex mb-4">
+                <div class="car-wrap rounded ftco-animate w-100 shadow-sm" style="overflow: hidden;">
+                  <div class="position-relative" style="background:#fff; border-bottom: 1px solid rgba(0,0,0,.05);">
+                    <div style="position:relative; height:0; padding-top:56%;">
+                      <div style="position:absolute; inset:0; background-image: url('{{ url_for('static', filename=('assets/' ~ item.img)) if item.img and (not item.img.startswith('assets/')) and (not item.img.startswith('http')) else item.img }}'); background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
+                    </div>
+                    <div style="position:absolute; top:8px; left:8px; background: rgba(255,255,255,.95); color:#000; padding:3px 8px; border-radius: 12px; font-size: 12px; font-weight:600; box-shadow: 0 1px 2px rgba(0,0,0,.08);">
+                      {% if item.category == 'bigbus' %}Bus{% elif item.category == 'minibus' %}Minibus{% else %}Mobil{% endif %}
+                    </div>
+                    <div style="position:absolute; top:8px; right:8px; background: rgba(255,255,255,.95); color:#000; padding:3px 8px; border-radius: 12px; font-size: 12px; font-weight:600; box-shadow: 0 1px 2px rgba(0,0,0,.08);">
+                      {{ item.capacity }} kursi
+                    </div>
+                    {% if item.driver_mandatory %}
+                    <div style="position:absolute; bottom:8px; right:8px; background:#ffc107; color:#221; padding:3px 8px; border-radius: 12px; font-size: 12px; font-weight:600;">
+                      wajib supir
+                    </div>
+                    {% endif %}
+                  </div>
+                  <div class="text p-3">
+                    <h3 class="mb-1"><a href="#layanan" class="font-weight-bold" style="font-weight:700;">{{ item.name }}</a></h3>
+                    <div class="d-flex align-items-center mb-2">
+                      <span class="cat">
+                        {% if item.driver_mandatory %}Supir wajib{% else %}Supir opsional{% endif %}
+                      </span>
+                      <span class="ml-auto price">Mulai Rp {{ "{:,.0f}".format(item.rent_fee) }} <span>/hari</span></span>
+                    </div>
+                    <div class="d-flex align-items-stretch">
+                      <a href="#layanan" class="btn btn-sm mr-2 flex-fill text-white" style="background: var(--color-primary-bg); border-color: var(--color-primary-bg);">
+                        Cek Harga
+                      </a>
+                      <a href="https://wa.me/6287712345678?text=hai%20saya%20mau%20cari%20mobil%20ka" target="_blank" rel="noopener" class="btn btn-sm flex-fill text-white" style="background:#25D366; border-color:#25D366;">
+                        <img src="{{ url_for('static', filename='assets/images/icon-wa.png') }}" alt="WA" style="height:16px; width:16px; margin-right:6px;"> Pesan Sekarang
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    
+
+		<section class="ftco-section">
+			<div class="container">
+				<div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+          	<span class="subheading d-inline-block px-3 py-1 rounded" style="background: rgba(37,211,102,.12); color:#25D366; font-weight:600;">Keunggulan</span>
+            <h2 class="mb-2" style="font-weight:800;">Mengapa Memilih Kami</h2>
+            <p class="text-muted mb-0">Layanan andal, harga jelas, dan tim profesional untuk setiap perjalanan Anda.</p>
+          </div>
+        </div>
+				<div class="row">
+					<div class="col-md-6 col-lg-3 mb-4">
+						<div class="w-100 text-center h-100 p-4 rounded shadow-sm">
+            	<div class="d-flex align-items-center justify-content-center mb-3" style="width:64px;height:64px;margin:0 auto;border-radius:50%;background: rgba(0,123,255,.1); color: var(--color-primary-bg, #007bff);">
+                <span class="fa fa-car" style="font-size:28px;"></span>
+              </div>
+            	<div class="text w-100">
+                <h3 class="heading mb-2" style="font-weight:700;">Armada Lengkap</h3>
+                <p class="mb-0">Avanza, Innova, Alphard, Hiace, hingga Bus.</p>
+              </div>
+            </div>
+					</div>
+					<div class="col-md-6 col-lg-3 mb-4">
+						<div class="w-100 text-center h-100 p-4 rounded shadow-sm">
+            	<div class="d-flex align-items-center justify-content-center mb-3" style="width:64px;height:64px;margin:0 auto;border-radius:50%;background: rgba(40,167,69,.1); color:#28a745;">
+                <span class="fa fa-user" style="font-size:28px;"></span>
+              </div>
+            	<div class="text w-100">
+                <h3 class="heading mb-2" style="font-weight:700;">Sopir Profesional</h3>
+                <p class="mb-0">Berpengalaman, ramah, dan paham rute.</p>
+              </div>
+            </div>
+					</div>
+					<div class="col-md-6 col-lg-3 mb-4">
+						<div class="w-100 text-center h-100 p-4 rounded shadow-sm">
+            	<div class="d-flex align-items-center justify-content-center mb-3" style="width:64px;height:64px;margin:0 auto;border-radius:50%;background: rgba(255,193,7,.12); color:#ffc107;">
+                <span class="fa fa-tags" style="font-size:28px;"></span>
+              </div>
+            	<div class="text w-100">
+                <h3 class="heading mb-2" style="font-weight:700;">Harga Transparan</h3>
+                <p class="mb-0">Tanpa biaya tersembunyi, jelas di depan.</p>
+              </div>
+            </div>
+					</div>
+					<div class="col-md-6 col-lg-3 mb-4">
+						<div class="w-100 text-center h-100 p-4 rounded shadow-sm">
+            	<div class="d-flex align-items-center justify-content-center mb-3" style="width:64px;height:64px;margin:0 auto;border-radius:50%;background: rgba(108,117,125,.12); color:#6c757d;">
+                <span class="fa fa-headphones" style="font-size:28px;"></span>
+              </div>
+            	<div class="text w-100">
+                <h3 class="heading mb-2" style="font-weight:700;">Support 24/7</h3>
+                <p class="mb-0">Siap membantu kapan pun Anda butuh.</p>
+              </div>
+            </div>
+					</div>
+				</div>
+        <div class="text-center mt-2">
+          <a href="booking.html" class="btn btn-primary px-4">Booking Sekarang</a>
+        </div>
+			</div>
+		</section>
+
+		<section class="ftco-section ftco-intro" style="background-image: url('{{ url_for('static', filename='assets/images/bg_3.jpg') }}');">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row justify-content-end">
+					<div class="col-md-6 heading-section heading-section-white ftco-animate">
+            <h2 class="mb-3">Armada kami terbatas? jangan kehabisan</h2>
+            <a href="#" class="btn btn-primary btn-lg">Booking Sekarang</a>
+          </div>
+				</div>
+			</div>
+		</section>
+
+
+    <section class="ftco-section testimony-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+          	<span class="subheading">Testimoni</span>
+            <h2 class="mb-3">Pelanggan Kami Puas</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap rounded text-center py-4 pb-5">
+                    <div class="user-img mb-2" style="background-image: url('{{ url_for('static', filename='assets/images/testi_1.png') }}'); width: 140px; height: 180px; border-radius: 0; background-size: cover; background-position: center;">
+                    </div>
+                    <div class="text pt-4">
+                        <p class="mb-4">Pelayanannya cepat dan ramah. Mobil Ertiga yang kami sewa sangat nyaman, bersih, dan terawat sehingga perjalanan keluarga kami terasa aman dan menyenangkan.</p>
+                        <p class="name">Arif</p>
+                        <span class="position">Menyewa Ertiga 2019</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="testimony-wrap rounded text-center py-4 pb-5">
+                    <div class="user-img mb-2" style="background-image: url('{{ url_for('static', filename='assets/images/testi_2.png') }}'); width: 140px; height: 180px; border-radius: 0; background-size: cover; background-position: center;">
+                    </div>
+                    <div class="text pt-4">
+                        <p class="mb-4">Supirnya ramah dan profesional. Hiace yang kami sewa sangat lega, bersih, dan cocok untuk perjalanan rombongan. Anak-anak juga nyaman selama perjalanan jauh.</p>
+                        <p class="name">Dian</p>
+                        <span class="position">Menyewa Hiace Minibus</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="testimony-wrap rounded text-center py-4 pb-5">
+                    <div class="user-img mb-2" style="background-image: url('{{ url_for('static', filename='assets/images/testi_3.png') }}'); width: 140px; height: 180px; border-radius: 0; background-size: cover; background-position: center;">
+                    </div>
+                    <div class="text pt-4">
+                        <p class="mb-4">Pelayanan premium, Alphard-nya nyaman, interior wangi, dan supirnya sopan serta hafal rute. Keluarga kami benar-benar puas.</p>
+                        <p class="name">Jendry</p>
+                        <span class="position">Menyewa Alphard + Supir</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="testimony-wrap rounded text-center py-4 pb-5">
+                    <div class="user-img mb-2" style="background-image: url('{{ url_for('static', filename='assets/images/testi_1.png') }}'); width: 140px; height: 180px; border-radius: 0; background-size: cover; background-position: center;">
+                    </div>
+                    <div class="text pt-4">
+                        <p class="mb-4">Proses sewanya cepat lewat WA, mobil bersih dan siap pakai. Sangat membantu untuk kebutuhan mendesak.</p>
+                        <p class="name">Fauzan</p>
+                        <span class="position">Menyewa Avanza 2020</span>
+                    </div>
+                </div>
+            </div>
+            
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <!-- <section class="ftco-section">
+        <div class="container">
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+              <span class="subheading">Blog</span>
+              <h2>Recent Blog</h2>
+            </div>
+          </div>
+          <div class="row d-flex">
+            <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry justify-content-end">
+                <a href="blog-single.html" class="block-20" style="background-image: url('{{ url_for('static', filename='assets/images/image_1.jpg') }}');">
+                </a>
+                <div class="text pt-4">
+                  <div class="meta mb-3">
+                    <div><a href="#">Oct. 29, 2019</a></div>
+                    <div><a href="#">Admin</a></div>
+                    <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                  </div>
+                  <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+                  <p><a href="#" class="btn btn-primary">Read more</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry justify-content-end">
+                <a href="blog-single.html" class="block-20" style="background-image: url('{{ url_for('static', filename='assets/images/image_2.jpg') }}');">
+                </a>
+                <div class="text pt-4">
+                  <div class="meta mb-3">
+                    <div><a href="#">Oct. 29, 2019</a></div>
+                    <div><a href="#">Admin</a></div>
+                    <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                  </div>
+                  <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+                  <p><a href="#" class="btn btn-primary">Read more</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry">
+                <a href="blog-single.html" class="block-20" style="background-image: url('{{ url_for('static', filename='assets/images/image_3.jpg') }}');">
+                </a>
+                <div class="text pt-4">
+                  <div class="meta mb-3">
+                    <div><a href="#">Oct. 29, 2019</a></div>
+                    <div><a href="#">Admin</a></div>
+                    <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                  </div>
+                  <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+                  <p><a href="#" class="btn btn-primary">Read more</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>	 -->
+
+    <section class="ftco-counter ftco-section img bg-light" id="section-counter">
+			<div class="overlay"></div>
+    	<div class="container">
+    		<div class="row">
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text text-border d-flex align-items-center">
+                <strong class="number" data-number="3">0</strong>
+                <span>Tahun <br>Berdiri</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text text-border d-flex align-items-center">
+                <strong class="number" data-number="32">0</strong>
+                <span>Total <br>Armada</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text text-border d-flex align-items-center">
+                <strong class="number" data-number="234">0</strong>
+                <span>Pelanggan <br>Puas</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text d-flex align-items-center">
+                <strong class="number" data-number="23">0</strong>
+                <span>Driver <br>Berpengalaman</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    	</div>
+    </section>	
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-12">
+            <div class="ftco-footer-widget mb-4 text-center">
+              <h2 class="ftco-heading-2"><a href="{{ url_for('index') }}" class="logo">ALEXTRANS</a></h2>
+              <p>Rental & City Tour Bandung — armada lengkap, driver profesional, harga transparan.</p>
+              <ul class="ftco-footer-social list-unstyled d-inline-block mt-4">
+                <li class="ftco-animate d-inline-block mx-2"><a href="https://instagram.com/" target="_blank" rel="noopener"><span class="fa fa-instagram"></span></a></li>
+                <li class="ftco-animate d-inline-block mx-2"><a href="https://facebook.com/" target="_blank" rel="noopener"><span class="fa fa-facebook"></span></a></li>
+                <li class="ftco-animate d-inline-block mx-2"><a href="https://x.com/" target="_blank" rel="noopener"><span class="fa fa-twitter"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | </a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/jquery-migrate-3.0.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/popper.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/jquery.easing.1.3.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/jquery.waypoints.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/jquery.stellar.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/owl.carousel.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/jquery.animateNumber.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/bootstrap-datepicker.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/jquery.timepicker.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/scrollax.min.js') }}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{{ url_for('static', filename='assets/js/google-map.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+  <a class="wa-float" href="https://wa.me/6287712345678?text=hai%20saya%20mau%20cari%20mobil%20ka" target="_blank" rel="noopener" aria-label="WhatsApp Chat">
+    <img src="{{ url_for('static', filename='assets/images/icon-wa.png') }}" alt="WA">
+    <span>Ada yang bisa kami bantu? Chat</span>
+  </a>
+  <script>
+    (function() {
+      function applyDriverMandatory() {
+        var select = document.getElementById('car_name');
+        var driverCheckbox = document.getElementById('with_driver');
+        var hint = document.getElementById('driver_mandatory_hint');
+        if (!select || !driverCheckbox) return;
+        var opt = select.options[select.selectedIndex];
+        var mandatory = opt && opt.getAttribute('data-driver-mandatory') === '1';
+        if (mandatory) {
+          driverCheckbox.checked = true;
+          driverCheckbox.disabled = true;
+          if (hint) hint.style.display = '';
+        } else {
+          driverCheckbox.disabled = false;
+          if (hint) hint.style.display = 'none';
+        }
+      }
+      function pad2(v) {
+        v = String(v || '').replace(/\D/g,'');
+        if (v.length === 0) return '00';
+        if (v.length === 1) return '0' + v;
+        return v.slice(0, 2);
+      }
+      function clamp(n, min, max) {
+        var num = parseInt(String(n).replace(/\D/g,''), 10);
+        if (isNaN(num)) return min;
+        if (num < min) return min;
+        if (num > max) return max;
+        return num;
+      }
+      function bindTimeGroup(prefix) {
+        var h = document.getElementById(prefix + '_hour');
+        var m = document.getElementById(prefix + '_minute');
+        var hidden = document.getElementById(prefix + '_time');
+        if (!h || !m || !hidden) return;
+        // initialize from hidden (HH:MM)
+        if (hidden.value && hidden.value.indexOf(':') > -1) {
+          var parts = hidden.value.split(':');
+          h.value = pad2(parts[0]);
+          m.value = pad2(parts[1]);
+        }
+        function sync() {
+          var hh = pad2(clamp(h.value, 0, 23));
+          var mm = pad2(clamp(m.value, 0, 59));
+          h.value = hh;
+          m.value = mm;
+          hidden.value = hh + ':' + mm;
+        }
+        function adjust(el, min, max, delta) {
+          var current = clamp(el.value, min, max);
+          var next = current + (delta > 0 ? 1 : -1);
+          if (next > max) next = min;
+          if (next < min) next = max;
+          el.value = pad2(next);
+          sync();
+        }
+        function onWheelHours(e) { e.preventDefault(); adjust(h, 1, 23, -e.deltaY); }
+        function onWheelMinutes(e) { e.preventDefault(); adjust(m, 0, 59, -e.deltaY); }
+        function onKey(el, min, max, e) {
+          if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+            e.preventDefault();
+            adjust(el, min, max, e.key === 'ArrowUp' ? 1 : -1);
+          }
+        }
+        h.addEventListener('input', sync);
+        m.addEventListener('input', sync);
+        h.addEventListener('change', sync);
+        m.addEventListener('change', sync);
+        h.addEventListener('wheel', onWheelHours, { passive: false });
+        m.addEventListener('wheel', onWheelMinutes, { passive: false });
+        h.addEventListener('keydown', function(e){ onKey(h, 1, 23, e); });
+        m.addEventListener('keydown', function(e){ onKey(m, 0, 59, e); });
+        sync();
+      }
+      document.addEventListener('DOMContentLoaded', function() {
+        var select = document.getElementById('car_name');
+        if (select) {
+          select.addEventListener('change', applyDriverMandatory);
+          applyDriverMandatory();
+        }
+        bindTimeGroup('start');
+        bindTimeGroup('end');
+        // Enhance booking summary with time range and 12h-per-day estimate
+        var startEl = document.getElementById('start-display');
+        var endEl = document.getElementById('end-display');
+        if (startEl && endEl) {
+          function extractHHMM(s) {
+            var m = (s || '').match(/(\d{1,2}):(\d{2})/);
+            return m ? (m[1].padStart(2,'0') + ':' + m[2]) : null;
+          }
+          function parseFlexible(s) {
+            if (!s) return null;
+            var iso = s.match(/(\d{4})[-\/](\d{1,2})[-\/](\d{1,2}).*?(\d{1,2}):(\d{2})/);
+            if (iso) {
+              return new Date(parseInt(iso[1],10), parseInt(iso[2],10)-1, parseInt(iso[3],10), parseInt(iso[4],10), parseInt(iso[5],10));
+            }
+            var dmy = s.match(/(\d{1,2})[-\/](\d{1,2})[-\/](\d{4}).*?(\d{1,2}):(\d{2})/);
+            if (dmy) {
+              return new Date(parseInt(dmy[3],10), parseInt(dmy[2],10)-1, parseInt(dmy[1],10), parseInt(dmy[4],10), parseInt(dmy[5],10));
+            }
+            return null;
+          }
+          var sText = startEl.textContent.trim();
+          var eText = endEl.textContent.trim();
+          // Prefer explicit inputs from the form (most reliable)
+          var sDateInp = document.getElementById('start_date');
+          var eDateInp = document.getElementById('end_date');
+          var sTimeH = document.getElementById('start_time');
+          var eTimeH = document.getElementById('end_time');
+          var sh = (sTimeH && sTimeH.value) ? sTimeH.value : (extractHHMM(sText) || '--:--');
+          var eh = (eTimeH && eTimeH.value) ? eTimeH.value : (extractHHMM(eText) || '--:--');
+          var rangeEl = document.getElementById('summary-time-range');
+          if (rangeEl) rangeEl.textContent = sh + ' - ' + eh;
+          var sTimeDisp = document.getElementById('start-time-display');
+          if (sTimeDisp) sTimeDisp.textContent = ' ' + sh;
+          var eTimeDisp = document.getElementById('end-time-display');
+          if (eTimeDisp) eTimeDisp.textContent = ' ' + eh;
+          // Build Date objects using form inputs if available; fall back to parsing labels
+          function buildFrom(dateStr, timeStr) {
+            if (dateStr && timeStr && /^\d{4}-\d{2}-\d{2}$/.test(dateStr) && /^\d{2}:\d{2}$/.test(timeStr)) {
+              var y = parseInt(dateStr.slice(0,4),10);
+              var mo = parseInt(dateStr.slice(5,7),10) - 1;
+              var d = parseInt(dateStr.slice(8,10),10);
+              var hh = parseInt(timeStr.slice(0,2),10);
+              var mm = parseInt(timeStr.slice(3,5),10);
+              return new Date(y, mo, d, hh, mm);
+            }
+            return null;
+          }
+          var d1 = buildFrom(sDateInp && sDateInp.value, sTimeH && sTimeH.value) || parseFlexible(sText);
+          var d2 = buildFrom(eDateInp && eDateInp.value, eTimeH && eTimeH.value) || parseFlexible(eText);
+          var totalHours;
+          if (d1 && d2 && isFinite(d1) && isFinite(d2)) {
+            totalHours = Math.max(0, Math.round((d2.getTime() - d1.getTime()) / 36e5));
+          }
+          if (typeof totalHours === 'undefined') {
+            var wrap = document.getElementById('booking-summary');
+            var daysDS = wrap ? parseInt(wrap.getAttribute('data-days') || '0', 10) : 0;
+            if (!isNaN(daysDS)) totalHours = daysDS * 24;
+          }
+          // No additional totals shown; pricing panel below already includes day count and total.
+        }
+      });
+    })();
+  </script>
+  <script>
+    (function() {
+      function updateNavbarGradient() {
+        var nav = document.getElementById('ftco-navbar');
+        var hero = document.querySelector('.hero-wrap');
+        if (!nav || !hero) return;
+        var navH = nav.offsetHeight || 0;
+        var heroH = hero.offsetHeight || 0;
+        if (window.scrollY < Math.max(0, heroH - navH)) {
+          nav.classList.add('gradient-on-hero');
+        } else {
+          nav.classList.remove('gradient-on-hero');
+        }
+      }
+      window.addEventListener('scroll', updateNavbarGradient, { passive: true });
+      window.addEventListener('resize', updateNavbarGradient);
+      document.addEventListener('DOMContentLoaded', updateNavbarGradient);
+      updateNavbarGradient();
+    })();
+  </script>
+  
+    
+  </body>
+</html>
+  </body>
+</html>

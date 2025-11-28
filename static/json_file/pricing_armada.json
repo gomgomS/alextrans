@@ -1,0 +1,134 @@
+[
+  {
+    "name": "ALPHARD",
+    "category": "mobil",
+    "driver_mandatory": true,
+    "driver_type": "mobil",
+    "driver_fee": 0,
+    "rent_fee": 4800000,
+    "capacity": 6,
+    "img": "images/armada/alphard.png",
+    "description": "Toyota Alphard premium, wajib supir. Harga per hari berdasarkan tanggal."
+  },
+  {
+    "name": "BIG BUS",
+    "category": "bigbus",
+    "driver_mandatory": true,
+    "driver_type": "bigbus",
+    "driver_fee": 0,
+    "rent_fee": 4800000,
+    "capacity": 45,
+    "img": "images/armada/big-bus.jpg",
+    "description": "Big Bus kapasitas besar, wajib supir. Harga per hari."
+  },
+  {
+    "name": "MEDIUM BUS",
+    "category": "bigbus",
+    "driver_mandatory": true,
+    "driver_type": "bigbus",
+    "driver_fee": 0,
+    "rent_fee": 2800000,
+    "capacity": 25,
+    "img": "images/armada/medium-bus.jpg",
+    "description": "Medium Bus 25–35 seat, wajib supir. Harga per hari."
+  },
+  {
+    "name": "HIACE PREMIO",
+    "category": "minibus",
+    "driver_mandatory": true,
+    "driver_type": "minibus",
+    "driver_fee": 0,
+    "rent_fee": 1700000,
+    "capacity": 10,
+    "img": "images/armada/hiace-premio.png",
+    "description": "Hiace Premio wajib supir. Harga per hari."
+  },
+  {
+    "name": "HIACE COMMUTER",
+    "category": "minibus",
+    "driver_mandatory": true,
+    "driver_type": "minibus",
+    "driver_fee": 0,
+    "rent_fee": 1400000,
+    "capacity": 14,
+    "img": "images/armada/hiace-commuter.png",
+    "description": "Hiace Commuter wajib supir. Harga per hari."
+  },
+  {
+    "name": "FORTUNER",
+    "category": "mobil",
+    "driver_mandatory": true,
+    "driver_type": "mobil",
+    "driver_fee": 0,
+    "rent_fee": 1900000,
+    "capacity": 7,
+    "img": "images/armada/fortuner.png",
+    "description": "Fortuner wajib supir. Harga per hari."
+  },
+  {
+    "name": "AVANZA",
+    "category": "mobil",
+    "driver_mandatory": false,
+    "driver_type": "mobil",
+    "driver_fee": 400000,
+    "rent_fee": 450000,
+    "capacity": 4,
+    "img": "images/armada/avanza.png",
+    "description": "Avanza. Dengan supir Rp 850.000/hari, tanpa supir Rp 450.000/hari."
+  },
+  {
+    "name": "INNOVA REBORN",
+    "category": "mobil",
+    "driver_mandatory": false,
+    "driver_type": "mobil",
+    "driver_fee": 300000,
+    "rent_fee": 650000,
+    "capacity": 6,
+    "img": "images/armada/innova_reborn.png",
+    "description": "Innova Reborn. Dengan supir Rp 950.000/hari, tanpa supir Rp 650.000/hari."
+  },
+  {
+    "name": "ZENIX",
+    "category": "mobil",
+    "driver_mandatory": false,
+    "driver_type": "mobil",
+    "driver_fee": 550000,
+    "rent_fee": 850000,
+    "capacity": 6,
+    "img": "images/armada/zenix.png",
+    "description": "Zenix. Dengan supir Rp 1.400.000/hari, tanpa supir Rp 850.000/hari."
+  },
+  {
+    "name": "RUSH",
+    "category": "mobil",
+    "driver_mandatory": false,
+    "driver_type": "mobil",
+    "driver_fee": 350000,
+    "rent_fee": 400000,
+    "capacity": 7,
+    "img": "images/armada/rush.png",
+    "description": "Rush. Dengan supir Rp 750.000/hari, tanpa supir Rp 400.000/hari."
+  },
+  {
+    "name": "SIGRA",
+    "category": "mobil",
+    "driver_mandatory": false,
+    "driver_type": "mobil",
+    "driver_fee": 300000,
+    "rent_fee": 350000,
+    "capacity": 5,
+    "img": "images/armada/sigra.png",
+    "description": "Sigra. Dengan supir Rp 650.000/hari, tanpa supir Rp 350.000/hari."
+  },
+  {
+    "name": "CALYA",
+    "category": "mobil",
+    "driver_mandatory": false,
+    "driver_type": "mobil",
+    "driver_fee": 250000,
+    "rent_fee": 350000,
+    "capacity": 5,
+    "img": "images/armada/calya.png",
+    "description": "Calya. Dengan supir Rp 600.000/hari, tanpa supir Rp 350.000/hari."
+  }
+]
