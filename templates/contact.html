@@ -31,6 +31,21 @@
       .ftco_navbar { margin-top: 0 !important; }
       .navbar { margin-bottom: 0 !important; }
       .logo-oval { border-radius: 12px; height: 100px; object-fit: cover; }
+      /* Navigation menu styling - Poppins font with bold weight */
+      .navbar-nav .nav-link {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0.3px;
+        transition: all 0.3s ease;
+      }
+      .navbar-nav .nav-item.active .nav-link {
+        font-weight: 700;
+      }
+      .navbar-nav .nav-link:hover {
+        transform: translateY(-1px);
+      }
+      
       /* Ensure Google Map is visible */
       #map {
         width: 100%;
@@ -45,27 +60,191 @@
         z-index: 9999;
         display: flex;
         align-items: center;
+        justify-content: center;
         background: #25D366;
         color: #ffffff;
-        border-radius: 999px;
-        padding: 10px 14px;
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
         box-shadow: 0 8px 24px rgba(0,0,0,0.18);
         text-decoration: none;
         animation: wa-pulse 1.6s infinite;
       }
       .wa-float img {
-        height: 28px;
-        width: 28px;
-        margin-right: 10px;
-      }
-      .wa-float span {
-        font-weight: 600;
-        color: #ffffff;
+        height: 32px;
+        width: 32px;
       }
       @keyframes wa-pulse {
         0%   { transform: translateZ(0) scale(1); }
         50%  { transform: translateZ(0) scale(1.05); }
         100% { transform: translateZ(0) scale(1); }
+      }
+      /* Logo switching on scroll */
+      .navbar-brand .logo-light {
+        display: inline-block;
+      }
+      .navbar-brand .logo-dark {
+        display: none;
+      }
+      .ftco_navbar.awake .logo-light {
+        display: none;
+      }
+      .ftco_navbar.awake .logo-dark {
+        display: inline-block;
+      }
+      /* Hamburger menu icon - black when navbar is awake (white bg) */
+      .ftco_navbar.awake .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+      /* Make hero background look fuller on mobile (match index behavior) */
+      @media (max-width: 767.98px) {
+        .hero-wrap.hero-wrap-2 {
+          background-size: cover !important;
+          background-repeat: no-repeat !important;
+          background-position: center center !important;
+          min-height: 400px !important;
+          height: 400px !important;
+          position: relative;
+        }
+        .hero-wrap.hero-wrap-2 .overlay {
+          background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.6) 100%) !important;
+        }
+        .hero-wrap.hero-wrap-2 .container {
+          position: relative;
+          z-index: 2;
+          height: 100%;
+        }
+        .hero-wrap.hero-wrap-2 .slider-text {
+          min-height: 400px !important;
+          height: 400px !important;
+          align-items: flex-end !important;
+          justify-content: flex-start !important;
+          display: flex !important;
+        }
+        .hero-wrap.hero-wrap-2 .slider-text .ftco-animate {
+          padding-bottom: 3rem !important;
+          width: 100%;
+          position: relative;
+          z-index: 3;
+        }
+        .hero-wrap.hero-wrap-2 .breadcrumbs {
+          font-size: 13px !important;
+          color: #ffffff !important;
+          opacity: 0.95;
+        }
+        .hero-wrap.hero-wrap-2 .breadcrumbs a {
+          color: #ffffff !important;
+        }
+        .hero-wrap.hero-wrap-2 h1.bread {
+          font-size: 26px !important;
+          line-height: 1.3 !important;
+          color: #ffffff !important;
+          font-weight: 700 !important;
+          text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+      }
+      /* Modern Contact Info Cards */
+      .contact-info-card {
+        background: #ffffff;
+        border: none !important;
+        border-radius: 12px !important;
+        padding: 1.5rem !important;
+        box-shadow: 0 4px 15px rgba(0, 24, 48, 0.08);
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: flex-start;
+      }
+      .contact-info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(37, 96, 233, 0.15);
+      }
+      .contact-info-card .icon {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        background: linear-gradient(135deg, #001830 0%, #2560E9 100%);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+      }
+      .contact-info-card .icon span {
+        font-size: 22px;
+        color: #ffffff;
+      }
+      .contact-info-card p {
+        margin: 0;
+        flex: 1;
+      }
+      .contact-info-card p span:first-child {
+        display: block;
+        font-weight: 700;
+        color: #001830;
+        margin-bottom: 0.25rem;
+        font-size: 14px;
+      }
+      .contact-info-card a {
+        color: #2560E9;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+      .contact-info-card a:hover {
+        color: #001830;
+        text-decoration: none;
+      }
+      /* About Us Section */
+      .about-content {
+        background: #ffffff;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 24, 48, 0.08);
+      }
+      .about-content h3 {
+        color: #001830;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-bottom: 1rem;
+      }
+      .about-content h3::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, #2560E9 0%, #001830 100%);
+        border-radius: 2px;
+      }
+      .about-content p {
+        color: #64748b;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+      .about-content strong {
+        color: #001830;
+      }
+      /* Map Container */
+      .map-container {
+        background: #ffffff;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 24, 48, 0.08);
+      }
+      .map-wrapper {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 24, 48, 0.1);
+      }
+      @media (max-width: 767.98px) {
+        .map-container {
+          padding: 1.5rem;
+        }
+        .map-wrapper iframe {
+          height: 300px;
+        }
       }
     </style>
   </head>
@@ -73,17 +252,26 @@
     
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='assets/images/logo-removebg.png') }}" alt="ALEXTRANS" class="logo-oval"></a>
+	      <a class="navbar-brand" href="{{ url_for('index') }}">
+          <img src="{{ url_for('static', filename='assets/images/logo-removebg.png') }}" alt="ALEXTRANS" class="logo-oval logo-light">
+          <img src="{{ url_for('static', filename='assets/images/logo-removebg-black.png') }}" alt="" class="logo-oval logo-dark" aria-hidden="true">
+        </a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
+	        <span class="navbar-toggler-icon"></span>
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
               <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link">Beranda</a></li>
 	          <li class="nav-item"><a href="{{ url_for('layanan') }}" class="nav-link">Layanan</a></li>
+	          <li class="nav-item"><a href="{{ url_for('gallery') }}" class="nav-link">Galeri</a></li>
 	          <li class="nav-item active"><a href="{{ url_for('contact') }}" class="nav-link">Tentang & Kontak</a></li>
-              <li class="nav-item"><a href="https://wa.me/6287712345678?text=hai%20saya%20mau%20cari%20mobil%20ka" target="_blank" rel="noopener" class="nav-link">WA Booking</a></li>
+              <li class="nav-item nav-wa-booking">
+                <a href="https://wa.me/6281313256756?text=hai%20saya%20mau%20cari%20mobil%20ka" target="_blank" rel="noopener" class="nav-link nav-link-wa">
+                  <i class="fa fa-whatsapp"></i>
+                  <span>Chat Sekarang</span>
+                </a>
+              </li>
 	        </ul>
 	      </div>
 	    </div>
@@ -95,7 +283,7 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
           <div class="col-md-9 ftco-animate pb-5">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="{{ url_for('index') }}">Beranda <i class="ion-ios-arrow-forward"></i></a></span> <span>Tentang & Kontak <i class="ion-ios-arrow-forward"></i></span></p>
+          	<p class="breadcrumbs"><span class="mr-2"><a href="{{ url_for('index') }}">Beranda <i class="fa fa-angle-right"></i></a></span> <span>Tentang & Kontak <i class="fa fa-angle-right"></i></span></p>
             <h1 class="mb-3 bread">Tentang & Kontak</h1>
           </div>
         </div>
@@ -111,32 +299,32 @@
             <div class="row mb-5">
               
               <div class="col-md-12">
-                <div class="border w-100 p-4 rounded mb-2 d-flex">
-                  <div class="icon mr-3">
-                    <span class="fa fa-map-o"></span>
+                <div class="contact-info-card mb-3">
+                  <div class="icon">
+                    <span class="fa fa-map-marker"></span>
                   </div>
-                  <p><span>Alamat:</span> Bandung, Jawa Barat — Kantor & Garasi Operasional</p>
+                  <p><span>Alamat</span> Bandung, Jawa Barat — Kantor & Garasi Operasional</p>
                 </div>
               </div>
     
               <div class="col-md-12">
-                <div class="border w-100 p-4 rounded mb-2 d-flex">
-                  <div class="icon mr-3">
-                    <span class="fa fa-mobile"></span>
+                <div class="contact-info-card mb-3">
+                  <div class="icon">
+                    <span class="fa fa-whatsapp"></span>
                   </div>
-                  <p><span>Telepon/WA:</span> 
-                    <a href="https://wa.me/6281234567890" target="_blank">0812-3456-7890</a>
+                  <p><span>Telepon/WhatsApp</span> 
+                    <a href="https://wa.me/6281313256756" target="_blank">+62 813-1325-6756</a>
                   </p>
                 </div>
               </div>
     
               <div class="col-md-12">
-                <div class="border w-100 p-4 rounded mb-2 d-flex">
-                  <div class="icon mr-3">
-                    <span class="fa fa-envelope-o"></span>
+                <div class="contact-info-card mb-3">
+                  <div class="icon">
+                    <span class="fa fa-envelope"></span>
                   </div>
-                  <p><span>Email:</span> 
-                    <a href="mailto:admin@rentalbandung.com">admin@rentalbandung.com</a>
+                  <p><span>Email</span> 
+                    <a href="mailto:admin@alextrans.com">admin@alextrans.com</a>
                   </p>
                 </div>
               </div>
@@ -146,14 +334,15 @@
     
           <!-- About Us -->
           <div class="col-md-8 mb-md-5">
-            <h3 class="mb-3">Tentang Kami</h3>
-            <p>
-              Kami adalah penyedia layanan <strong>Rental Mobil Bandung</strong> dengan armada lengkap mulai dari city car, MPV, SUV, hingga Hiace & Big Bus untuk kebutuhan wisata, kantor, keluarga, dan perjalanan luar kota.
-            </p>
-            <p>
-              Semua armada terawat, bersih, AC dingin, dan selalu dicek sebelum digunakan. Didukung oleh sopir profesional yang ramah, berpengalaman, dan memahami rute Bandung hingga luar kota dengan baik.
-            </p>
-            <p>
+            <div class="about-content">
+              <h3>Tentang Kami</h3>
+              <p>
+                Kami adalah penyedia layanan <strong>Rental Mobil Bandung</strong> dengan armada lengkap mulai dari city car, MPV, SUV, hingga Hiace & Big Bus untuk kebutuhan wisata, kantor, keluarga, dan perjalanan luar kota.
+              </p>
+              <p>
+                Semua armada terawat, bersih, AC dingin, dan selalu dicek sebelum digunakan. Didukung oleh sopir profesional yang ramah, berpengalaman, dan memahami rute Bandung hingga luar kota dengan baik.
+              </p>
+              <p>
               Kami menyediakan layanan:
             </p>
             <ul>
@@ -164,56 +353,143 @@
               <li>Sewa Hiace / Elf / Bus Pariwisata</li>
             </ul>
     
-            <h4 class="mt-4">Kenapa Pilih Kami?</h4>
-            <ul>
+            <h4 class="mt-4" style="color: #001830; font-weight: 700;">Kenapa Pilih Kami?</h4>
+            <ul style="color: #64748b; line-height: 1.8;">
               <li>Harga transparan tanpa biaya tersembunyi</li>
               <li>Unit bersih, nyaman, dan rutin service</li>
               <li>Driver profesional & ramah</li>
               <li>Pemesanan cepat via WhatsApp</li>
               <li>Siap antar–jemput area Bandung</li>
             </ul>
+            </div>
           </div>
     
         </div>
     
-        <!-- Map -->
-        <div class="row justify-content-center">
-          <iframe
-            width="100%"
-            height="450"
-            style="border:0"
-            loading="lazy"
-            allowfullscreen
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3178.33!2d107.6187!3d-6.9025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e68a4f7b1f1f%3A0x...!2sGedung%20Sate%2C%20Bandung!5e0!3m2!1sen!2sid!4vYOURTIMESTAMP">
-          </iframe>
-
-
+        <!-- Map Section -->
+        <div class="row justify-content-center mt-5">
+          <div class="col-12">
+            <div class="map-container">
+              <h3 class="text-center mb-4" style="color: #001830; font-weight: 800;">Lokasi Kami</h3>
+              <div class="map-wrapper">
+                <iframe
+                  width="100%"
+                  height="450"
+                  style="border:0; border-radius: 12px;"
+                  loading="lazy"
+                  allowfullscreen
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3178.33!2d107.6187!3d-6.9025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e68a4f7b1f1f%3A0x...!2sGedung%20Sate%2C%20Bandung!5e0!3m2!1sen!2sid!4vYOURTIMESTAMP">
+                </iframe>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 	
 
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md-12">
-            <div class="ftco-footer-widget mb-4 text-center">
-              <h2 class="ftco-heading-2"><a href="{{ url_for('index') }}" class="logo">ALEXTRANS</a></h2>
-              <p>Rental & City Tour Bandung — armada lengkap, driver profesional, harga transparan.</p>
-              <ul class="ftco-footer-social list-unstyled d-inline-block mt-4">
-                <li class="ftco-animate d-inline-block mx-2"><a href="https://instagram.com/" target="_blank" rel="noopener"><span class="icon-instagram"></span></a></li>
-                <li class="ftco-animate d-inline-block mx-2"><a href="https://facebook.com/" target="_blank" rel="noopener"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate d-inline-block mx-2"><a href="https://x.com/" target="_blank" rel="noopener"><span class="icon-twitter"></span></a></li>
-              </ul>
+    <footer class="modern-footer">
+      <!-- Main Footer Content -->
+      <div class="footer-main">
+        <div class="container">
+          <div class="row">
+            
+            <!-- Company Info -->
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+              <div class="footer-widget">
+                <div class="footer-logo">
+                  <a href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='assets/images/logo-removebg.png') }}" alt="ALEXTRANS" style="height: 60px;">
+                  </a>
+                </div>
+                <p class="footer-description">Solusi rental mobil & city tour terpercaya di Bandung. Armada lengkap, driver profesional, harga transparan.</p>
+                <div class="footer-social">
+                  <a href="https://instagram.com/" target="_blank" rel="noopener" class="social-link">
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                  <a href="https://facebook.com/" target="_blank" rel="noopener" class="social-link">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="https://x.com/" target="_blank" rel="noopener" class="social-link">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="https://wa.me/6281313256756" target="_blank" rel="noopener" class="social-link">
+                    <i class="fa fa-whatsapp"></i>
+                  </a>
+                </div>
+              </div>
             </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+              <div class="footer-widget">
+                <h4 class="footer-title">Menu</h4>
+                <ul class="footer-links">
+                  <li><a href="{{ url_for('index') }}"><i class="fa fa-angle-right mr-2"></i>Beranda</a></li>
+                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i>Layanan</a></li>
+                  <li><a href="{{ url_for('gallery') }}"><i class="fa fa-angle-right mr-2"></i>Galeri</a></li>
+                  <li><a href="{{ url_for('contact') }}"><i class="fa fa-angle-right mr-2"></i>Tentang & Kontak</a></li>
+                  <li><a href="{{ url_for('index') }}#layanan"><i class="fa fa-angle-right mr-2"></i>Cek Harga</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Services -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <div class="footer-widget">
+                <h4 class="footer-title">Layanan Kami</h4>
+                <ul class="footer-links">
+                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i>Rental Lepas Kunci</a></li>
+                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i>Rental dengan Supir</a></li>
+                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i>Antar Jemput Bandara</a></li>
+                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i>City Tour Bandung</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <div class="footer-widget">
+                <h4 class="footer-title">Hubungi Kami</h4>
+                <ul class="footer-contact">
+                  <li>
+                    <i class="fa fa-map-marker"></i>
+                    <span>Bandung, Jawa Barat<br>Indonesia</span>
+                  </li>
+                  <li>
+                    <i class="fa fa-phone"></i>
+                    <span><a href="tel:+6281313256756">+62 813-1325-6756</a></span>
+                  </li>
+                  <li>
+                    <i class="fa fa-whatsapp"></i>
+                    <span><a href="https://wa.me/6281313256756" target="_blank">WhatsApp Chat</a></span>
+                  </li>
+                  <li>
+                    <i class="fa fa-clock-o"></i>
+                    <span>24/7 Support</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
+      </div>
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | </a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+              <p class="footer-copyright">
+                &copy; <script>document.write(new Date().getFullYear());</script> <strong>ALEXTRANS</strong>. All rights reserved.
+              </p>
+            </div>
+            <div class="col-md-6 text-center text-md-right">
+              <p class="footer-credit">
+                Made with <i class="fa fa-heart" style="color: #e74c3c;"></i> kitabuat.web.id
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -240,10 +516,29 @@
   <script src="{{ url_for('static', filename='assets/js/jquery.timepicker.min.js') }}"></script>
   <script src="{{ url_for('static', filename='assets/js/scrollax.min.js') }}"></script>
   <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
-  <a class="wa-float" href="https://wa.me/6287712345678?text=hai%20saya%20mau%20cari%20mobil%20ka" target="_blank" rel="noopener" aria-label="WhatsApp Chat">
+  <a class="wa-float" href="https://wa.me/6281313256756?text=hai%20saya%20mau%20cari%20mobil%20ka" target="_blank" rel="noopener" aria-label="WhatsApp Chat">
     <img src="{{ url_for('static', filename='assets/images/icon-wa.png') }}" alt="WA">
-    <span>Ada yang bisa kami bantu? Chat</span>
   </a>
+  <script>
+    (function() {
+      function updateNavbarOnScroll() {
+        var nav = document.getElementById('ftco-navbar');
+        var hero = document.querySelector('.hero-wrap');
+        if (!nav || !hero) return;
+        var navH = nav.offsetHeight || 0;
+        var heroH = hero.offsetHeight || 0;
+        if (window.scrollY < Math.max(0, heroH - navH)) {
+          nav.classList.remove('awake');
+        } else {
+          nav.classList.add('awake');
+        }
+      }
+      window.addEventListener('scroll', updateNavbarOnScroll, { passive: true });
+      window.addEventListener('resize', updateNavbarOnScroll);
+      document.addEventListener('DOMContentLoaded', updateNavbarOnScroll);
+      updateNavbarOnScroll();
+    })();
+  </script>
     
   </body>
 </html>

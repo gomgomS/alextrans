@@ -1,1 +1,19 @@
-static/assets/images/testimoni
+static/assets/testimoni_ori
+rental-mobil-backup.lnk
+static/assets/testimoni.rar
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+htmlcov/
+pytavia_core/__pycache__
+pytavia_modules/__pycache__
