@@ -11292,17 +11292,16 @@ html, body {
 }
 
 .testimony-author {
-  display: flex;
-  align-items: center;
-  gap: 15px;
   padding-top: 20px;
   border-top: 2px solid #f1f3f5;
   margin-top: auto;
+  text-align: left;
 }
 
 .author-image-wrapper {
   position: relative;
   flex-shrink: 0;
+  display: none; /* Hidden - no photos */
 }
 
 .author-image {
@@ -11313,6 +11312,7 @@ html, body {
   border: 3px solid white;
   box-shadow: 0 5px 20px rgba(0, 24, 48, 0.15);
   transition: all 0.3s ease;
+  display: none; /* Hidden - no photos */
 }
 
 .testimony-card-modern:hover .author-image {
@@ -11326,18 +11326,19 @@ html, body {
 }
 
 .author-name {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
   color: var(--color-primary-bg);
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   font-family: 'Poppins', sans-serif;
 }
 
 .author-position {
-  font-size: 14px;
+  font-size: 13px;
   color: #6c757d;
   margin-bottom: 0;
   font-weight: 500;
+  font-style: italic;
 }
 
 .testimony-cta-modern {

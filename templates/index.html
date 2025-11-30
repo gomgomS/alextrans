@@ -7,25 +7,36 @@
     <meta name="description" content="Sewa mobil Bandung murah mulai 200rb/hari. Tersedia lepas kunci & dengan sopir. Layanan 24 jam, city tour, antar jemput bandara. Booking via WA mudah & cepat!">
     <meta name="keywords" content="rental mobil bandung, sewa mobil bandung, rental mobil bandung murah, sewa mobil bandung lepas kunci, rental mobil dengan sopir bandung, city tour bandung, sewa mobil bandung 24 jam">
     
+    <!-- Favicon - Multiple sizes for all devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='assets/images/favicon_io/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='assets/images/favicon_io/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='assets/images/favicon_io/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='assets/images/favicon_io/site.webmanifest') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/images/favicon_io/favicon.ico') }}">
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url_for('index', _external=True) }}">
     <meta property="og:title" content="Rental Mobil Bandung Murah 24 Jam | Lepas Kunci & Sopir - ALEXTRANS">
     <meta property="og:description" content="Sewa mobil Bandung murah mulai 200rb/hari. Tersedia lepas kunci & dengan sopir. Layanan 24 jam, city tour, antar jemput bandara. Booking via WA mudah & cepat!">
-    <meta property="og:image" content="{{ url_for('static', filename='assets/images/home-poster.png', _external=True) }}">
+    <meta property="og:image" content="{{ url_for('static', filename='assets/images/favicon_io/android-chrome-512x512.png', _external=True) }}">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
     <meta property="og:locale" content="id_ID">
     <meta property="og:site_name" content="ALEXTRANS - Rental Mobil Bandung">
     
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="{{ url_for('index', _external=True) }}">
     <meta name="twitter:title" content="Rental Mobil Bandung Murah 24 Jam | Lepas Kunci & Sopir">
     <meta name="twitter:description" content="Sewa mobil Bandung murah mulai 200rb/hari. Tersedia lepas kunci & dengan sopir. Layanan 24 jam, city tour, antar jemput bandara.">
-    <meta name="twitter:image" content="{{ url_for('static', filename='assets/images/home-poster.png', _external=True) }}">
+    <meta name="twitter:image" content="{{ url_for('static', filename='assets/images/favicon_io/android-chrome-512x512.png', _external=True) }}">
     
     <!-- Additional SEO Meta Tags -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="ALEXTRANS Rental Mobil Bandung">
+    <meta name="theme-color" content="#007bff">
+    <meta name="msapplication-TileColor" content="#007bff">
     <link rel="canonical" href="{{ url_for('index', _external=True) }}">
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
@@ -56,7 +67,13 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "ALEXTRANS - Rental Mobil Bandung",
-      "image": "{{ url_for('static', filename='assets/images/logo-removebg.png', _external=True) }}",
+      "image": "{{ url_for('static', filename='assets/images/favicon_io/android-chrome-512x512.png', _external=True) }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ url_for('static', filename='assets/images/favicon_io/android-chrome-512x512.png', _external=True) }}",
+        "width": 512,
+        "height": 512
+      },
       "@id": "{{ url_for('index', _external=True) }}",
       "url": "{{ url_for('index', _external=True) }}",
       "telephone": "+6281313256756",
@@ -88,7 +105,7 @@
         "closes": "23:59"
       },
       "sameAs": [
-        "https://instagram.com/",
+        "https://instagram.com/alex.transtravel/",
         "https://facebook.com/",
         "https://wa.me/6281313256756"
       ],
@@ -690,9 +707,9 @@
         <div class="col-md-6 wrap-about ftco-animate">
           <div class="heading-section heading-section-white pl-md-5">
             <span class="subheading">Layanan Unggulan</span>
-            <h3 class="mb-4" style="font-size: 32px; font-weight: 700;">Rental Mobil Lepas Kunci Bandung Tanpa Survei</h3>
+            <h3 class="mb-4" style="font-size: 32px; font-weight: 700; color: #fff;">Rental Mobil Lepas Kunci Bandung Tanpa Survei</h3>
 
-            <p style="font-size: 16px; line-height: 1.8;">Nikmati kebebasan berkendara dengan layanan <strong>rental mobil lepas kunci Bandung</strong>. Sewa mobil tanpa sopir (self drive) untuk fleksibilitas maksimal. Proses mudah tanpa survei, armada terawat, harga terjangkau. Cocok untuk perjalanan pribadi, liburan keluarga, atau kebutuhan mobilitas harian Anda di Bandung.</p>
+            <p style="font-size: 16px; line-height: 1.8; color: #fff;">Nikmati kebebasan berkendara dengan layanan <strong>rental mobil lepas kunci Bandung</strong>. Sewa mobil tanpa sopir (self drive) untuk fleksibilitas maksimal. Proses mudah tanpa survei, armada terawat, harga terjangkau. Cocok untuk perjalanan pribadi, liburan keluarga, atau kebutuhan mobilitas harian Anda di Bandung.</p>
 
             <p class="mt-4">
               <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20mau%20rental%20mobil%20lepas%20kunci%20di%20Bandung" target="_blank" class="btn btn-primary px-4 py-3">Cek Harga & Ketersediaan</a>
@@ -708,9 +725,9 @@
         <div class="col-md-6 order-2 order-md-1 wrap-about ftco-animate">
           <div class="heading-section heading-section-white pr-md-5">
             <span class="subheading">Layanan Unggulan</span>
-            <h3 class="mb-4" style="font-size: 32px; font-weight: 700;">Sewa Mobil Bandung Antar Jemput Bandara Husein Sastranegara</h3>
+            <h3 class="mb-4" style="font-size: 32px; font-weight: 700; color: #fff;">Sewa Mobil Bandung Antar Jemput Bandara Husein Sastranegara</h3>
 
-            <p style="font-size: 16px; line-height: 1.8;">Layanan antar jemput bandara Husein Sastranegara yang cepat dan nyaman. Kami siap menjemput atau mengantar Anda ke bandara dengan tepat waktu. Tersedia berbagai pilihan armada dari sedan hingga mobil keluarga. Sopir profesional, harga flat, tanpa biaya tersembunyi. Sempurnakan perjalanan Anda dengan layanan airport transfer terpercaya.</p>
+            <p style="font-size: 16px; line-height: 1.8; color: #fff;">Layanan antar jemput bandara Husein Sastranegara yang cepat dan nyaman. Kami siap menjemput atau mengantar Anda ke bandara dengan tepat waktu. Tersedia berbagai pilihan armada dari sedan hingga mobil keluarga. Sopir profesional, harga flat, tanpa biaya tersembunyi. Sempurnakan perjalanan Anda dengan layanan airport transfer terpercaya.</p>
 
             <p class="mt-4">
               <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20butuh%20layanan%20antar%20jemput%20bandara%20Bandung" target="_blank" class="btn btn-primary px-4 py-3">Booking Mudah via WA</a>
@@ -730,9 +747,9 @@
         <div class="col-md-6 wrap-about ftco-animate">
           <div class="heading-section heading-section-white pl-md-5">
             <span class="subheading">Layanan Unggulan</span>
-            <h3 class="mb-4" style="font-size: 32px; font-weight: 700;">Paket City Tour Bandung dengan Sopir Berpengalaman</h3>
+            <h3 class="mb-4" style="font-size: 32px; font-weight: 700; color: #fff;">Paket City Tour Bandung dengan Sopir Berpengalaman</h3>
   
-            <p style="font-size: 16px; line-height: 1.8;">Jelajahi destinasi wisata Bandung dengan <strong>paket city tour</strong> nyaman dan terjangkau. <strong>Sewa mobil wisata Bandung</strong> dengan sopir yang ramah dan paham rute wisata terbaik. Cocok untuk keluarga, rombongan, atau perjalanan pribadi. Paket wisata Bandung fleksibel sesuai kebutuhan Anda - dari wisata alam, kuliner, hingga belanja. Harga bersahabat, pengalaman tak terlupakan.</p>
+            <p style="font-size: 16px; line-height: 1.8; color: #fff;">Jelajahi destinasi wisata Bandung dengan <strong>paket city tour</strong> nyaman dan terjangkau. <strong>Sewa mobil wisata Bandung</strong> dengan sopir yang ramah dan paham rute wisata terbaik. Cocok untuk keluarga, rombongan, atau perjalanan pribadi. Paket wisata Bandung fleksibel sesuai kebutuhan Anda - dari wisata alam, kuliner, hingga belanja. Harga bersahabat, pengalaman tak terlupakan.</p>
   
             <p class="mt-4">
               <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20mau%20paket%20city%20tour%20Bandung" target="_blank" class="btn btn-primary px-4 py-3">Pesan Paket Wisata</a>
@@ -919,15 +936,12 @@
                     <i class="fa fa-star"></i>
                   </div>
                   <p class="testimony-text">
-                    Pelayanannya cepat dan ramah. Mobil Ertiga yang kami sewa sangat nyaman, bersih, dan terawat sehingga perjalanan keluarga kami terasa aman dan menyenangkan.
+                    Sewa Avanza untuk mudik, prosesnya gampang banget via WA. Mobilnya bersih, AC dingin, dan bensin irit. Puas banget, next pasti pakai Alextrans lagi.
                   </p>
                   <div class="testimony-author">
-                    <div class="author-image-wrapper">
-                      <img src="{{ url_for('static', filename='assets/images/testi_1.png') }}" alt="Arif" class="author-image">
-                    </div>
                     <div class="author-info">
-                      <h5 class="author-name">Arif</h5>
-                      <p class="author-position">Menyewa Ertiga 2019</p>
+                      <h5 class="author-name">Budi Santoso</h5>
+                      <p class="author-position">Sewa Avanza Lepas Kunci</p>
                     </div>
                   </div>
                 </div>
@@ -947,15 +961,12 @@
                     <i class="fa fa-star"></i>
                   </div>
                   <p class="testimony-text">
-                    Supirnya ramah dan profesional. Hiace yang kami sewa sangat lega, bersih, dan cocok untuk perjalanan rombongan. Anak-anak juga nyaman selama perjalanan jauh.
+                    Pakai Hiace Commuter untuk rombongan keluarga ke Lembang. Supirnya ramah dan paham rute, mobilnya lega dan nyaman. Recommended!
                   </p>
                   <div class="testimony-author">
-                    <div class="author-image-wrapper">
-                      <img src="{{ url_for('static', filename='assets/images/testi_2.png') }}" alt="Dian" class="author-image">
-                    </div>
                     <div class="author-info">
-                      <h5 class="author-name">Dian</h5>
-                      <p class="author-position">Menyewa Hiace Minibus</p>
+                      <h5 class="author-name">Siti Nurhaliza</h5>
+                      <p class="author-position">Sewa Hiace Commuter + Supir</p>
                     </div>
                   </div>
                 </div>
@@ -975,15 +986,12 @@
                     <i class="fa fa-star"></i>
                   </div>
                   <p class="testimony-text">
-                    Pelayanan premium, Alphard-nya nyaman, interior wangi, dan supirnya sopan serta hafal rute. Keluarga kami benar-benar puas.
+                    Alphard untuk acara keluarga, pelayanannya premium banget. Interior mewah, sopir profesional, tepat waktu. Worth it untuk acara penting.
                   </p>
                   <div class="testimony-author">
-                    <div class="author-image-wrapper">
-                      <img src="{{ url_for('static', filename='assets/images/testi_3.png') }}" alt="Jendry" class="author-image">
-                    </div>
                     <div class="author-info">
-                      <h5 class="author-name">Jendry</h5>
-                      <p class="author-position">Menyewa Alphard + Supir</p>
+                      <h5 class="author-name">Rudi Hermawan</h5>
+                      <p class="author-position">Sewa Alphard dengan Supir</p>
                     </div>
                   </div>
                 </div>
@@ -1003,15 +1011,62 @@
                     <i class="fa fa-star"></i>
                   </div>
                   <p class="testimony-text">
-                    Proses sewanya cepat lewat WA, mobil bersih dan siap pakai. Sangat membantu untuk kebutuhan mendesak.
+                    Innova Reborn untuk city tour, sangat puas. Mobil terawat, AC dingin, dan harganya masuk akal. Admin responsif, proses booking cepat.
                   </p>
                   <div class="testimony-author">
-                    <div class="author-image-wrapper">
-                      <img src="{{ url_for('static', filename='assets/images/testi_1.png') }}" alt="Fauzan" class="author-image">
-                    </div>
                     <div class="author-info">
-                      <h5 class="author-name">Fauzan</h5>
-                      <p class="author-position">Menyewa Avanza 2020</p>
+                      <h5 class="author-name">Denny Prakoso</h5>
+                      <p class="author-position">Sewa Innova Reborn + Supir</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 5 -->
+              <div class="item">
+                <div class="testimony-card-modern">
+                  <div class="testimony-quote-icon">
+                    <i class="fa fa-quote-left"></i>
+                  </div>
+                  <div class="testimony-rating mb-3">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <p class="testimony-text">
+                    Rush lepas kunci untuk weekend getaway, mobilnya oke banget. Mesin halus, interior rapi, tanpa ribet survei. Terima kasih Alextrans!
+                  </p>
+                  <div class="testimony-author">
+                    <div class="author-info">
+                      <h5 class="author-name">Andi Wijaya</h5>
+                      <p class="author-position">Sewa Rush Lepas Kunci</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 6 -->
+              <div class="item">
+                <div class="testimony-card-modern">
+                  <div class="testimony-quote-icon">
+                    <i class="fa fa-quote-left"></i>
+                  </div>
+                  <div class="testimony-rating mb-3">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <p class="testimony-text">
+                    Fortuner untuk perjalanan ke Pangandaran, sangat nyaman dan aman. Sopirnya pengalaman, tahu jalan pintas. Puas dengan pelayanannya.
+                  </p>
+                  <div class="testimony-author">
+                    <div class="author-info">
+                      <h5 class="author-name">Lisa Permata</h5>
+                      <p class="author-position">Sewa Fortuner dengan Supir</p>
                     </div>
                   </div>
                 </div>
@@ -1270,7 +1325,7 @@
                 </div>
                 <p class="footer-description">ALEXTRANS - Penyedia jasa <strong>rental mobil Bandung</strong> terpercaya. Layanan lepas kunci, dengan sopir, city tour, dan antar jemput bandara. Harga murah, armada lengkap, pelayanan 24 jam.</p>
                 <div class="footer-social">
-                  <a href="https://instagram.com/" target="_blank" rel="noopener" class="social-link">
+                  <a href="https://instagram.com/alex.transtravel/" target="_blank" rel="noopener" class="social-link">
                     <i class="fa fa-instagram"></i>
                   </a>
                   <a href="https://facebook.com/" target="_blank" rel="noopener" class="social-link">
