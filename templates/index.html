@@ -1,9 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{ site_name or 'ALEXTRANS' }} - Rental & Tour</title>
+    <title>Rental Mobil Bandung Murah 24 Jam | Lepas Kunci & Sopir</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Sewa mobil Bandung murah mulai 200rb/hari. Tersedia lepas kunci & dengan sopir. Layanan 24 jam, city tour, antar jemput bandara. Booking via WA mudah & cepat!">
+    <meta name="keywords" content="rental mobil bandung, sewa mobil bandung, rental mobil bandung murah, sewa mobil bandung lepas kunci, rental mobil dengan sopir bandung, city tour bandung, sewa mobil bandung 24 jam">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url_for('index', _external=True) }}">
+    <meta property="og:title" content="Rental Mobil Bandung Murah 24 Jam | Lepas Kunci & Sopir - ALEXTRANS">
+    <meta property="og:description" content="Sewa mobil Bandung murah mulai 200rb/hari. Tersedia lepas kunci & dengan sopir. Layanan 24 jam, city tour, antar jemput bandara. Booking via WA mudah & cepat!">
+    <meta property="og:image" content="{{ url_for('static', filename='assets/images/home-poster.png', _external=True) }}">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="ALEXTRANS - Rental Mobil Bandung">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ url_for('index', _external=True) }}">
+    <meta name="twitter:title" content="Rental Mobil Bandung Murah 24 Jam | Lepas Kunci & Sopir">
+    <meta name="twitter:description" content="Sewa mobil Bandung murah mulai 200rb/hari. Tersedia lepas kunci & dengan sopir. Layanan 24 jam, city tour, antar jemput bandara.">
+    <meta name="twitter:image" content="{{ url_for('static', filename='assets/images/home-poster.png', _external=True) }}">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="ALEXTRANS Rental Mobil Bandung">
+    <link rel="canonical" href="{{ url_for('index', _external=True) }}">
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
 
@@ -26,6 +49,153 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/icomoon.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+    
+    <!-- JSON-LD Schema Markup for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "ALEXTRANS - Rental Mobil Bandung",
+      "image": "{{ url_for('static', filename='assets/images/logo-removebg.png', _external=True) }}",
+      "@id": "{{ url_for('index', _external=True) }}",
+      "url": "{{ url_for('index', _external=True) }}",
+      "telephone": "+6281313256756",
+      "priceRange": "Rp 350.000 - Rp 1.500.000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bandung",
+        "addressLocality": "Bandung",
+        "addressRegion": "Jawa Barat",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -6.9175,
+        "longitude": 107.6191
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "sameAs": [
+        "https://instagram.com/",
+        "https://facebook.com/",
+        "https://wa.me/6281313256756"
+      ],
+      "description": "Rental mobil Bandung murah 24 jam. Tersedia lepas kunci dan dengan sopir profesional. Layanan city tour, antar jemput bandara, dan wisata. Harga transparan mulai Rp 350.000/hari.",
+      "areaServed": {
+        "@type": "City",
+        "name": "Bandung"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Layanan Rental Mobil",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Rental Mobil Lepas Kunci Bandung",
+              "description": "Sewa mobil tanpa sopir (self drive) dengan proses mudah tanpa survei"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Rental Mobil dengan Sopir Bandung",
+              "description": "Sewa mobil dengan driver profesional yang ramah dan berpengalaman"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Paket City Tour Bandung",
+              "description": "Paket wisata keliling Bandung dengan mobil dan sopir berpengalaman"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Antar Jemput Bandara",
+              "description": "Layanan airport transfer dari/ke Bandara Husein Sastranegara"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- FAQ Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Berapa harga rental mobil Bandung per hari?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Harga sewa mobil Bandung mulai dari Rp 350.000/hari untuk mobil ekonomis seperti Avanza. Harga bervariasi tergantung jenis armada dan durasi sewa. Untuk minibus seperti Hiace mulai Rp 600.000/hari, sudah termasuk atau belum termasuk sopir tergantung paket yang dipilih."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah tersedia rental mobil lepas kunci tanpa survei?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ya, kami menyediakan layanan rental mobil lepas kunci Bandung tanpa survei. Proses cepat dan mudah, cukup lengkapi dokumen (KTP, SIM, KK) dan jaminan sesuai ketentuan. Cocok untuk Anda yang ingin berkendara sendiri (self drive) dengan fleksibilitas penuh."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bagaimana cara booking rental mobil Bandung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Booking sangat mudah! Hubungi kami via WhatsApp di +62 813-1325-6756, atau gunakan form Cek Harga di website ini. Tim kami akan merespon cepat dan membantu memilih armada yang sesuai kebutuhan Anda. Proses booking hanya butuh beberapa menit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah ada paket city tour Bandung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tentu! Kami menyediakan paket city tour Bandung dengan sopir berpengalaman yang paham rute wisata. Destinasi populer meliputi Lembang, Dago, Kawah Putih, Tangkuban Perahu, dan tempat wisata lainnya. Paket dapat disesuaikan dengan kebutuhan dan budget Anda. Harga mulai dari Rp 950.000 untuk 12 jam."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah melayani antar jemput bandara?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ya, kami melayani antar jemput bandara Husein Sastranegara 24 jam. Sopir akan menjemput atau mengantar Anda tepat waktu. Harga flat tanpa biaya tersembunyi. Layanan airport transfer tersedia untuk berbagai jenis armada, dari sedan hingga minibus untuk rombongan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah rental mobil Bandung tersedia 24 jam?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ya, rental mobil Bandung 24 jam kami siap melayani kapan saja. Customer service kami standby via WhatsApp untuk membantu kebutuhan rental Anda, baik malam hari maupun weekend. Booking dapat dilakukan kapan saja sesuai kebutuhan mendadak Anda."
+          }
+        }
+      ]
+    }
+    </script>
+    
     <style>
       /* Global navbar tweaks */
       body { margin-top: 0 !important; }
@@ -165,16 +335,16 @@
 	  </nav>
     <!-- END nav -->
     
-    <div class="hero-wrap ftco-degree-bg" style="background-image: url('{{ url_for('static', filename='assets/images/home-poster.png') }}'); background-repeat: no-repeat; background-size: contain; " data-stellar-background-ratio="0">
+    <div class="hero-wrap ftco-degree-bg" style="background-image: url('{{ url_for('static', filename='assets/images/home-poster.png') }}'); background-repeat: no-repeat; background-size: contain; " data-stellar-background-ratio="0" role="img" aria-label="Rental mobil Bandung murah dengan layanan lepas kunci dan sopir profesional 24 jam">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text justify-content-start align-items-center">
           <div class="col-lg-6 col-md-8 ftco-animate">
           	<div class="text w-100 text-left mb-md-5 pb-md-5">
-	            <h1 class="mb-4">{{ hero_title or 'Sewa Mobil & City Tour Mudah dan Cepat' }}</h1>
-	            <p style="font-size: 18px;">{{ hero_subtitle or 'Armada lengkap, sopir profesional, harga transparan. Siap antar ke mana saja.' }}</p>
+	            <h1 class="mb-4">{{ hero_title or 'Rental Mobil Bandung Murah - Lepas Kunci & Dengan Sopir' }}</h1>
+	            <p style="font-size: 18px;">{{ hero_subtitle or 'Sewa mobil Bandung 24 jam dengan armada lengkap. Tersedia lepas kunci (self drive) dan dengan sopir profesional. Harga transparan mulai Rp 350.000/hari. Cocok untuk city tour, wisata, dan antar jemput bandara.' }}</p>
 	            <p class="mt-3">
-	              <a href="https://wa.me/6281313256756?text=hai%20saya%20mau%20cari%20mobil%20ka" target="_blank" class="btn btn-primary btn-lg px-4">Pesan Sekarang</a>
+	              <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20mau%20rental%20mobil%20Bandung" target="_blank" class="btn btn-primary btn-lg px-4">Pesan Sekarang via WhatsApp</a>
 	            </p>
             </div>
           </div>
@@ -455,13 +625,38 @@
   		</div>
 	</section>
   
-  <section class="ftco-section" style="background: linear-gradient(180deg, #e8f3ff 0%, #f6fbff 100%);">
+  <!-- Tentang Layanan - SEO Content Section -->
+  <section class="ftco-section" style="background: #ffffff; padding: 60px 0;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="text-center mb-4">
+            <span class="subheading d-inline-block px-3 py-1 rounded" style="background: rgba(37,211,102,.12); color:#25D366; font-weight:600;">Tentang Kami</span>
+            <h2 class="mb-3 mt-3" style="font-weight:700; color: var(--color-primary-bg);">Rental Mobil Bandung Terpercaya</h2>
+          </div>
+          <div class="about-content" style="font-size: 16px; line-height: 1.8; color: #555; text-align: justify;">
+            <p style="margin-bottom: 20px;">
+              <strong>ALEXTRANS</strong> adalah penyedia jasa <strong>rental mobil Bandung</strong> terpercaya dengan layanan 24 jam. Kami menyediakan <strong>sewa mobil Bandung murah</strong> untuk berbagai kebutuhan - baik <strong>rental mobil Bandung lepas kunci</strong> (self drive) maupun <strong>sewa mobil dengan sopir</strong> profesional.
+            </p>
+            <p style="margin-bottom: 20px;">
+              Armada kami meliputi Avanza, Innova, Alphard, Hiace, hingga Bus untuk keluarga atau rombongan. Cocok untuk <strong>city tour Bandung</strong>, paket wisata, <strong>antar jemput bandara</strong>, perjalanan bisnis, maupun acara keluarga.
+            </p>
+            <p style="margin-bottom: 0;">
+              Dengan harga transparan mulai Rp 350.000/hari, proses booking via WhatsApp yang mudah, dan pelayanan ramah, ALEXTRANS menjadi pilihan utama <strong>rental mobil di Bandung</strong>. Kami siap melayani Anda kapan saja dengan armada terawat dan sopir berpengalaman.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-section" style="background: linear-gradient(180deg, #e8f3ff 0%, #f6fbff 100%); padding-top: 80px;">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-10 text-center">
-          <span class="subheading">Layanan Kami</span>
-          <h2 class="mb-3">Layanan Premium Kami</h2>
-          <p>Bisa sewa lepas kunci maupun dengan driver. Alextrans Sewa mobil bandung memudahkan mobilitas dan memberikan kenyamanan dalam perjalanan anda.</p>
+          <span class="subheading d-inline-block px-3 py-1 rounded" style="background: rgba(37,211,102,.12); color:#25D366; font-weight:600;">Layanan Kami</span>
+          <h2 class="mb-3 mt-3" style="font-weight:700;">Layanan Rental Mobil Bandung</h2>
+          <p style="color: #666;">Layanan lengkap rental mobil Bandung: lepas kunci, dengan sopir, city tour, dan antar jemput bandara. Armada terawat, harga transparan, proses mudah.</p>
         </div>
       </div>
     </div>
@@ -495,11 +690,13 @@
         <div class="col-md-6 wrap-about ftco-animate">
           <div class="heading-section heading-section-white pl-md-5">
             <span class="subheading">Layanan Unggulan</span>
-            <h2 class="mb-4">Rental Mobil Lepas Kunci Tanpa Survei</h2>
+            <h3 class="mb-4" style="font-size: 32px; font-weight: 700;">Rental Mobil Lepas Kunci Bandung Tanpa Survei</h3>
 
-            <p>Nikmati kebebasan berkendara tanpa survei! Alextrans Rental hadir dengan layanan Rental Mobil Lepas Kunci, praktis dan efisien. Armada terawat, proses cepat, nilai terbaik</p>
+            <p style="font-size: 16px; line-height: 1.8;">Nikmati kebebasan berkendara dengan layanan <strong>rental mobil lepas kunci Bandung</strong>. Sewa mobil tanpa sopir (self drive) untuk fleksibilitas maksimal. Proses mudah tanpa survei, armada terawat, harga terjangkau. Cocok untuk perjalanan pribadi, liburan keluarga, atau kebutuhan mobilitas harian Anda di Bandung.</p>
 
-
+            <p class="mt-4">
+              <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20mau%20rental%20mobil%20lepas%20kunci%20di%20Bandung" target="_blank" class="btn btn-primary px-4 py-3">Cek Harga & Ketersediaan</a>
+            </p>
           </div>
         </div>
       </div>
@@ -511,11 +708,13 @@
         <div class="col-md-6 order-2 order-md-1 wrap-about ftco-animate">
           <div class="heading-section heading-section-white pr-md-5">
             <span class="subheading">Layanan Unggulan</span>
-            <h2 class="mb-4">Paket Jemput/Drop Bandara</h2>
+            <h3 class="mb-4" style="font-size: 32px; font-weight: 700;">Sewa Mobil Bandung Antar Jemput Bandara Husein Sastranegara</h3>
 
-            <p>Dapatkan kenyamanan dengan Paket Jemput/Drop Bandara dari Alextrans Travel! Layanan cepat dan andal untuk sempurnakan perjalanan Anda dengan layanan kami.</p>
+            <p style="font-size: 16px; line-height: 1.8;">Layanan antar jemput bandara Husein Sastranegara yang cepat dan nyaman. Kami siap menjemput atau mengantar Anda ke bandara dengan tepat waktu. Tersedia berbagai pilihan armada dari sedan hingga mobil keluarga. Sopir profesional, harga flat, tanpa biaya tersembunyi. Sempurnakan perjalanan Anda dengan layanan airport transfer terpercaya.</p>
 
-
+            <p class="mt-4">
+              <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20butuh%20layanan%20antar%20jemput%20bandara%20Bandung" target="_blank" class="btn btn-primary px-4 py-3">Booking Mudah via WA</a>
+            </p>
           </div>
         </div>
         <div class="col-md-6 order-1 order-md-2 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url('{{ url_for('static', filename='assets/images/bandara.png') }}'); background-size: contain; background-repeat: no-repeat; background-position: center;">
@@ -531,10 +730,13 @@
         <div class="col-md-6 wrap-about ftco-animate">
           <div class="heading-section heading-section-white pl-md-5">
             <span class="subheading">Layanan Unggulan</span>
-            <h2 class="mb-4">Paket City Tour Nyaman & Terjangkau</h2>
+            <h3 class="mb-4" style="font-size: 32px; font-weight: 700;">Paket City Tour Bandung dengan Sopir Berpengalaman</h3>
   
-            <p>Jelajahi berbagai destinasi wisata kota bersama Alextrans Rental! Kami menyediakan layanan City Tour dengan armada nyaman, rute fleksibel, dan harga bersahabat. Cocok untuk keluarga, rombongan, maupun perjalanan pribadi.</p>
+            <p style="font-size: 16px; line-height: 1.8;">Jelajahi destinasi wisata Bandung dengan <strong>paket city tour</strong> nyaman dan terjangkau. <strong>Sewa mobil wisata Bandung</strong> dengan sopir yang ramah dan paham rute wisata terbaik. Cocok untuk keluarga, rombongan, atau perjalanan pribadi. Paket wisata Bandung fleksibel sesuai kebutuhan Anda - dari wisata alam, kuliner, hingga belanja. Harga bersahabat, pengalaman tak terlupakan.</p>
   
+            <p class="mt-4">
+              <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20mau%20paket%20city%20tour%20Bandung" target="_blank" class="btn btn-primary px-4 py-3">Pesan Paket Wisata</a>
+            </p>
           </div>
         </div>
       </div>
@@ -547,8 +749,8 @@
         <div class="row justify-content-center">
           <div class="col-md-12 heading-section text-center ftco-animate mb-5">
           	<span class="subheading d-inline-block px-3 py-1 rounded" style="background: rgba(37,211,102,.12); color:#25D366; font-weight:600;">Pilihan Armada</span>
-            <h2 class="mb-2" style="font-weight:800;">Armada Unggulan</h2>
-            <p class="text-muted mb-0">Pilih mobil, minibus, hingga bus sesuai kebutuhan perjalanan Anda.</p>
+            <h2 class="mb-2" style="font-weight:800;">Daftar Harga Rental Mobil Bandung</h2>
+            <p class="text-muted mb-0">Pilihan lengkap armada rental mobil Bandung: mobil, minibus, hingga bus. Harga transparan mulai Rp 350.000/hari untuk berbagai kebutuhan Anda.</p>
           </div>
         </div>
     		<div class="row">
@@ -611,8 +813,8 @@
 				<div class="row justify-content-center mb-5">
           <div class="col-md-8 text-center heading-section ftco-animate">
           	<span class="subheading d-inline-block px-3 py-1 rounded" style="background: rgba(37,211,102,.12); color:#25D366; font-weight:600;">Keunggulan</span>
-            <h2 class="mb-2" style="font-weight:800;">Mengapa Memilih Kami</h2>
-            <p class="text-muted mb-0">Layanan andal, harga jelas, dan tim profesional untuk setiap perjalanan Anda.</p>
+            <h2 class="mb-2" style="font-weight:800;">Mengapa Memilih Rental Mobil Kami</h2>
+            <p class="text-muted mb-0">Layanan rental mobil Bandung terbaik dengan harga transparan dan armada terawat. Tersedia lepas kunci maupun dengan sopir.</p>
           </div>
         </div>
 				<div class="row">
@@ -622,8 +824,8 @@
                 <span class="fa fa-car" style="font-size:28px;"></span>
               </div>
             	<div class="text w-100">
-                <h3 class="heading mb-2" style="font-weight:700;">Armada Lengkap</h3>
-                <p class="mb-0">Avanza, Innova, Alphard, Hiace, hingga Bus.</p>
+                <h3 class="heading mb-2" style="font-weight:700; font-size: 18px;">Armada Lengkap & Terawat</h3>
+                <p class="mb-0">Pilihan mobil beragam: Avanza, Innova, Alphard, Hiace, hingga Bus. Semua armada bersih dan siap untuk perjalanan jauh maupun city tour.</p>
               </div>
             </div>
 					</div>
@@ -633,8 +835,8 @@
                 <span class="fa fa-user" style="font-size:28px;"></span>
               </div>
             	<div class="text w-100">
-                <h3 class="heading mb-2" style="font-weight:700;">Sopir Profesional</h3>
-                <p class="mb-0">Berpengalaman, ramah, dan paham rute.</p>
+                <h3 class="heading mb-2" style="font-weight:700; font-size: 18px;">Sopir Profesional</h3>
+                <p class="mb-0">Driver berpengalaman, ramah, dan paham rute wisata Bandung. Tersedia untuk layanan dengan sopir maupun city tour.</p>
               </div>
             </div>
 					</div>
@@ -644,8 +846,8 @@
                 <span class="fa fa-tags" style="font-size:28px;"></span>
               </div>
             	<div class="text w-100">
-                <h3 class="heading mb-2" style="font-weight:700;">Harga Transparan</h3>
-                <p class="mb-0">Tanpa biaya tersembunyi, jelas di depan.</p>
+                <h3 class="heading mb-2" style="font-weight:700; font-size: 18px;">Harga Transparan</h3>
+                <p class="mb-0">Tanpa biaya tersembunyi, semua jelas di awal. Harga sewa mobil Bandung terjangkau mulai Rp 350.000/hari.</p>
               </div>
             </div>
 					</div>
@@ -655,14 +857,14 @@
                 <span class="fa fa-headphones" style="font-size:28px;"></span>
               </div>
             	<div class="text w-100">
-                <h3 class="heading mb-2" style="font-weight:700;">Support 24/7</h3>
-                <p class="mb-0">Siap membantu kapan pun Anda butuh.</p>
+                <h3 class="heading mb-2" style="font-weight:700; font-size: 18px;">Layanan 24 Jam</h3>
+                <p class="mb-0">Rental mobil Bandung 24 jam siap melayani. Booking kapan saja via WhatsApp dengan respon cepat.</p>
               </div>
             </div>
 					</div>
 				</div>
         <div class="text-center mt-2">
-          <a href="https://wa.me/6281313256756?text=Halo,%20saya%20tertarik%20untuk%20sewa%20mobil.%20Mohon%20info%20detail%20harga%20dan%20armada%20yang%20tersedia.%20Terima%20kasih!" target="_blank" rel="noopener" class="btn btn-primary px-4">Booking Sekarang</a>
+          <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20tertarik%20rental%20mobil%20Bandung.%20Mohon%20info%20harga%20dan%20armada.%20Terima%20kasih!" target="_blank" rel="noopener" class="btn btn-primary px-4 py-3">Booking Sekarang</a>
         </div>
 			</div>
 		</section>
@@ -672,8 +874,9 @@
 			<div class="container">
 				<div class="row justify-content-end">
 					<div class="col-md-6 heading-section heading-section-white ftco-animate">
-            <h2 class="mb-3">Armada kami terbatas? jangan kehabisan</h2>
-            <a href="#" class="btn btn-primary btn-lg">Booking Sekarang</a>
+            <h2 class="mb-3" style="font-size: 36px; font-weight: 700;">Sewa Mobil Bandung Sekarang - Armada Terbatas!</h2>
+            <p style="font-size: 18px; margin-bottom: 25px;">Jangan sampai kehabisan armada di hari libur atau peak season. Booking rental mobil Bandung Anda sekarang untuk harga terbaik!</p>
+            <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20mau%20booking%20rental%20mobil%20Bandung" target="_blank" rel="noopener" class="btn btn-primary btn-lg px-5 py-3">Booking Sekarang</a>
           </div>
 				</div>
 			</div>
@@ -955,6 +1158,100 @@
           </div>
         </div>
     	</div>
+    </section>
+    
+    <!-- FAQ Section for SEO -->
+    <section class="ftco-section" style="background: #f8f9fa; padding: 80px 0;">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+            <span class="subheading d-inline-block px-3 py-1 rounded" style="background: rgba(37,211,102,.12); color:#25D366; font-weight:600;">FAQ</span>
+            <h2 class="mb-3 mt-3" style="font-weight:800;">Pertanyaan Seputar Rental Mobil Bandung</h2>
+            <p class="text-muted">Informasi penting tentang layanan sewa mobil kami</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            
+            <!-- FAQ Item 1 -->
+            <div class="faq-item mb-4" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+              <h3 style="font-size: 18px; font-weight: 700; color: var(--color-primary-bg); margin-bottom: 12px;">
+                <i class="fa fa-question-circle mr-2" style="color: #25D366;"></i>
+                Berapa harga rental mobil Bandung per hari?
+              </h3>
+              <p style="margin: 0; color: #555; line-height: 1.7;">
+                Harga <strong>sewa mobil Bandung</strong> mulai dari Rp 350.000/hari untuk mobil ekonomis seperti Avanza. Harga bervariasi tergantung jenis armada dan durasi sewa. Untuk minibus seperti Hiace mulai Rp 600.000/hari, sudah termasuk atau belum termasuk sopir tergantung paket yang dipilih. Hubungi kami untuk penawaran terbaik.
+              </p>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item mb-4" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+              <h3 style="font-size: 18px; font-weight: 700; color: var(--color-primary-bg); margin-bottom: 12px;">
+                <i class="fa fa-question-circle mr-2" style="color: #25D366;"></i>
+                Apakah tersedia rental mobil lepas kunci tanpa survei?
+              </h3>
+              <p style="margin: 0; color: #555; line-height: 1.7;">
+                Ya, kami menyediakan layanan <strong>rental mobil lepas kunci Bandung tanpa survei</strong>. Proses cepat dan mudah, cukup lengkapi dokumen (KTP, SIM, KK) dan jaminan sesuai ketentuan. Cocok untuk Anda yang ingin berkendara sendiri (self drive) dengan fleksibilitas penuh.
+              </p>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item mb-4" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+              <h3 style="font-size: 18px; font-weight: 700; color: var(--color-primary-bg); margin-bottom: 12px;">
+                <i class="fa fa-question-circle mr-2" style="color: #25D366;"></i>
+                Bagaimana cara booking rental mobil Bandung?
+              </h3>
+              <p style="margin: 0; color: #555; line-height: 1.7;">
+                Booking sangat mudah! Hubungi kami via WhatsApp di <strong>+62 813-1325-6756</strong>, atau gunakan form "Cek Harga" di website ini. Tim kami akan merespon cepat dan membantu memilih armada yang sesuai kebutuhan Anda. Proses booking hanya butuh beberapa menit.
+              </p>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item mb-4" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+              <h3 style="font-size: 18px; font-weight: 700; color: var(--color-primary-bg); margin-bottom: 12px;">
+                <i class="fa fa-question-circle mr-2" style="color: #25D366;"></i>
+                Apakah ada paket city tour Bandung?
+              </h3>
+              <p style="margin: 0; color: #555; line-height: 1.7;">
+                Tentu! Kami menyediakan <strong>paket city tour Bandung</strong> dengan sopir berpengalaman yang paham rute wisata. Destinasi populer meliputi Lembang, Dago, Kawah Putih, Tangkuban Perahu, dan tempat wisata lainnya. Paket dapat disesuaikan dengan kebutuhan dan budget Anda. Harga mulai dari Rp 950.000 untuk 12 jam.
+              </p>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item mb-4" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+              <h3 style="font-size: 18px; font-weight: 700; color: var(--color-primary-bg); margin-bottom: 12px;">
+                <i class="fa fa-question-circle mr-2" style="color: #25D366;"></i>
+                Apakah melayani antar jemput bandara?
+              </h3>
+              <p style="margin: 0; color: #555; line-height: 1.7;">
+                Ya, kami melayani <strong>antar jemput bandara Husein Sastranegara</strong> 24 jam. Sopir akan menjemput atau mengantar Anda tepat waktu. Harga flat tanpa biaya tersembunyi. Layanan airport transfer tersedia untuk berbagai jenis armada, dari sedan hingga minibus untuk rombongan.
+              </p>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="faq-item" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+              <h3 style="font-size: 18px; font-weight: 700; color: var(--color-primary-bg); margin-bottom: 12px;">
+                <i class="fa fa-question-circle mr-2" style="color: #25D366;"></i>
+                Apakah rental mobil Bandung tersedia 24 jam?
+              </h3>
+              <p style="margin: 0; color: #555; line-height: 1.7;">
+                Ya, <strong>rental mobil Bandung 24 jam</strong> kami siap melayani kapan saja. Customer service kami standby via WhatsApp untuk membantu kebutuhan rental Anda, baik malam hari maupun weekend. Booking dapat dilakukan kapan saja sesuai kebutuhan mendadak Anda.
+              </p>
+            </div>
+
+          </div>
+        </div>
+        
+        <!-- CTA after FAQ -->
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <p style="font-size: 18px; color: #555; margin-bottom: 20px;">Masih ada pertanyaan? Hubungi kami sekarang!</p>
+            <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20ada%20pertanyaan%20tentang%20rental%20mobil%20Bandung" target="_blank" rel="noopener" class="btn btn-success btn-lg px-5 py-3" style="background: #25D366; border-color: #25D366;">
+              <i class="fa fa-whatsapp mr-2"></i>Chat via WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
     </section>	
 
     <footer class="modern-footer">
@@ -967,11 +1264,11 @@
             <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
               <div class="footer-widget">
                 <div class="footer-logo">
-                  <a href="{{ url_for('index') }}">
-                    <img src="{{ url_for('static', filename='assets/images/logo-removebg.png') }}" alt="ALEXTRANS" style="height: 60px;">
+                  <a href="{{ url_for('index') }}" title="Rental Mobil Bandung - ALEXTRANS">
+                    <img src="{{ url_for('static', filename='assets/images/logo-removebg.png') }}" alt="Rental Mobil Bandung Murah - ALEXTRANS" style="height: 60px;">
                   </a>
                 </div>
-                <p class="footer-description">Solusi rental mobil & city tour terpercaya di Bandung. Armada lengkap, driver profesional, harga transparan.</p>
+                <p class="footer-description">ALEXTRANS - Penyedia jasa <strong>rental mobil Bandung</strong> terpercaya. Layanan lepas kunci, dengan sopir, city tour, dan antar jemput bandara. Harga murah, armada lengkap, pelayanan 24 jam.</p>
                 <div class="footer-social">
                   <a href="https://instagram.com/" target="_blank" rel="noopener" class="social-link">
                     <i class="fa fa-instagram"></i>
@@ -1008,10 +1305,11 @@
               <div class="footer-widget">
                 <h4 class="footer-title">Layanan Kami</h4>
                 <ul class="footer-links">
-                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i>Rental Lepas Kunci</a></li>
-                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i>Rental dengan Supir</a></li>
-                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i>Antar Jemput Bandara</a></li>
-                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i>City Tour Bandung</a></li>
+                  <li><a href="{{ url_for('layanan') }}" title="Rental mobil lepas kunci Bandung"><i class="fa fa-angle-right mr-2"></i>Rental Mobil Lepas Kunci</a></li>
+                  <li><a href="{{ url_for('layanan') }}" title="Sewa mobil dengan sopir Bandung"><i class="fa fa-angle-right mr-2"></i>Rental Mobil dengan Sopir</a></li>
+                  <li><a href="{{ url_for('layanan') }}" title="Antar jemput bandara Bandung"><i class="fa fa-angle-right mr-2"></i>Antar Jemput Bandara</a></li>
+                  <li><a href="{{ url_for('layanan') }}" title="Paket city tour Bandung"><i class="fa fa-angle-right mr-2"></i>Paket City Tour Bandung</a></li>
+                  <li><a href="{{ url_for('layanan') }}" title="Sewa mobil wisata Bandung"><i class="fa fa-angle-right mr-2"></i>Sewa Mobil Wisata</a></li>
                 </ul>
               </div>
             </div>
