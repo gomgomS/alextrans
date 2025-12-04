@@ -4,7 +4,7 @@
     <title>Rental Mobil Bandung Murah 24 Jam | Lepas Kunci & Sopir</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Sewa mobil Bandung murah mulai 200rb/hari. Tersedia lepas kunci & dengan sopir. Layanan 24 jam, city tour, antar jemput bandara. Booking via WA mudah & cepat!">
+    <meta name="description" content="Sewa mobil Bandung murah mulai 350rb/hari. Tersedia lepas kunci & dengan sopir. Layanan 24 jam, city tour, antar jemput bandara. Booking via WA mudah & cepat!">
     <meta name="keywords" content="rental mobil bandung, sewa mobil bandung, rental mobil bandung murah, sewa mobil bandung lepas kunci, rental mobil dengan sopir bandung, city tour bandung, sewa mobil bandung 24 jam">
     
     <!-- Favicon - Multiple sizes for all devices -->
@@ -18,7 +18,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url_for('index', _external=True) }}">
     <meta property="og:title" content="Rental Mobil Bandung Murah 24 Jam | Lepas Kunci & Sopir - ALEXTRANS">
-    <meta property="og:description" content="Sewa mobil Bandung murah mulai 200rb/hari. Tersedia lepas kunci & dengan sopir. Layanan 24 jam, city tour, antar jemput bandara. Booking via WA mudah & cepat!">
+    <meta property="og:description" content="Sewa mobil Bandung murah mulai 350rb/hari. Tersedia lepas kunci & dengan sopir. Layanan 24 jam, city tour, antar jemput bandara. Booking via WA mudah & cepat!">
     <meta property="og:image" content="{{ url_for('static', filename='assets/images/favicon_io/android-chrome-512x512.png', _external=True) }}">
     <meta property="og:image:width" content="512">
     <meta property="og:image:height" content="512">
@@ -29,7 +29,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="{{ url_for('index', _external=True) }}">
     <meta name="twitter:title" content="Rental Mobil Bandung Murah 24 Jam | Lepas Kunci & Sopir">
-    <meta name="twitter:description" content="Sewa mobil Bandung murah mulai 200rb/hari. Tersedia lepas kunci & dengan sopir. Layanan 24 jam, city tour, antar jemput bandara.">
+    <meta name="twitter:description" content="Sewa mobil Bandung murah mulai 350rb/hari. Tersedia lepas kunci & dengan sopir. Layanan 24 jam, city tour, antar jemput bandara.">
     <meta name="twitter:image" content="{{ url_for('static', filename='assets/images/favicon_io/android-chrome-512x512.png', _external=True) }}">
     
     <!-- Additional SEO Meta Tags -->
@@ -147,7 +147,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Antar Jemput Bandara",
-              "description": "Layanan airport transfer dari/ke Bandara Husein Sastranegara"
+              "description": "Layanan airport transfer dari/ke Bandara Soekarno-Hatta & Halim Jakarta"
             }
           }
         ]
@@ -198,7 +198,7 @@
           "name": "Apakah melayani antar jemput bandara?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ya, kami melayani antar jemput bandara Husein Sastranegara 24 jam. Sopir akan menjemput atau mengantar Anda tepat waktu. Harga flat tanpa biaya tersembunyi. Layanan airport transfer tersedia untuk berbagai jenis armada, dari sedan hingga minibus untuk rombongan."
+            "text": "Ya, kami melayani antar jemput bandara Soekarno-Hatta & Halim Jakarta 24 jam. Sopir akan menjemput atau mengantar Anda tepat waktu. Harga flat tanpa biaya tersembunyi. Layanan airport transfer tersedia untuk berbagai jenis armada, dari sedan hingga minibus untuk rombongan."
           }
         },
         {
@@ -336,14 +336,14 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="{{ url_for('index') }}" class="nav-link">Beranda</a></li>
-	          <li class="nav-item"><a href="{{ url_for('layanan') }}" class="nav-link">Layanan</a></li>
-	          <li class="nav-item"><a href="{{ url_for('gallery') }}" class="nav-link">Galeri</a></li>
-	          <li class="nav-item"><a href="{{ url_for('contact') }}" class="nav-link">Tentang & Kontak</a></li>
+	          <li class="nav-item active"><a href="{{ url_for('index') }}" class="nav-link" data-i18n="nav.home">Beranda</a></li>
+	          <li class="nav-item"><a href="{{ url_for('layanan') }}" class="nav-link" data-i18n="nav.services">Layanan</a></li>
+	          <li class="nav-item"><a href="{{ url_for('gallery') }}" class="nav-link" data-i18n="nav.gallery">Galeri</a></li>
+	          <li class="nav-item"><a href="{{ url_for('contact') }}" class="nav-link" data-i18n="nav.about_contact">Tentang & Kontak</a></li>
               <li class="nav-item nav-wa-booking">
                 <a href="https://wa.me/6281313256756?text=hai%20saya%20mau%20cari%20mobil%20ka" target="_blank" rel="noopener" class="nav-link nav-link-wa">
                   <i class="fa fa-whatsapp"></i>
-                  <span>Chat Sekarang</span>
+                  <span data-i18n="nav.chat_now">Chat Sekarang</span>
                 </a>
               </li>
 	        </ul>
@@ -358,10 +358,10 @@
         <div class="row no-gutters slider-text justify-content-start align-items-center">
           <div class="col-lg-6 col-md-8 ftco-animate">
           	<div class="text w-100 text-left mb-md-5 pb-md-5">
-	            <h1 class="mb-4">{{ hero_title or 'Rental Mobil Bandung Murah - Lepas Kunci & Dengan Sopir' }}</h1>
-	            <p style="font-size: 18px;">{{ hero_subtitle or 'Sewa mobil Bandung 24 jam dengan armada lengkap. Tersedia lepas kunci (self drive) dan dengan sopir profesional. Harga transparan mulai Rp 350.000/hari. Cocok untuk city tour, wisata, dan antar jemput bandara.' }}</p>
+	            <h1 class="mb-4" data-i18n="index.hero.title">{{ hero_title or 'Rental Mobil Bandung Murah - Lepas Kunci & Dengan Sopir' }}</h1>
+	            <p style="font-size: 18px;" data-i18n="index.hero.subtitle">{{ hero_subtitle or 'Sewa mobil Bandung 24 jam dengan armada lengkap. Tersedia lepas kunci (self drive) dan dengan sopir profesional. Harga transparan mulai Rp 350.000/hari. Cocok untuk city tour, wisata, dan antar jemput bandara.' }}</p>
 	            <p class="mt-3">
-	              <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20mau%20rental%20mobil%20Bandung" target="_blank" class="btn btn-primary btn-lg px-4">Pesan Sekarang via WhatsApp</a>
+	              <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20mau%20rental%20mobil%20Bandung" target="_blank" class="btn btn-primary btn-lg px-4" data-i18n="index.hero.cta">Pesan Sekarang via WhatsApp</a>
 	            </p>
             </div>
           </div>
@@ -376,10 +376,10 @@
     				<div class="row no-gutters">
 	  					<div class="col-md-4 d-flex align-items-stretch">
 	  						<form action="{{ url_for('booking') }}" method="get" class="request-form ftco-animate bg-primary w-100 h-100 shadow-lg" style="border-radius: 16px;">
-		          		<h2 class="mb-1">Cek Harga Armada</h2>
-                  <p class="text-light-50 mb-4" style="opacity:.9;">Pilih armada, atur waktu, dapatkan estimasi instan.</p>
+		          		<h2 class="mb-1" data-i18n="index.booking_form.title">Cek Harga Armada</h2>
+                  <p class="text-light-50 mb-4" style="opacity:.9;" data-i18n="index.booking_form.subtitle">Pilih armada, atur waktu, dapatkan estimasi instan.</p>
                   <div class="form-group">
-                    <label for="car_name" class="label"><span class="fa fa-car mr-2"></span>Pilih Armada</label>
+                    <label for="car_name" class="label"><span class="fa fa-car mr-2"></span><span data-i18n="index.booking_form.select_fleet">Pilih Armada</span></label>
                     <select id="car_name" name="car_name" class="form-control bg-white text-dark" style="color:#000 !important; background-color:#fff !important;">
                       {% for item in pricing %}
                       <option value="{{ item.name }}"
@@ -391,12 +391,12 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="with_driver" class="label"><span class="fa fa-id-badge mr-2"></span>Dengan Supir</label>
+                    <label for="with_driver" class="label"><span class="fa fa-id-badge mr-2"></span><span data-i18n="index.booking_form.with_driver">Dengan Supir</span></label>
                     <div class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input" id="with_driver" name="with_driver" value="1" {% if form_values.with_driver != '0' %}checked{% endif %}>
-                      <label class="custom-control-label text-light" for="with_driver">Dengan Supir / City Tour</label>
+                      <label class="custom-control-label text-light" for="with_driver" data-i18n="index.booking_form.with_driver_label">Dengan Supir / City Tour</label>
                     </div>
-                    <small id="driver_mandatory_hint" class="text-light" style="display:none;">Armada ini wajib supir.</small>
+                    <small id="driver_mandatory_hint" class="text-light" style="display:none;" data-i18n="index.booking_form.driver_mandatory">Armada ini wajib supir.</small>
                   </div>
 			    				<!-- <div class="form-group">
 			    					<label for="" class="label">Lokasi Jemput</label>
@@ -407,17 +407,17 @@
 			    					<input type="text" class="form-control" placeholder="Kota, bandara, stasiun, dll">
 			    				</div> -->
                   <div class="form-group">
-                    <label class="label"><span class="fa fa-calendar mr-2"></span>Mulai Sewa</label>
+                    <label class="label"><span class="fa fa-calendar mr-2"></span><span data-i18n="index.booking_form.start_rental">Mulai Sewa</span></label>
                     <div class="form-row">
                   
                       <div class="col-5 col-md-5 mb-2 mb-md-0">
-                        <label class="small d-block mb-1">Tanggal:</label>
+                        <label class="small d-block mb-1" data-i18n="index.booking_form.date_label">Tanggal:</label>
                         <input type="date" class="form-control bg-white text-dark" id="start_date" name="start_date" value="{{ form_values.start_date or '' }}">
                       </div>
                       <div class="col-1">
                       </div>
                       <div class="col-5 col-md-5 ">
-                        <label class="small d-block mb-1">Jam:</label>
+                        <label class="small d-block mb-1" data-i18n="index.booking_form.time_label">Jam:</label>
                         <div class="input-group time-input flex-nowrap w-100">
                           <select id="start_hour" class="form-control bg-white text-dark">
                             <option value="">HH</option>
@@ -442,11 +442,11 @@
                   </div>
                   
                   <div class="form-group">
-                    <label class="label"><span class="fa fa-clock-o mr-2"></span>Selesai Sewa</label>
+                    <label class="label"><span class="fa fa-clock-o mr-2"></span><span data-i18n="index.booking_form.end_rental">Selesai Sewa</span></label>
                     <div class="form-row">
                   
                       <div class="col-5 col-md-5 mb-2 mb-md-0">
-                        <label class="small d-block mb-1">Tanggal:</label>
+                        <label class="small d-block mb-1" data-i18n="index.booking_form.date_label">Tanggal:</label>
                         <input type="date" class="form-control bg-white text-dark" id="end_date" name="end_date" value="{{ form_values.end_date or '' }}">
 
                       </div>
@@ -454,7 +454,7 @@
                       </div>
                   
                       <div class="col-5 col-md-5 ">
-                        <label class="small d-block mb-1">Jam:</label>
+                        <label class="small d-block mb-1" data-i18n="index.booking_form.time_label">Jam:</label>
                         <div class="input-group time-input flex-nowrap w-100">
                           <select id="end_hour" class="form-control bg-white text-dark">
                             <option value="">HH</option>
@@ -480,7 +480,7 @@
                   
                   
 			            <div class="form-group mt-3">
-			              <input type="submit" value="Cek Harga" class="btn btn-secondary btn-block py-3 px-4 w-100" style="border-radius: 10px;">
+			              <input type="submit" data-i18n-value="index.booking_form.check_price" value="Cek Harga" class="btn btn-secondary btn-block py-3 px-4 w-100" style="border-radius: 10px;">
 			            </div>
 			    			</form>
 	  					</div>
@@ -578,8 +578,8 @@
                         <div class="">
                           <i class="fa fa-star"></i>
                         </div>
-                        <h3>Kenapa Pilih Alextrans?</h3>
-                        <p>Solusi transportasi terpercaya di Bandung</p>
+                        <h3 data-i18n="index.why_choose.title">Kenapa Pilih Alextrans?</h3>
+                        <p data-i18n="index.why_choose.subtitle">Solusi transportasi terpercaya di Bandung</p>
                       </div>
                       
                       <div class="why-features">
@@ -588,8 +588,8 @@
                             <i class="fa fa-check"></i>
                           </div>
                           <div class="feature-content">
-                            <h5>Armada Lengkap & Terawat</h5>
-                            <p>Mobil, minibus, hingga bus bersih dan siap perjalanan jauh</p>
+                            <h5 data-i18n="index.why_choose.feature1_title">Armada Lengkap & Terawat</h5>
+                            <p data-i18n="index.why_choose.feature1_desc">Mobil, minibus, hingga bus bersih dan siap perjalanan jauh</p>
                           </div>
                         </div>
                         
@@ -598,8 +598,8 @@
                             <i class="fa fa-check"></i>
                           </div>
                           <div class="feature-content">
-                            <h5>Supir Profesional</h5>
-                            <p>Driver ramah, berpengalaman, dan paham rute wisata</p>
+                            <h5 data-i18n="index.why_choose.feature2_title">Supir Profesional</h5>
+                            <p data-i18n="index.why_choose.feature2_desc">Driver ramah, berpengalaman, dan paham rute wisata</p>
                           </div>
                         </div>
                         
@@ -608,8 +608,8 @@
                             <i class="fa fa-check"></i>
                           </div>
                           <div class="feature-content">
-                            <h5>Harga Transparan</h5>
-                            <p>Tidak ada biaya tersembunyi, semua jelas di awal</p>
+                            <h5 data-i18n="index.why_choose.feature3_title">Harga Transparan</h5>
+                            <p data-i18n="index.why_choose.feature3_desc">Tidak ada biaya tersembunyi, semua jelas di awal</p>
                           </div>
                         </div>
                         
@@ -618,8 +618,8 @@
                             <i class="fa fa-check"></i>
                           </div>
                           <div class="feature-content">
-                            <h5>Booking Mudah</h5>
-                            <p>Proses cepat via WhatsApp, respon dalam hitungan menit</p>
+                            <h5 data-i18n="index.why_choose.feature4_title">Booking Mudah</h5>
+                            <p data-i18n="index.why_choose.feature4_desc">Proses cepat via WhatsApp, respon dalam hitungan menit</p>
                           </div>
                         </div>
                       </div>
@@ -648,17 +648,17 @@
       <div class="row justify-content-center">
         <div class="col-lg-10">
           <div class="text-center mb-4">
-            <span class="subheading d-inline-block px-3 py-1 rounded" style="background: rgba(37,211,102,.12); color:#25D366; font-weight:600;">Tentang Kami</span>
-            <h2 class="mb-3 mt-3" style="font-weight:700; color: var(--color-primary-bg);">Rental Mobil Bandung Terpercaya</h2>
+            <span class="subheading d-inline-block px-3 py-1 rounded" style="background: rgba(37,211,102,.12); color:#25D366; font-weight:600;" data-i18n="index.about.badge">Tentang Kami</span>
+            <h2 class="mb-3 mt-3" style="font-weight:700; color: var(--color-primary-bg);" data-i18n="index.about.title">Rental Mobil Bandung Terpercaya</h2>
           </div>
           <div class="about-content" style="font-size: 16px; line-height: 1.8; color: #555; text-align: justify;">
-            <p style="margin-bottom: 20px;">
+            <p style="margin-bottom: 20px;" data-i18n-html="index.about.paragraph1">
               <strong>ALEXTRANS</strong> adalah penyedia jasa <strong>rental mobil Bandung</strong> terpercaya dengan layanan 24 jam. Kami menyediakan <strong>sewa mobil Bandung murah</strong> untuk berbagai kebutuhan - baik <strong>rental mobil Bandung lepas kunci</strong> (self drive) maupun <strong>sewa mobil dengan sopir</strong> profesional.
             </p>
-            <p style="margin-bottom: 20px;">
+            <p style="margin-bottom: 20px;" data-i18n-html="index.about.paragraph2">
               Armada kami meliputi Avanza, Innova, Alphard, Hiace, hingga Bus untuk keluarga atau rombongan. Cocok untuk <strong>city tour Bandung</strong>, paket wisata, <strong>antar jemput bandara</strong>, perjalanan bisnis, maupun acara keluarga.
             </p>
-            <p style="margin-bottom: 0;">
+            <p style="margin-bottom: 0;" data-i18n-html="index.about.paragraph3">
               Dengan harga transparan mulai Rp 350.000/hari, proses booking via WhatsApp yang mudah, dan pelayanan ramah, ALEXTRANS menjadi pilihan utama <strong>rental mobil di Bandung</strong>. Kami siap melayani Anda kapan saja dengan armada terawat dan sopir berpengalaman.
             </p>
           </div>
@@ -671,9 +671,9 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-10 text-center">
-          <span class="subheading d-inline-block px-3 py-1 rounded" style="background: rgba(37,211,102,.12); color:#25D366; font-weight:600;">Layanan Kami</span>
-          <h2 class="mb-3 mt-3" style="font-weight:700;">Layanan Rental Mobil Bandung</h2>
-          <p style="color: #666;">Layanan lengkap rental mobil Bandung: lepas kunci, dengan sopir, city tour, dan antar jemput bandara. Armada terawat, harga transparan, proses mudah.</p>
+          <span class="subheading d-inline-block px-3 py-1 rounded" style="background: rgba(37,211,102,.12); color:#25D366; font-weight:600;" data-i18n="index.services.badge">Layanan Kami</span>
+          <h2 class="mb-3 mt-3" style="font-weight:700;" data-i18n="index.services.title">Layanan Rental Mobil Bandung</h2>
+          <p style="color: #666;" data-i18n="index.services.subtitle">Layanan lengkap rental mobil Bandung: lepas kunci, dengan sopir, city tour, dan antar jemput bandara. Armada terawat, harga transparan, proses mudah.</p>
         </div>
       </div>
     </div>
@@ -706,13 +706,13 @@
         </div>
         <div class="col-md-6 wrap-about ftco-animate">
           <div class="heading-section heading-section-white pl-md-5">
-            <span class="subheading">Layanan Unggulan</span>
-            <h3 class="mb-4" style="font-size: 32px; font-weight: 700; color: #fff;">Rental Mobil Lepas Kunci Bandung Tanpa Survei</h3>
+            <span class="subheading" data-i18n="index.service_lepas_kunci.badge">Layanan Unggulan</span>
+            <h3 class="mb-4" style="font-size: 32px; font-weight: 700; color: #fff;" data-i18n="index.service_lepas_kunci.title">Rental Mobil Lepas Kunci Bandung Tanpa Survei</h3>
 
-            <p style="font-size: 16px; line-height: 1.8; color: #fff;">Nikmati kebebasan berkendara dengan layanan <strong>rental mobil lepas kunci Bandung</strong>. Sewa mobil tanpa sopir (self drive) untuk fleksibilitas maksimal. Proses mudah tanpa survei, armada terawat, harga terjangkau. Cocok untuk perjalanan pribadi, liburan keluarga, atau kebutuhan mobilitas harian Anda di Bandung.</p>
+            <p style="font-size: 16px; line-height: 1.8; color: #fff;" data-i18n-html="index.service_lepas_kunci.description">Nikmati kebebasan berkendara dengan layanan <strong>rental mobil lepas kunci Bandung</strong>. Sewa mobil tanpa sopir (self drive) untuk fleksibilitas maksimal. Proses mudah tanpa survei, armada terawat, harga terjangkau. Cocok untuk perjalanan pribadi, liburan keluarga, atau kebutuhan mobilitas harian Anda di Bandung.</p>
 
             <p class="mt-4">
-              <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20mau%20rental%20mobil%20lepas%20kunci%20di%20Bandung" target="_blank" class="btn btn-primary px-4 py-3">Cek Harga & Ketersediaan</a>
+              <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20mau%20rental%20mobil%20lepas%20kunci%20di%20Bandung" target="_blank" class="btn btn-primary px-4 py-3" data-i18n="index.service_lepas_kunci.cta">Cek Harga & Ketersediaan</a>
             </p>
           </div>
         </div>
@@ -724,13 +724,13 @@
       <div class="row no-gutters">
         <div class="col-md-6 order-2 order-md-1 wrap-about ftco-animate">
           <div class="heading-section heading-section-white pr-md-5">
-            <span class="subheading">Layanan Unggulan</span>
-            <h3 class="mb-4" style="font-size: 32px; font-weight: 700; color: #fff;">Sewa Mobil Jakarta Antar Jemput Bandara Soekarno-Hatta &amp; Halim</h3>
+            <span class="subheading" data-i18n="index.service_bandara.badge">Layanan Unggulan</span>
+            <h3 class="mb-4" style="font-size: 32px; font-weight: 700; color: #fff;" data-i18n="index.service_bandara.title">Sewa Mobil Jakarta Antar Jemput Bandara Soekarno-Hatta &amp; Halim</h3>
 
-            <p style="font-size: 16px; line-height: 1.8; color: #fff;">Layanan antar jemput bandara Jakarta (Soekarno-Hatta &amp; Halim Perdanakusuma) yang cepat dan nyaman. Kami siap menjemput atau mengantar Anda ke bandara dengan tepat waktu. Tersedia berbagai pilihan armada dari sedan hingga mobil keluarga. Sopir profesional, harga flat, tanpa biaya tersembunyi. Sempurnakan perjalanan Anda dengan layanan airport transfer terpercaya di Jakarta.</p>
+            <p style="font-size: 16px; line-height: 1.8; color: #fff;" data-i18n-html="index.service_bandara.description">Layanan antar jemput bandara Jakarta (Soekarno-Hatta &amp; Halim Perdanakusuma) yang cepat dan nyaman. Kami siap menjemput atau mengantar Anda ke bandara dengan tepat waktu. Tersedia berbagai pilihan armada dari sedan hingga mobil keluarga. Sopir profesional, harga flat, tanpa biaya tersembunyi. Sempurnakan perjalanan Anda dengan layanan airport transfer terpercaya di Jakarta.</p>
 
             <p class="mt-4">
-              <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20butuh%20layanan%20antar%20jemput%20bandara%20Jakarta" target="_blank" class="btn btn-primary px-4 py-3">Booking Mudah via WA</a>
+              <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20butuh%20layanan%20antar%20jemput%20bandara%20Jakarta" target="_blank" class="btn btn-primary px-4 py-3" data-i18n="index.service_bandara.cta">Booking Mudah via WA</a>
             </p>
           </div>
         </div>
@@ -746,13 +746,13 @@
         </div>
         <div class="col-md-6 wrap-about ftco-animate">
           <div class="heading-section heading-section-white pl-md-5">
-            <span class="subheading">Layanan Unggulan</span>
-            <h3 class="mb-4" style="font-size: 32px; font-weight: 700; color: #fff;">Paket City Tour Bandung dengan Sopir Berpengalaman</h3>
+            <span class="subheading" data-i18n="index.service_citytour.badge">Layanan Unggulan</span>
+            <h3 class="mb-4" style="font-size: 32px; font-weight: 700; color: #fff;" data-i18n="index.service_citytour.title">Paket City Tour Bandung dengan Sopir Berpengalaman</h3>
   
-            <p style="font-size: 16px; line-height: 1.8; color: #fff;">Jelajahi destinasi wisata Bandung dengan <strong>paket city tour</strong> nyaman dan terjangkau. <strong>Sewa mobil wisata Bandung</strong> dengan sopir yang ramah dan paham rute wisata terbaik. Cocok untuk keluarga, rombongan, atau perjalanan pribadi. Paket wisata Bandung fleksibel sesuai kebutuhan Anda - dari wisata alam, kuliner, hingga belanja. Harga bersahabat, pengalaman tak terlupakan.</p>
+            <p style="font-size: 16px; line-height: 1.8; color: #fff;" data-i18n-html="index.service_citytour.description">Jelajahi destinasi wisata Bandung dengan <strong>paket city tour</strong> nyaman dan terjangkau. <strong>Sewa mobil wisata Bandung</strong> dengan sopir yang ramah dan paham rute wisata terbaik. Cocok untuk keluarga, rombongan, atau perjalanan pribadi. Paket wisata Bandung fleksibel sesuai kebutuhan Anda - dari wisata alam, kuliner, hingga belanja. Harga bersahabat, pengalaman tak terlupakan.</p>
   
             <p class="mt-4">
-              <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20mau%20paket%20city%20tour%20Bandung" target="_blank" class="btn btn-primary px-4 py-3">Pesan Paket Wisata</a>
+              <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20mau%20paket%20city%20tour%20Bandung" target="_blank" class="btn btn-primary px-4 py-3" data-i18n="index.service_citytour.cta">Pesan Paket Wisata</a>
             </p>
           </div>
         </div>
@@ -765,9 +765,9 @@
     	<div class="container">
         <div class="row justify-content-center">
           <div class="col-md-12 heading-section text-center ftco-animate mb-5">
-          	<span class="subheading d-inline-block px-3 py-1 rounded" style="background: rgba(37,211,102,.12); color:#25D366; font-weight:600;">Pilihan Armada</span>
-            <h2 class="mb-2" style="font-weight:800;">Daftar Harga Rental Mobil Bandung</h2>
-            <p class="text-muted mb-0">Pilihan lengkap armada rental mobil Bandung: mobil, minibus, hingga bus. Harga transparan mulai Rp 350.000/hari untuk berbagai kebutuhan Anda.</p>
+          	<span class="subheading d-inline-block px-3 py-1 rounded" style="background: rgba(37,211,102,.12); color:#25D366; font-weight:600;" data-i18n="index.fleet.badge">Pilihan Armada</span>
+            <h2 class="mb-2" style="font-weight:800;" data-i18n="index.fleet.title">Daftar Harga Rental Mobil Bandung</h2>
+            <p class="text-muted mb-0" data-i18n="index.fleet.subtitle">Pilihan lengkap armada rental mobil Bandung: mobil, minibus, hingga bus. Harga transparan mulai Rp 350.000/hari untuk berbagai kebutuhan Anda.</p>
           </div>
         </div>
     		<div class="row">
@@ -829,9 +829,9 @@
 			<div class="container">
 				<div class="row justify-content-center mb-5">
           <div class="col-md-8 text-center heading-section ftco-animate">
-          	<span class="subheading d-inline-block px-3 py-1 rounded" style="background: rgba(37,211,102,.12); color:#25D366; font-weight:600;">Keunggulan</span>
-            <h2 class="mb-2" style="font-weight:800;">Mengapa Memilih Rental Mobil Kami</h2>
-            <p class="text-muted mb-0">Layanan rental mobil Bandung terbaik dengan harga transparan dan armada terawat. Tersedia lepas kunci maupun dengan sopir.</p>
+          	<span class="subheading d-inline-block px-3 py-1 rounded" style="background: rgba(37,211,102,.12); color:#25D366; font-weight:600;" data-i18n="index.advantages.badge">Keunggulan</span>
+            <h2 class="mb-2" style="font-weight:800;" data-i18n="index.advantages.title">Mengapa Memilih Rental Mobil Kami</h2>
+            <p class="text-muted mb-0" data-i18n="index.advantages.subtitle">Layanan rental mobil Bandung terbaik dengan harga transparan dan armada terawat. Tersedia lepas kunci maupun dengan sopir.</p>
           </div>
         </div>
 				<div class="row">
@@ -841,8 +841,8 @@
                 <span class="fa fa-car" style="font-size:28px;"></span>
               </div>
             	<div class="text w-100">
-                <h3 class="heading mb-2" style="font-weight:700; font-size: 18px;">Armada Lengkap & Terawat</h3>
-                <p class="mb-0">Pilihan mobil beragam: Avanza, Innova, Alphard, Hiace, hingga Bus. Semua armada bersih dan siap untuk perjalanan jauh maupun city tour.</p>
+                <h3 class="heading mb-2" style="font-weight:700; font-size: 18px;" data-i18n="index.advantages.feature1_title">Armada Lengkap & Terawat</h3>
+                <p class="mb-0" data-i18n="index.advantages.feature1_desc">Pilihan mobil beragam: Avanza, Innova, Alphard, Hiace, hingga Bus. Semua armada bersih dan siap untuk perjalanan jauh maupun city tour.</p>
               </div>
             </div>
 					</div>
@@ -852,8 +852,8 @@
                 <span class="fa fa-user" style="font-size:28px;"></span>
               </div>
             	<div class="text w-100">
-                <h3 class="heading mb-2" style="font-weight:700; font-size: 18px;">Sopir Profesional</h3>
-                <p class="mb-0">Driver berpengalaman, ramah, dan paham rute wisata Bandung. Tersedia untuk layanan dengan sopir maupun city tour.</p>
+                <h3 class="heading mb-2" style="font-weight:700; font-size: 18px;" data-i18n="index.advantages.feature2_title">Sopir Profesional</h3>
+                <p class="mb-0" data-i18n="index.advantages.feature2_desc">Driver berpengalaman, ramah, dan paham rute wisata Bandung. Tersedia untuk layanan dengan sopir maupun city tour.</p>
               </div>
             </div>
 					</div>
@@ -863,8 +863,8 @@
                 <span class="fa fa-tags" style="font-size:28px;"></span>
               </div>
             	<div class="text w-100">
-                <h3 class="heading mb-2" style="font-weight:700; font-size: 18px;">Harga Transparan</h3>
-                <p class="mb-0">Tanpa biaya tersembunyi, semua jelas di awal. Harga sewa mobil Bandung terjangkau mulai Rp 350.000/hari.</p>
+                <h3 class="heading mb-2" style="font-weight:700; font-size: 18px;" data-i18n="index.advantages.feature3_title">Harga Transparan</h3>
+                <p class="mb-0" data-i18n="index.advantages.feature3_desc">Tanpa biaya tersembunyi, semua jelas di awal. Harga sewa mobil Bandung terjangkau mulai Rp 350.000/hari.</p>
               </div>
             </div>
 					</div>
@@ -874,14 +874,14 @@
                 <span class="fa fa-headphones" style="font-size:28px;"></span>
               </div>
             	<div class="text w-100">
-                <h3 class="heading mb-2" style="font-weight:700; font-size: 18px;">Layanan 24 Jam</h3>
-                <p class="mb-0">Rental mobil Bandung 24 jam siap melayani. Booking kapan saja via WhatsApp dengan respon cepat.</p>
+                <h3 class="heading mb-2" style="font-weight:700; font-size: 18px;" data-i18n="index.advantages.feature4_title">Layanan 24 Jam</h3>
+                <p class="mb-0" data-i18n="index.advantages.feature4_desc">Rental mobil Bandung 24 jam siap melayani. Booking kapan saja via WhatsApp dengan respon cepat.</p>
               </div>
             </div>
 					</div>
 				</div>
         <div class="text-center mt-2">
-          <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20tertarik%20rental%20mobil%20Bandung.%20Mohon%20info%20harga%20dan%20armada.%20Terima%20kasih!" target="_blank" rel="noopener" class="btn btn-primary px-4 py-3">Booking Sekarang</a>
+          <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20tertarik%20rental%20mobil%20Bandung.%20Mohon%20info%20harga%20dan%20armada.%20Terima%20kasih!" target="_blank" rel="noopener" class="btn btn-primary px-4 py-3" data-i18n="index.advantages.cta">Booking Sekarang</a>
         </div>
 			</div>
 		</section>
@@ -891,9 +891,9 @@
 			<div class="container">
 				<div class="row justify-content-end">
 					<div class="col-md-6 heading-section heading-section-white ftco-animate">
-            <h2 class="mb-3" style="font-size: 36px; font-weight: 700;">Sewa Mobil Bandung Sekarang - Armada Terbatas!</h2>
-            <p style="font-size: 18px; margin-bottom: 25px;">Jangan sampai kehabisan armada di hari libur atau peak season. Booking rental mobil Bandung Anda sekarang untuk harga terbaik!</p>
-            <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20mau%20booking%20rental%20mobil%20Bandung" target="_blank" rel="noopener" class="btn btn-primary btn-lg px-5 py-3">Booking Sekarang</a>
+            <h2 class="mb-3" style="font-size: 36px; font-weight: 700;" data-i18n="index.cta_banner.title">Sewa Mobil Bandung Sekarang - Armada Terbatas!</h2>
+            <p style="font-size: 18px; margin-bottom: 25px;" data-i18n="index.cta_banner.description">Jangan sampai kehabisan armada di hari libur atau peak season. Booking rental mobil Bandung Anda sekarang untuk harga terbaik!</p>
+            <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20mau%20booking%20rental%20mobil%20Bandung" target="_blank" rel="noopener" class="btn btn-primary btn-lg px-5 py-3" data-i18n="index.cta_banner.cta">Booking Sekarang</a>
           </div>
 				</div>
 			</div>
@@ -906,12 +906,12 @@
         <div class="row justify-content-center mb-5">
           <div class="col-lg-8 text-center heading-section ftco-animate">
             <div class="d-inline-block px-4 py-2 mb-3" style="background: linear-gradient(135deg, var(--color-accent), #4c7bff); border-radius: 50px; box-shadow: 0 4px 15px rgba(37,96,233,0.2);">
-              <span style="color: white; font-weight: 600; font-size: 14px; letter-spacing: 1px;">TESTIMONI</span>
+              <span style="color: white; font-weight: 600; font-size: 14px; letter-spacing: 1px;" data-i18n="index.testimonials.badge">TESTIMONI</span>
             </div>
-            <h2 class="mb-3" style="font-size: 42px; font-weight: 700; color: var(--color-primary-bg); line-height: 1.2;">
+            <h2 class="mb-3" style="font-size: 42px; font-weight: 700; color: var(--color-primary-bg); line-height: 1.2;" data-i18n="index.testimonials.title">
               Kepercayaan <span style="background: linear-gradient(135deg, var(--color-accent), #4c7bff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Pelanggan</span> Kami
             </h2>
-            <p style="font-size: 16px; color: #6c757d; max-width: 600px; margin: 0 auto;">
+            <p style="font-size: 16px; color: #6c757d; max-width: 600px; margin: 0 auto;" data-i18n="index.testimonials.subtitle">
               Ribuan pelanggan telah mempercayai layanan rental mobil kami untuk perjalanan yang aman dan nyaman
             </p>
           </div>
@@ -935,13 +935,13 @@
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                   </div>
-                  <p class="testimony-text">
+                  <p class="testimony-text" data-i18n="index.testimonials.testimonial1_text">
                     Sewa Avanza untuk mudik, prosesnya gampang banget via WA. Mobilnya bersih, AC dingin, dan bensin irit. Puas banget, next pasti pakai Alextrans lagi.
                   </p>
                   <div class="testimony-author">
                     <div class="author-info">
-                      <h5 class="author-name">Budi Santoso</h5>
-                      <p class="author-position">Sewa Avanza Lepas Kunci</p>
+                      <h5 class="author-name" data-i18n="index.testimonials.testimonial1_name">Budi Santoso</h5>
+                      <p class="author-position" data-i18n="index.testimonials.testimonial1_service">Sewa Avanza Lepas Kunci</p>
                     </div>
                   </div>
                 </div>
@@ -960,13 +960,13 @@
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                   </div>
-                  <p class="testimony-text">
+                  <p class="testimony-text" data-i18n="index.testimonials.testimonial2_text">
                     Pakai Hiace Commuter untuk rombongan keluarga ke Lembang. Supirnya ramah dan paham rute, mobilnya lega dan nyaman. Recommended!
                   </p>
                   <div class="testimony-author">
                     <div class="author-info">
-                      <h5 class="author-name">Siti Nurhaliza</h5>
-                      <p class="author-position">Sewa Hiace Commuter + Supir</p>
+                      <h5 class="author-name" data-i18n="index.testimonials.testimonial2_name">Siti Nurhaliza</h5>
+                      <p class="author-position" data-i18n="index.testimonials.testimonial2_service">Sewa Hiace Commuter + Supir</p>
                     </div>
                   </div>
                 </div>
@@ -985,13 +985,13 @@
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                   </div>
-                  <p class="testimony-text">
+                  <p class="testimony-text" data-i18n="index.testimonials.testimonial3_text">
                     Alphard untuk acara keluarga, pelayanannya premium banget. Interior mewah, sopir profesional, tepat waktu. Worth it untuk acara penting.
                   </p>
                   <div class="testimony-author">
                     <div class="author-info">
-                      <h5 class="author-name">Rudi Hermawan</h5>
-                      <p class="author-position">Sewa Alphard dengan Supir</p>
+                      <h5 class="author-name" data-i18n="index.testimonials.testimonial3_name">Rudi Hermawan</h5>
+                      <p class="author-position" data-i18n="index.testimonials.testimonial3_service">Sewa Alphard dengan Supir</p>
                     </div>
                   </div>
                 </div>
@@ -1010,13 +1010,13 @@
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                   </div>
-                  <p class="testimony-text">
+                  <p class="testimony-text" data-i18n="index.testimonials.testimonial4_text">
                     Innova Reborn untuk city tour, sangat puas. Mobil terawat, AC dingin, dan harganya masuk akal. Admin responsif, proses booking cepat.
                   </p>
                   <div class="testimony-author">
                     <div class="author-info">
-                      <h5 class="author-name">Denny Prakoso</h5>
-                      <p class="author-position">Sewa Innova Reborn + Supir</p>
+                      <h5 class="author-name" data-i18n="index.testimonials.testimonial4_name">Denny Prakoso</h5>
+                      <p class="author-position" data-i18n="index.testimonials.testimonial4_service">Sewa Innova Reborn + Supir</p>
                     </div>
                   </div>
                 </div>
@@ -1035,13 +1035,13 @@
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                   </div>
-                  <p class="testimony-text">
+                  <p class="testimony-text" data-i18n="index.testimonials.testimonial5_text">
                     Rush lepas kunci untuk weekend getaway, mobilnya oke banget. Mesin halus, interior rapi, tanpa ribet survei. Terima kasih Alextrans!
                   </p>
                   <div class="testimony-author">
                     <div class="author-info">
-                      <h5 class="author-name">Andi Wijaya</h5>
-                      <p class="author-position">Sewa Rush Lepas Kunci</p>
+                      <h5 class="author-name" data-i18n="index.testimonials.testimonial5_name">Andi Wijaya</h5>
+                      <p class="author-position" data-i18n="index.testimonials.testimonial5_service">Sewa Rush Lepas Kunci</p>
                     </div>
                   </div>
                 </div>
@@ -1060,13 +1060,13 @@
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                   </div>
-                  <p class="testimony-text">
+                  <p class="testimony-text" data-i18n="index.testimonials.testimonial6_text">
                     Fortuner untuk perjalanan ke Pangandaran, sangat nyaman dan aman. Sopirnya pengalaman, tahu jalan pintas. Puas dengan pelayanannya.
                   </p>
                   <div class="testimony-author">
                     <div class="author-info">
-                      <h5 class="author-name">Lisa Permata</h5>
-                      <p class="author-position">Sewa Fortuner dengan Supir</p>
+                      <h5 class="author-name" data-i18n="index.testimonials.testimonial6_name">Lisa Permata</h5>
+                      <p class="author-position" data-i18n="index.testimonials.testimonial6_service">Sewa Fortuner dengan Supir</p>
                     </div>
                   </div>
                 </div>
@@ -1080,9 +1080,9 @@
         <div class="row mt-5 ftco-animate">
           <div class="col-12 text-center">
             <div class="testimony-cta-modern">
-              <h4 style="color: white; font-weight: 700; margin-bottom: 15px;">Siap Merasakan Pengalaman Terbaik?</h4>
-              <p style="color: rgba(255,255,255,0.9); margin-bottom: 25px;">Bergabunglah dengan ribuan pelanggan puas kami</p>
-              <a href="https://wa.me/6281313256756?text=hai%20saya%20mau%20cari%20mobil%20ka" target="_blank" class="btn btn-testimony-cta">
+              <h4 style="color: white; font-weight: 700; margin-bottom: 15px;" data-i18n="index.testimonials.cta_title">Siap Merasakan Pengalaman Terbaik?</h4>
+              <p style="color: rgba(255,255,255,0.9); margin-bottom: 25px;" data-i18n="index.testimonials.cta_subtitle">Bergabunglah dengan ribuan pelanggan puas kami</p>
+              <a href="https://wa.me/6281313256756?text=hai%20saya%20mau%20cari%20mobil%20ka" target="_blank" class="btn btn-testimony-cta" data-i18n="index.testimonials.cta_button">
                   Pesan Sekarang
               </a>
             </div>
@@ -1154,8 +1154,8 @@
     	<div class="container">
         <div class="row justify-content-center mb-4">
           <div class="col-md-8 text-center">
-            <h2 class="mb-2 text-white" style="font-weight:800;">Alextrans dalam Angka</h2>
-            <p class="text-white" style="opacity:0.9;">Dipercaya ratusan pelanggan dengan layanan profesional</p>
+            <h2 class="mb-2 text-white" style="font-weight:800;" data-i18n="index.stats.title">Alextrans dalam Angka</h2>
+            <p class="text-white" style="opacity:0.9;" data-i18n="index.stats.subtitle">Dipercaya ratusan pelanggan dengan layanan profesional</p>
           </div>
         </div>
     		<div class="row">
@@ -1168,8 +1168,8 @@
                 <strong class="number" data-number="3">0</strong>
                 <span class="stat-plus">+</span>
               </div>
-              <div class="stat-label">Tahun Berdiri</div>
-              <div class="stat-description">Pengalaman terpercaya</div>
+              <div class="stat-label" data-i18n="index.stats.years_title">Tahun Berdiri</div>
+              <div class="stat-description" data-i18n="index.stats.years_desc">Pengalaman terpercaya</div>
             </div>
           </div>
           <div class="col-md-6 col-lg-3 mb-4 ftco-animate">
@@ -1181,8 +1181,8 @@
                 <strong class="number" data-number="32">0</strong>
                 <span class="stat-plus">+</span>
               </div>
-              <div class="stat-label">Armada Tersedia</div>
-              <div class="stat-description">Kendaraan terawat</div>
+              <div class="stat-label" data-i18n="index.stats.fleet_title">Armada Tersedia</div>
+              <div class="stat-description" data-i18n="index.stats.fleet_desc">Kendaraan terawat</div>
             </div>
           </div>
           <div class="col-md-6 col-lg-3 mb-4 ftco-animate">
@@ -1194,8 +1194,8 @@
                 <strong class="number" data-number="234">0</strong>
                 <span class="stat-plus">+</span>
               </div>
-              <div class="stat-label">Pelanggan Puas</div>
-              <div class="stat-description">Kepuasan terjamin</div>
+              <div class="stat-label" data-i18n="index.stats.customers_title">Pelanggan Puas</div>
+              <div class="stat-description" data-i18n="index.stats.customers_desc">Kepuasan terjamin</div>
             </div>
           </div>
           <div class="col-md-6 col-lg-3 mb-4 ftco-animate">
@@ -1207,8 +1207,8 @@
                 <strong class="number" data-number="23">0</strong>
                 <span class="stat-plus">+</span>
               </div>
-              <div class="stat-label">Driver Profesional</div>
-              <div class="stat-description">Ramah & berpengalaman</div>
+              <div class="stat-label" data-i18n="index.stats.drivers_title">Driver Profesional</div>
+              <div class="stat-description" data-i18n="index.stats.drivers_desc">Ramah & berpengalaman</div>
             </div>
           </div>
         </div>
@@ -1220,9 +1220,9 @@
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-lg-8 text-center">
-            <span class="subheading d-inline-block px-3 py-1 rounded" style="background: rgba(37,211,102,.12); color:#25D366; font-weight:600;">FAQ</span>
-            <h2 class="mb-3 mt-3" style="font-weight:800;">Pertanyaan Seputar Rental Mobil Bandung</h2>
-            <p class="text-muted">Informasi penting tentang layanan sewa mobil kami</p>
+            <span class="subheading d-inline-block px-3 py-1 rounded" style="background: rgba(37,211,102,.12); color:#25D366; font-weight:600;" data-i18n="index.faq.badge">FAQ</span>
+            <h2 class="mb-3 mt-3" style="font-weight:800;" data-i18n="index.faq.title">Pertanyaan Seputar Rental Mobil Bandung</h2>
+            <p class="text-muted" data-i18n="index.faq.subtitle">Informasi penting tentang layanan sewa mobil kami</p>
           </div>
         </div>
         <div class="row justify-content-center">
@@ -1232,9 +1232,9 @@
             <div class="faq-item mb-4" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
               <h3 style="font-size: 18px; font-weight: 700; color: var(--color-primary-bg); margin-bottom: 12px;">
                 <i class="fa fa-question-circle mr-2" style="color: #25D366;"></i>
-                Berapa harga rental mobil Bandung per hari?
+                <span data-i18n="index.faq.question1">Berapa harga rental mobil Bandung per hari?</span>
               </h3>
-              <p style="margin: 0; color: #555; line-height: 1.7;">
+              <p style="margin: 0; color: #555; line-height: 1.7;" data-i18n-html="index.faq.answer1">
                 Harga <strong>sewa mobil Bandung</strong> mulai dari Rp 350.000/hari untuk mobil ekonomis seperti Avanza. Harga bervariasi tergantung jenis armada dan durasi sewa. Untuk minibus seperti Hiace mulai Rp 600.000/hari, sudah termasuk atau belum termasuk sopir tergantung paket yang dipilih. Hubungi kami untuk penawaran terbaik.
               </p>
             </div>
@@ -1243,9 +1243,9 @@
             <div class="faq-item mb-4" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
               <h3 style="font-size: 18px; font-weight: 700; color: var(--color-primary-bg); margin-bottom: 12px;">
                 <i class="fa fa-question-circle mr-2" style="color: #25D366;"></i>
-                Apakah tersedia rental mobil lepas kunci tanpa survei?
+                <span data-i18n="index.faq.question2">Apakah tersedia rental mobil lepas kunci tanpa survei?</span>
               </h3>
-              <p style="margin: 0; color: #555; line-height: 1.7;">
+              <p style="margin: 0; color: #555; line-height: 1.7;" data-i18n-html="index.faq.answer2">
                 Ya, kami menyediakan layanan <strong>rental mobil lepas kunci Bandung tanpa survei</strong>. Proses cepat dan mudah, cukup lengkapi dokumen (KTP, SIM, KK) dan jaminan sesuai ketentuan. Cocok untuk Anda yang ingin berkendara sendiri (self drive) dengan fleksibilitas penuh.
               </p>
             </div>
@@ -1254,9 +1254,9 @@
             <div class="faq-item mb-4" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
               <h3 style="font-size: 18px; font-weight: 700; color: var(--color-primary-bg); margin-bottom: 12px;">
                 <i class="fa fa-question-circle mr-2" style="color: #25D366;"></i>
-                Bagaimana cara booking rental mobil Bandung?
+                <span data-i18n="index.faq.question3">Bagaimana cara booking rental mobil Bandung?</span>
               </h3>
-              <p style="margin: 0; color: #555; line-height: 1.7;">
+              <p style="margin: 0; color: #555; line-height: 1.7;" data-i18n-html="index.faq.answer3">
                 Booking sangat mudah! Hubungi kami via WhatsApp di <strong>+62 813-1325-6756</strong>, atau gunakan form "Cek Harga" di website ini. Tim kami akan merespon cepat dan membantu memilih armada yang sesuai kebutuhan Anda. Proses booking hanya butuh beberapa menit.
               </p>
             </div>
@@ -1265,9 +1265,9 @@
             <div class="faq-item mb-4" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
               <h3 style="font-size: 18px; font-weight: 700; color: var(--color-primary-bg); margin-bottom: 12px;">
                 <i class="fa fa-question-circle mr-2" style="color: #25D366;"></i>
-                Apakah ada paket city tour Bandung?
+                <span data-i18n="index.faq.question4">Apakah ada paket city tour Bandung?</span>
               </h3>
-              <p style="margin: 0; color: #555; line-height: 1.7;">
+              <p style="margin: 0; color: #555; line-height: 1.7;" data-i18n-html="index.faq.answer4">
                 Tentu! Kami menyediakan <strong>paket city tour Bandung</strong> dengan sopir berpengalaman yang paham rute wisata. Destinasi populer meliputi Lembang, Dago, Kawah Putih, Tangkuban Perahu, dan tempat wisata lainnya. Paket dapat disesuaikan dengan kebutuhan dan budget Anda. Harga mulai dari Rp 950.000 untuk 12 jam.
               </p>
             </div>
@@ -1276,10 +1276,10 @@
             <div class="faq-item mb-4" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
               <h3 style="font-size: 18px; font-weight: 700; color: var(--color-primary-bg); margin-bottom: 12px;">
                 <i class="fa fa-question-circle mr-2" style="color: #25D366;"></i>
-                Apakah melayani antar jemput bandara?
+                <span data-i18n="index.faq.question5">Apakah melayani antar jemput bandara?</span>
               </h3>
-              <p style="margin: 0; color: #555; line-height: 1.7;">
-                Ya, kami melayani <strong>antar jemput bandara Husein Sastranegara</strong> 24 jam. Sopir akan menjemput atau mengantar Anda tepat waktu. Harga flat tanpa biaya tersembunyi. Layanan airport transfer tersedia untuk berbagai jenis armada, dari sedan hingga minibus untuk rombongan.
+              <p style="margin: 0; color: #555; line-height: 1.7;" data-i18n-html="index.faq.answer5">
+                Ya, kami melayani <strong>antar jemput bandara Soekarno-Hatta & Halim Jakarta</strong> 24 jam. Sopir akan menjemput atau mengantar Anda tepat waktu. Harga flat tanpa biaya tersembunyi. Layanan airport transfer tersedia untuk berbagai jenis armada, dari sedan hingga minibus untuk rombongan.
               </p>
             </div>
 
@@ -1287,9 +1287,9 @@
             <div class="faq-item" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
               <h3 style="font-size: 18px; font-weight: 700; color: var(--color-primary-bg); margin-bottom: 12px;">
                 <i class="fa fa-question-circle mr-2" style="color: #25D366;"></i>
-                Apakah rental mobil Bandung tersedia 24 jam?
+                <span data-i18n="index.faq.question6">Apakah rental mobil Bandung tersedia 24 jam?</span>
               </h3>
-              <p style="margin: 0; color: #555; line-height: 1.7;">
+              <p style="margin: 0; color: #555; line-height: 1.7;" data-i18n-html="index.faq.answer6">
                 Ya, <strong>rental mobil Bandung 24 jam</strong> kami siap melayani kapan saja. Customer service kami standby via WhatsApp untuk membantu kebutuhan rental Anda, baik malam hari maupun weekend. Booking dapat dilakukan kapan saja sesuai kebutuhan mendadak Anda.
               </p>
             </div>
@@ -1300,9 +1300,9 @@
         <!-- CTA after FAQ -->
         <div class="row mt-5">
           <div class="col-12 text-center">
-            <p style="font-size: 18px; color: #555; margin-bottom: 20px;">Masih ada pertanyaan? Hubungi kami sekarang!</p>
+            <p style="font-size: 18px; color: #555; margin-bottom: 20px;" data-i18n="index.faq.still_have_questions">Masih ada pertanyaan? Hubungi kami sekarang!</p>
             <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20ada%20pertanyaan%20tentang%20rental%20mobil%20Bandung" target="_blank" rel="noopener" class="btn btn-success btn-lg px-5 py-3" style="background: #25D366; border-color: #25D366;">
-              <i class="fa fa-whatsapp mr-2"></i>Chat via WhatsApp
+              <i class="fa fa-whatsapp mr-2"></i><span data-i18n="index.faq.cta">Chat via WhatsApp</span>
             </a>
           </div>
         </div>
@@ -1323,7 +1323,7 @@
                     <img src="{{ url_for('static', filename='assets/images/logo-removebg.png') }}" alt="Rental Mobil Bandung Murah - ALEXTRANS" style="height: 60px;">
                   </a>
                 </div>
-                <p class="footer-description">ALEXTRANS - Penyedia jasa <strong>rental mobil Bandung</strong> terpercaya. Layanan lepas kunci, dengan sopir, city tour, dan antar jemput bandara. Harga murah, armada lengkap, pelayanan 24 jam.</p>
+                <p class="footer-description" data-i18n-html="footer.description">ALEXTRANS - Penyedia jasa <strong>rental mobil Bandung</strong> terpercaya. Layanan lepas kunci, dengan sopir, city tour, dan antar jemput bandara. Harga murah, armada lengkap, pelayanan 24 jam.</p>
                 <div class="footer-social">
                   <a href="https://instagram.com/alex.transtravel/" target="_blank" rel="noopener" class="social-link">
                     <i class="fa fa-instagram"></i>
@@ -1344,13 +1344,13 @@
             <!-- Quick Links -->
             <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
               <div class="footer-widget">
-                <h4 class="footer-title">Menu</h4>
+                <h4 class="footer-title" data-i18n="footer.menu_title">Menu</h4>
                 <ul class="footer-links">
-                  <li><a href="{{ url_for('index') }}"><i class="fa fa-angle-right mr-2"></i>Beranda</a></li>
-                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i>Layanan</a></li>
-                  <li><a href="{{ url_for('gallery') }}"><i class="fa fa-angle-right mr-2"></i>Galeri</a></li>
-                  <li><a href="{{ url_for('contact') }}"><i class="fa fa-angle-right mr-2"></i>Tentang & Kontak</a></li>
-                  <li><a href="#layanan"><i class="fa fa-angle-right mr-2"></i>Cek Harga</a></li>
+                  <li><a href="{{ url_for('index') }}"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.menu_home">Beranda</span></a></li>
+                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.menu_services">Layanan</span></a></li>
+                  <li><a href="{{ url_for('gallery') }}"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.menu_gallery">Galeri</span></a></li>
+                  <li><a href="{{ url_for('contact') }}"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.menu_contact">Tentang & Kontak</span></a></li>
+                  <li><a href="#layanan"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.menu_check_price">Cek Harga</span></a></li>
                 </ul>
               </div>
             </div>
@@ -1358,13 +1358,13 @@
             <!-- Services -->
             <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
               <div class="footer-widget">
-                <h4 class="footer-title">Layanan Kami</h4>
+                <h4 class="footer-title" data-i18n="footer.services_title">Layanan Kami</h4>
                 <ul class="footer-links">
-                  <li><a href="{{ url_for('layanan') }}" title="Rental mobil lepas kunci Bandung"><i class="fa fa-angle-right mr-2"></i>Rental Mobil Lepas Kunci</a></li>
-                  <li><a href="{{ url_for('layanan') }}" title="Sewa mobil dengan sopir Bandung"><i class="fa fa-angle-right mr-2"></i>Rental Mobil dengan Sopir</a></li>
-                  <li><a href="{{ url_for('layanan') }}" title="Antar jemput bandara Bandung"><i class="fa fa-angle-right mr-2"></i>Antar Jemput Bandara</a></li>
-                  <li><a href="{{ url_for('layanan') }}" title="Paket city tour Bandung"><i class="fa fa-angle-right mr-2"></i>Paket City Tour Bandung</a></li>
-                  <li><a href="{{ url_for('layanan') }}" title="Sewa mobil wisata Bandung"><i class="fa fa-angle-right mr-2"></i>Sewa Mobil Wisata</a></li>
+                  <li><a href="{{ url_for('layanan') }}" title="Rental mobil lepas kunci Bandung"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.service1">Rental Mobil Lepas Kunci</span></a></li>
+                  <li><a href="{{ url_for('layanan') }}" title="Sewa mobil dengan sopir Bandung"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.service2">Rental Mobil dengan Sopir</span></a></li>
+                  <li><a href="{{ url_for('layanan') }}" title="Antar jemput bandara Bandung"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.service3">Antar Jemput Bandara</span></a></li>
+                  <li><a href="{{ url_for('layanan') }}" title="Paket city tour Bandung"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.service4">Paket City Tour Bandung</span></a></li>
+                  <li><a href="{{ url_for('layanan') }}" title="Sewa mobil wisata Bandung"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.service5">Sewa Mobil Wisata</span></a></li>
                 </ul>
               </div>
             </div>
@@ -1372,11 +1372,11 @@
             <!-- Contact Info -->
             <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
               <div class="footer-widget">
-                <h4 class="footer-title">Hubungi Kami</h4>
+                <h4 class="footer-title" data-i18n="footer.contact_title">Hubungi Kami</h4>
                 <ul class="footer-contact">
                   <li>
                     <i class="fa fa-map-marker"></i>
-                    <span>Bandung, Jawa Barat<br>Indonesia</span>
+                    <span><span data-i18n="footer.address">Jl. Rancabentang No. 104 RT 4 RW 14</span><br><span data-i18n="footer.address_line2">Brilink Angelicha, Bandung</span><br><span data-i18n="footer.country">Indonesia</span></span>
                   </li>
                   <li>
                     <i class="fa fa-phone"></i>
@@ -1384,11 +1384,11 @@
                   </li>
                   <li>
                     <i class="fa fa-whatsapp"></i>
-                    <span><a href="https://wa.me/6281313256756" target="_blank">WhatsApp Chat</a></span>
+                    <span><a href="https://wa.me/6281313256756" target="_blank" data-i18n="footer.whatsapp_chat">WhatsApp Chat</a></span>
                   </li>
                   <li>
                     <i class="fa fa-clock-o"></i>
-                    <span>24/7 Support</span>
+                    <span data-i18n="footer.support">24/7 Support</span>
                   </li>
                 </ul>
               </div>
@@ -1404,12 +1404,12 @@
           <div class="row align-items-center">
             <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
               <p class="footer-copyright">
-                &copy; <script>document.write(new Date().getFullYear());</script> <strong>ALEXTRANS</strong>. All rights reserved.
+                &copy; <script>document.write(new Date().getFullYear());</script> <strong>ALEXTRANS</strong>. <span data-i18n="footer.copyright">All rights reserved.</span>
               </p>
             </div>
             <div class="col-md-6 text-center text-md-right">
               <p class="footer-credit">
-                Made with <i class="fa fa-heart" style="color: #e74c3c;"></i> kitabuat.web.id
+                <span data-i18n="footer.made_with">Made with</span> <i class="fa fa-heart" style="color: #e74c3c;"></i> <span data-i18n="footer.by">kitabuat.web.id</span>
               </p>
             </div>
           </div>
@@ -1443,6 +1443,29 @@
   <a class="wa-float" href="https://wa.me/6281313256756?text=hai%20saya%20mau%20cari%20mobil%20ka" target="_blank" rel="noopener" aria-label="WhatsApp Chat">
     <img src="{{ url_for('static', filename='assets/images/icon-wa.png') }}" alt="WA">
   </a>
+
+  <!-- Language Switcher -->
+  <div class="lang-switcher" style="position: fixed; right: 18px; bottom: 90px; z-index: 9999; display: flex; flex-direction: column; gap: 8px;">
+    <button type="button" class="lang-btn" data-lang="id" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid #fff; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.15); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; padding: 0;">
+      <img src="{{ url_for('static', filename='assets/images/indonesia-flag.png') }}" alt="ID" style="width: 28px; height: 28px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span style="display: none; font-weight: 600; font-size: 12px; color: #333;">ID</span>
+    </button>
+    <button type="button" class="lang-btn" data-lang="en" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid #fff; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.15); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; padding: 0;">
+      <img src="{{ url_for('static', filename='assets/images/uk-flag.png') }}" alt="EN" style="width: 28px; height: 28px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span style="display: none; font-weight: 600; font-size: 12px; color: #333;">EN</span>
+    </button>
+  </div>
+
+  <style>
+    .lang-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2) !important;
+    }
+    .lang-btn.active {
+      border-color: #25D366 !important;
+      box-shadow: 0 6px 16px rgba(37,211,102,0.4) !important;
+    }
+  </style>
   <script>
     (function() {
       function applyDriverMandatory() {
@@ -1836,6 +1859,156 @@
           window.open(waLink, '_blank');
         });
       });
+    })();
+  </script>
+
+  <!-- Multi-Language Translation Script -->
+  <script>
+    (function() {
+      var LOCALE_PATH = "{{ url_for('static', filename='json_file/data_') }}";
+      var currentLang = 'id';
+      var translations = {};
+
+      function detectPreferredLanguage() {
+        try {
+          var navLangs = (navigator.languages && navigator.languages.length) 
+            ? navigator.languages 
+            : [navigator.language || navigator.userLanguage || ''];
+          
+          for (var i = 0; i < navLangs.length; i++) {
+            var l = (navLangs[i] || '').toLowerCase();
+            if (l === 'id' || l.indexOf('id-') === 0 || l === 'in' || l.indexOf('in-') === 0) {
+              return 'id';
+            }
+            if (l === 'en' || l.indexOf('en-') === 0) {
+              return 'en';
+            }
+          }
+          
+          var tz = (Intl && Intl.DateTimeFormat && Intl.DateTimeFormat().resolvedOptions().timeZone) || '';
+          var indoTZ = ['Asia/Jakarta','Asia/Pontianak','Asia/Makassar','Asia/Jayapura'];
+          if (indoTZ.indexOf(tz) !== -1) return 'id';
+        } catch (e) {}
+        return 'id';
+      }
+
+      function getByPath(obj, path) {
+        if (!path || !obj) return null;
+        return path.split('.').reduce(function(o, k) {
+          return (o && o[k] != null) ? o[k] : null;
+        }, obj);
+      }
+
+      function applyTranslations() {
+        // Text content
+        var textNodes = document.querySelectorAll('[data-i18n]');
+        for (var i = 0; i < textNodes.length; i++) {
+          var el = textNodes[i];
+          var key = el.getAttribute('data-i18n');
+          var val = getByPath(translations, key);
+          if (val != null) {
+            el.textContent = val;
+          }
+        }
+
+        // HTML content
+        var htmlNodes = document.querySelectorAll('[data-i18n-html]');
+        for (var j = 0; j < htmlNodes.length; j++) {
+          var el = htmlNodes[j];
+          var key = el.getAttribute('data-i18n-html');
+          var val = getByPath(translations, key);
+          if (val != null) {
+            el.innerHTML = val;
+          }
+        }
+
+        // Placeholder
+        var placeholderNodes = document.querySelectorAll('[data-i18n-placeholder]');
+        for (var k = 0; k < placeholderNodes.length; k++) {
+          var el = placeholderNodes[k];
+          var key = el.getAttribute('data-i18n-placeholder');
+          var val = getByPath(translations, key);
+          if (val != null) {
+            el.setAttribute('placeholder', val);
+          }
+        }
+
+        // Title attribute
+        var titleNodes = document.querySelectorAll('[data-i18n-title]');
+        for (var m = 0; m < titleNodes.length; m++) {
+          var el = titleNodes[m];
+          var key = el.getAttribute('data-i18n-title');
+          var val = getByPath(translations, key);
+          if (val != null) {
+            el.setAttribute('title', val);
+          }
+        }
+
+        // Value attribute (for input/button)
+        var valueNodes = document.querySelectorAll('[data-i18n-value]');
+        for (var n = 0; n < valueNodes.length; n++) {
+          var el = valueNodes[n];
+          var key = el.getAttribute('data-i18n-value');
+          var val = getByPath(translations, key);
+          if (val != null) {
+            el.setAttribute('value', val);
+          }
+        }
+      }
+
+      function setActiveButton(lng) {
+        var btns = document.querySelectorAll('.lang-btn');
+        for (var i = 0; i < btns.length; i++) {
+          var btn = btns[i];
+          if (btn.getAttribute('data-lang') === lng) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        }
+      }
+
+      function loadLanguage(lng) {
+        currentLang = lng;
+        localStorage.setItem('lang', lng);
+        
+        fetch(LOCALE_PATH + lng + '.json', { cache: 'no-store' })
+          .then(function(r) {
+            if (!r.ok) throw new Error('Failed to load language file');
+            return r.json();
+          })
+          .then(function(json) {
+            translations = json || {};
+            applyTranslations();
+            setActiveButton(lng);
+          })
+          .catch(function(err) {
+            console.error('Language load error:', err);
+          });
+      }
+
+      function initLanguage() {
+        var stored = localStorage.getItem('lang');
+        var preferred = stored || detectPreferredLanguage();
+        loadLanguage(preferred);
+
+        var btns = document.querySelectorAll('.lang-btn');
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener('click', function(e) {
+            e.preventDefault();
+            var lang = this.getAttribute('data-lang');
+            if (lang && lang !== currentLang) {
+              loadLanguage(lang);
+            }
+          });
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initLanguage);
+      } else {
+        initLanguage();
+      }
     })();
   </script>
   

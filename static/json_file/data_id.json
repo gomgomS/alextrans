@@ -1,7 +1,310 @@
 {
-    "pageTitle": "Selamat Datang di Situs Saya!",
-    "pageContent": "Ini adalah konten dalam Bahasa Indonesia.",
-    "buttonText": "Ganti Bahasa",
-    "sign_up":"Daftar",
-    "login":"Masuk"
+  "nav": {
+    "home": "Beranda",
+    "services": "Layanan",
+    "gallery": "Galeri",
+    "about_contact": "Tentang & Kontak",
+    "chat_now": "Chat Sekarang"
+  },
+  "index": {
+    "meta": {
+      "title": "Rental Mobil Bandung Murah 24 Jam | Lepas Kunci & Sopir",
+      "description": "Sewa mobil Bandung murah mulai 350rb/hari. Tersedia lepas kunci & dengan sopir. Layanan 24 jam, city tour, antar jemput bandara. Booking via WA mudah & cepat!"
+    },
+    "hero": {
+      "title": "Rental Mobil Bandung Murah - Lepas Kunci & Dengan Sopir",
+      "subtitle": "Sewa mobil Bandung 24 jam dengan armada lengkap. Tersedia lepas kunci (self drive) dan dengan sopir profesional. Harga transparan mulai Rp 350.000/hari. Cocok untuk city tour, wisata, dan antar jemput bandara.",
+      "cta": "Pesan Sekarang via WhatsApp"
+    },
+    "booking_form": {
+      "title": "Cek Harga Armada",
+      "subtitle": "Pilih armada, atur waktu, dapatkan estimasi instan.",
+      "select_fleet": "Pilih Armada",
+      "with_driver": "Dengan Supir",
+      "with_driver_label": "Dengan Supir / City Tour",
+      "driver_mandatory": "Armada ini wajib supir.",
+      "start_rental": "Mulai Sewa",
+      "end_rental": "Selesai Sewa",
+      "date_label": "Tanggal:",
+      "time_label": "Jam:",
+      "check_price": "Cek Harga",
+      "booking_summary": "Ringkasan Booking",
+      "price_estimate": "Estimasi Harga Sewa",
+      "days": "Hari",
+      "fleet": "Armada",
+      "driver_option": "Opsi Supir",
+      "with_driver_yes": "Dengan Supir",
+      "without_driver": "Tanpa Supir",
+      "start": "Mulai",
+      "end": "Selesai",
+      "price_per_day": "Harga/hari + Supir",
+      "price_per_day_only": "Harga/hari",
+      "duration": "Durasi",
+      "total_price": "Total Harga",
+      "note": "Catatan:",
+      "note_text": "Harga dapat berubah untuk paket city tour atau sewa mingguan/bulanan.",
+      "contact_admin": "Hubungi admin untuk penawaran terbaik.",
+      "terms_apply": "S&K berlaku.",
+      "chat_whatsapp": "Chat WhatsApp"
+    },
+    "why_choose": {
+      "title": "Kenapa Pilih Alextrans?",
+      "subtitle": "Solusi transportasi terpercaya di Bandung",
+      "feature1_title": "Armada Lengkap & Terawat",
+      "feature1_desc": "Mobil, minibus, hingga bus bersih dan siap perjalanan jauh",
+      "feature2_title": "Supir Profesional",
+      "feature2_desc": "Driver ramah, berpengalaman, dan paham rute wisata",
+      "feature3_title": "Harga Transparan",
+      "feature3_desc": "Tidak ada biaya tersembunyi, semua jelas di awal",
+      "feature4_title": "Booking Mudah",
+      "feature4_desc": "Proses cepat via WhatsApp, respon dalam hitungan menit",
+      "check_price_now": "Cek Harga Sekarang",
+      "chat_admin": "Chat Admin"
+    },
+    "about": {
+      "badge": "Tentang Kami",
+      "title": "Rental Mobil Bandung Terpercaya",
+      "paragraph1": "ALEXTRANS adalah penyedia jasa rental mobil Bandung terpercaya dengan layanan 24 jam. Kami menyediakan sewa mobil Bandung murah untuk berbagai kebutuhan - baik rental mobil Bandung lepas kunci (self drive) maupun sewa mobil dengan sopir profesional.",
+      "paragraph2": "Armada kami meliputi Avanza, Innova, Alphard, Hiace, hingga Bus untuk keluarga atau rombongan. Cocok untuk city tour Bandung, paket wisata, antar jemput bandara, perjalanan bisnis, maupun acara keluarga.",
+      "paragraph3": "Dengan harga transparan mulai Rp 350.000/hari, proses booking via WhatsApp yang mudah, dan pelayanan ramah, ALEXTRANS menjadi pilihan utama rental mobil di Bandung. Kami siap melayani Anda kapan saja dengan armada terawat dan sopir berpengalaman."
+    },
+    "services": {
+      "badge": "Layanan Kami",
+      "title": "Layanan Rental Mobil Bandung",
+      "subtitle": "Layanan lengkap rental mobil Bandung: lepas kunci, dengan sopir, city tour, dan antar jemput bandara. Armada terawat, harga transparan, proses mudah."
+    },
+    "service_lepas_kunci": {
+      "badge": "Layanan Unggulan",
+      "title": "Rental Mobil Lepas Kunci Bandung Tanpa Survei",
+      "description": "Nikmati kebebasan berkendara dengan layanan rental mobil lepas kunci Bandung. Sewa mobil tanpa sopir (self drive) untuk fleksibilitas maksimal. Proses mudah tanpa survei, armada terawat, harga terjangkau. Cocok untuk perjalanan pribadi, liburan keluarga, atau kebutuhan mobilitas harian Anda di Bandung.",
+      "cta": "Cek Harga & Ketersediaan"
+    },
+    "service_bandara": {
+      "badge": "Layanan Unggulan",
+      "title": "Sewa Mobil Jakarta Antar Jemput Bandara Soekarno-Hatta & Halim",
+      "description": "Layanan antar jemput bandara Jakarta (Soekarno-Hatta & Halim Perdanakusuma) yang cepat dan nyaman. Kami siap menjemput atau mengantar Anda ke bandara dengan tepat waktu. Tersedia berbagai pilihan armada dari sedan hingga mobil keluarga. Sopir profesional, harga flat, tanpa biaya tersembunyi. Sempurnakan perjalanan Anda dengan layanan airport transfer terpercaya di Jakarta.",
+      "cta": "Booking Mudah via WA"
+    },
+    "service_citytour": {
+      "badge": "Layanan Unggulan",
+      "title": "Paket City Tour Bandung dengan Sopir Berpengalaman",
+      "description": "Jelajahi destinasi wisata Bandung dengan paket city tour nyaman dan terjangkau. Sewa mobil wisata Bandung dengan sopir yang ramah dan paham rute wisata terbaik. Cocok untuk keluarga, rombongan, atau perjalanan pribadi. Paket wisata Bandung fleksibel sesuai kebutuhan Anda - dari wisata alam, kuliner, hingga belanja. Harga bersahabat, pengalaman tak terlupakan.",
+      "cta": "Pesan Paket Wisata"
+    },
+    "fleet": {
+      "badge": "Pilihan Armada",
+      "title": "Daftar Harga Rental Mobil Bandung",
+      "subtitle": "Pilihan lengkap armada rental mobil Bandung: mobil, minibus, hingga bus. Harga transparan mulai Rp 350.000/hari untuk berbagai kebutuhan Anda.",
+      "car": "Mobil",
+      "minibus": "Minibus",
+      "bus": "Bus",
+      "seats": "kursi",
+      "driver_mandatory": "wajib supir",
+      "driver_optional": "Supir opsional",
+      "starting_from": "Mulai",
+      "per_day": "/hari",
+      "check_price": "Cek Harga",
+      "order_now": "Pesan Sekarang"
+    },
+    "advantages": {
+      "badge": "Keunggulan",
+      "title": "Mengapa Memilih Rental Mobil Kami",
+      "subtitle": "Layanan rental mobil Bandung terbaik dengan harga transparan dan armada terawat. Tersedia lepas kunci maupun dengan sopir.",
+      "feature1_title": "Armada Lengkap & Terawat",
+      "feature1_desc": "Pilihan mobil beragam: Avanza, Innova, Alphard, Hiace, hingga Bus. Semua armada bersih dan siap untuk perjalanan jauh maupun city tour.",
+      "feature2_title": "Sopir Profesional",
+      "feature2_desc": "Driver berpengalaman, ramah, dan paham rute wisata Bandung. Tersedia untuk layanan dengan sopir maupun city tour.",
+      "feature3_title": "Harga Transparan",
+      "feature3_desc": "Tanpa biaya tersembunyi, semua jelas di awal. Harga sewa mobil Bandung terjangkau mulai Rp 350.000/hari.",
+      "feature4_title": "Layanan 24 Jam",
+      "feature4_desc": "Rental mobil Bandung 24 jam siap melayani. Booking kapan saja via WhatsApp dengan respon cepat.",
+      "cta": "Booking Sekarang"
+    },
+    "cta_banner": {
+      "title": "Sewa Mobil Bandung Sekarang - Armada Terbatas!",
+      "description": "Jangan sampai kehabisan armada di hari libur atau peak season. Booking rental mobil Bandung Anda sekarang untuk harga terbaik!",
+      "cta": "Booking Sekarang"
+    },
+    "testimonials": {
+      "badge": "TESTIMONI",
+      "title": "Kepercayaan Pelanggan Kami",
+      "subtitle": "Ribuan pelanggan telah mempercayai layanan rental mobil kami untuk perjalanan yang aman dan nyaman",
+      "testimonial1_text": "Sewa Avanza untuk mudik, prosesnya gampang banget via WA. Mobilnya bersih, AC dingin, dan bensin irit. Puas banget, next pasti pakai Alextrans lagi.",
+      "testimonial1_name": "Budi Santoso",
+      "testimonial1_service": "Sewa Avanza Lepas Kunci",
+      "testimonial2_text": "Pakai Hiace Commuter untuk rombongan keluarga ke Lembang. Supirnya ramah dan paham rute, mobilnya lega dan nyaman. Recommended!",
+      "testimonial2_name": "Siti Nurhaliza",
+      "testimonial2_service": "Sewa Hiace Commuter + Supir",
+      "testimonial3_text": "Alphard untuk acara keluarga, pelayanannya premium banget. Interior mewah, sopir profesional, tepat waktu. Worth it untuk acara penting.",
+      "testimonial3_name": "Rudi Hermawan",
+      "testimonial3_service": "Sewa Alphard dengan Supir",
+      "testimonial4_text": "Innova Reborn untuk city tour, sangat puas. Mobil terawat, AC dingin, dan harganya masuk akal. Admin responsif, proses booking cepat.",
+      "testimonial4_name": "Denny Prakoso",
+      "testimonial4_service": "Sewa Innova Reborn + Supir",
+      "testimonial5_text": "Rush lepas kunci untuk weekend getaway, mobilnya oke banget. Mesin halus, interior rapi, tanpa ribet survei. Terima kasih Alextrans!",
+      "testimonial5_name": "Andi Wijaya",
+      "testimonial5_service": "Sewa Rush Lepas Kunci",
+      "testimonial6_text": "Fortuner untuk perjalanan ke Pangandaran, sangat nyaman dan aman. Sopirnya pengalaman, tahu jalan pintas. Puas dengan pelayanannya.",
+      "testimonial6_name": "Lisa Permata",
+      "testimonial6_service": "Sewa Fortuner dengan Supir",
+      "cta_title": "Siap Merasakan Pengalaman Terbaik?",
+      "cta_subtitle": "Bergabunglah dengan ribuan pelanggan puas kami",
+      "cta_button": "Pesan Sekarang"
+    },
+    "stats": {
+      "title": "Alextrans dalam Angka",
+      "subtitle": "Dipercaya ratusan pelanggan dengan layanan profesional",
+      "years_title": "Tahun Berdiri",
+      "years_desc": "Pengalaman terpercaya",
+      "fleet_title": "Armada Tersedia",
+      "fleet_desc": "Kendaraan terawat",
+      "customers_title": "Pelanggan Puas",
+      "customers_desc": "Kepuasan terjamin",
+      "drivers_title": "Driver Profesional",
+      "drivers_desc": "Ramah & berpengalaman"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan Seputar Rental Mobil Bandung",
+      "subtitle": "Informasi penting tentang layanan sewa mobil kami",
+      "question1": "Berapa harga rental mobil Bandung per hari?",
+      "answer1": "Harga sewa mobil Bandung mulai dari Rp 350.000/hari untuk mobil ekonomis seperti Avanza. Harga bervariasi tergantung jenis armada dan durasi sewa. Untuk minibus seperti Hiace mulai Rp 600.000/hari, sudah termasuk atau belum termasuk sopir tergantung paket yang dipilih. Hubungi kami untuk penawaran terbaik.",
+      "question2": "Apakah tersedia rental mobil lepas kunci tanpa survei?",
+      "answer2": "Ya, kami menyediakan layanan rental mobil lepas kunci Bandung tanpa survei. Proses cepat dan mudah, cukup lengkapi dokumen (KTP, SIM, KK) dan jaminan sesuai ketentuan. Cocok untuk Anda yang ingin berkendara sendiri (self drive) dengan fleksibilitas penuh.",
+      "question3": "Bagaimana cara booking rental mobil Bandung?",
+      "answer3": "Booking sangat mudah! Hubungi kami via WhatsApp di +62 813-1325-6756, atau gunakan form \"Cek Harga\" di website ini. Tim kami akan merespon cepat dan membantu memilih armada yang sesuai kebutuhan Anda. Proses booking hanya butuh beberapa menit.",
+      "question4": "Apakah ada paket city tour Bandung?",
+      "answer4": "Tentu! Kami menyediakan paket city tour Bandung dengan sopir berpengalaman yang paham rute wisata. Destinasi populer meliputi Lembang, Dago, Kawah Putih, Tangkuban Perahu, dan tempat wisata lainnya. Paket dapat disesuaikan dengan kebutuhan dan budget Anda. Harga mulai dari Rp 950.000 untuk 12 jam.",
+      "question5": "Apakah melayani antar jemput bandara?",
+      "answer5": "Ya, kami melayani antar jemput bandara Soekarno-Hatta & Halim Jakarta 24 jam. Sopir akan menjemput atau mengantar Anda tepat waktu. Harga flat tanpa biaya tersembunyi. Layanan airport transfer tersedia untuk berbagai jenis armada, dari sedan hingga minibus untuk rombongan.",
+      "question6": "Apakah rental mobil Bandung tersedia 24 jam?",
+      "answer6": "Ya, rental mobil Bandung 24 jam kami siap melayani kapan saja. Customer service kami standby via WhatsApp untuk membantu kebutuhan rental Anda, baik malam hari maupun weekend. Booking dapat dilakukan kapan saja sesuai kebutuhan mendadak Anda.",
+      "still_have_questions": "Masih ada pertanyaan? Hubungi kami sekarang!",
+      "cta": "Chat via WhatsApp"
+    }
+  },
+  "layanan": {
+    "meta": {
+      "title": "Layanan - Alextranstravel.com"
+    },
+    "hero": {
+      "breadcrumb_home": "Beranda",
+      "breadcrumb_current": "Layanan",
+      "title": "Pilih Layanan & Armada"
+    },
+    "service_tabs": {
+      "lepas_kunci": "Lepas Kunci",
+      "bandara": "Antar Jemput Bandara",
+      "citytour": "City Tour"
+    },
+    "lepas_kunci": {
+      "badge": "Layanan Unggulan",
+      "title": "Rental Mobil Lepas Kunci Tanpa Survei",
+      "description": "Nikmati kebebasan berkendara tanpa survei! Alextrans Rental hadir dengan layanan Rental Mobil Lepas Kunci, praktis dan efisien.",
+      "cta": "Booking Sekarang"
+    },
+    "bandara": {
+      "badge": "Layanan Bandara",
+      "title": "Antar Jemput Bandara",
+      "description": "Layanan antar jemput ke/dari Bandara Soekarno-Hatta & Halim Perdanakusuma Jakarta. Tepat waktu, nyaman, dan terpercaya untuk perjalanan Anda di Jakarta.",
+      "cta": "Booking Sekarang"
+    },
+    "citytour": {
+      "badge": "Wisata Bandung",
+      "title": "City Tour Bandung",
+      "description": "Jelajahi keindahan Bandung dengan paket city tour kami. Driver berpengalaman siap menemani perjalanan wisata Anda.",
+      "cta": "Booking Sekarang"
+    },
+    "fleet_tabs": {
+      "all": "Semua",
+      "car": "Mobil",
+      "minibus": "Minibus",
+      "bus": "Bus"
+    },
+    "advantages": {
+      "badge": "Keunggulan",
+      "title": "Mengapa Memilih Rental Mobil Kami",
+      "subtitle": "Layanan rental mobil Bandung terbaik dengan harga transparan dan armada terawat. Tersedia lepas kunci maupun dengan sopir."
+    }
+  },
+  "gallery": {
+    "meta": {
+      "title": "Galeri - Alextranstravel.com"
+    },
+    "hero": {
+      "breadcrumb_home": "Beranda",
+      "breadcrumb_current": "Galeri",
+      "title": "Galeri Foto"
+    },
+    "section": {
+      "badge": "Galeri Testimoni",
+      "title": "Momen Perjalanan Bersama Kami",
+      "subtitle": "Kepuasan pelanggan adalah prioritas kami. Lihat dokumentasi perjalanan happy customer ALEXTRANS."
+    },
+    "cta": {
+      "title": "Ingin Menjadi Bagian Dari Galeri Kami?",
+      "subtitle": "Pesan sekarang dan dapatkan pengalaman perjalanan terbaik bersama ALEXTRANS!",
+      "button": "Booking Sekarang"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Tentang & Kontak - Alextranstravel.com"
+    },
+    "hero": {
+      "breadcrumb_home": "Beranda",
+      "breadcrumb_current": "Tentang & Kontak",
+      "title": "Tentang & Kontak"
+    },
+    "info": {
+      "address_label": "Alamat",
+      "address_text": "Jl. Rancabentang No. 104 RT 4 RW 14, Brilink Angelicha (Patokan: Pasar Rancabentang), Bandung, Jawa Barat",
+      "phone_label": "Telepon/WhatsApp",
+      "email_label": "Email"
+    },
+    "about": {
+      "title": "Tentang Kami",
+      "paragraph1": "Kami adalah penyedia layanan Rental Mobil Bandung dengan armada lengkap mulai dari city car, MPV, SUV, hingga Hiace & Big Bus untuk kebutuhan wisata, kantor, keluarga, dan perjalanan luar kota.",
+      "paragraph2": "Semua armada terawat, bersih, AC dingin, dan selalu dicek sebelum digunakan. Didukung oleh sopir profesional yang ramah, berpengalaman, dan memahami rute Bandung hingga luar kota dengan baik.",
+      "paragraph3": "Kami menyediakan layanan:",
+      "service1": "Rental Mobil Lepas Kunci / Dengan Sopir",
+      "service2": "Airport Transfer Bandara Soekarno-Hatta & Halim Jakarta",
+      "service3": "City Tour Bandung",
+      "service4": "Drop Off Dalam & Luar Kota",
+      "service5": "Sewa Hiace / Elf / Bus Pariwisata",
+      "why_title": "Kenapa Pilih Kami?",
+      "why1": "Harga transparan tanpa biaya tersembunyi",
+      "why2": "Unit bersih, nyaman, dan rutin service",
+      "why3": "Driver profesional & ramah",
+      "why4": "Pemesanan cepat via WhatsApp",
+      "why5": "Siap antar–jemput area Bandung"
+    },
+    "map": {
+      "title": "Lokasi Kami"
+    }
+  },
+  "footer": {
+    "description": "ALEXTRANS - Penyedia jasa rental mobil Bandung terpercaya. Layanan lepas kunci, dengan sopir, city tour, dan antar jemput bandara. Harga murah, armada lengkap, pelayanan 24 jam.",
+    "menu_title": "Menu",
+    "menu_home": "Beranda",
+    "menu_services": "Layanan",
+    "menu_gallery": "Galeri",
+    "menu_contact": "Tentang & Kontak",
+    "menu_check_price": "Cek Harga",
+    "services_title": "Layanan Kami",
+    "service1": "Rental Mobil Lepas Kunci",
+    "service2": "Rental Mobil dengan Sopir",
+    "service3": "Antar Jemput Bandara",
+    "service4": "Paket City Tour Bandung",
+    "service5": "Sewa Mobil Wisata",
+    "contact_title": "Hubungi Kami",
+    "address": "Jl. Rancabentang No. 104 RT 4 RW 14",
+    "address_line2": "Brilink Angelicha, Bandung",
+    "country": "Indonesia",
+    "support": "24/7 Support",
+    "whatsapp_chat": "WhatsApp Chat",
+    "copyright": "All rights reserved.",
+    "made_with": "Made with",
+    "by": "kitabuat.web.id"
+  }
 }

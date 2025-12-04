@@ -269,14 +269,14 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-              <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link">Beranda</a></li>
-	          <li class="nav-item"><a href="{{ url_for('layanan') }}" class="nav-link">Layanan</a></li>
-	          <li class="nav-item"><a href="{{ url_for('gallery') }}" class="nav-link">Galeri</a></li>
-	          <li class="nav-item active"><a href="{{ url_for('contact') }}" class="nav-link">Tentang & Kontak</a></li>
+              <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link" data-i18n="nav.home">Beranda</a></li>
+	          <li class="nav-item"><a href="{{ url_for('layanan') }}" class="nav-link" data-i18n="nav.services">Layanan</a></li>
+	          <li class="nav-item"><a href="{{ url_for('gallery') }}" class="nav-link" data-i18n="nav.gallery">Galeri</a></li>
+	          <li class="nav-item active"><a href="{{ url_for('contact') }}" class="nav-link" data-i18n="nav.about_contact">Tentang & Kontak</a></li>
               <li class="nav-item nav-wa-booking">
                 <a href="https://wa.me/6281313256756?text=hai%20saya%20mau%20cari%20mobil%20ka" target="_blank" rel="noopener" class="nav-link nav-link-wa">
                   <i class="fa fa-whatsapp"></i>
-                  <span>Chat Sekarang</span>
+                  <span data-i18n="nav.chat_now">Chat Sekarang</span>
                 </a>
               </li>
 	        </ul>
@@ -290,8 +290,8 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
           <div class="col-md-9 ftco-animate pb-5">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="{{ url_for('index') }}">Beranda <i class="fa fa-angle-right"></i></a></span> <span>Tentang & Kontak <i class="fa fa-angle-right"></i></span></p>
-            <h1 class="mb-3 bread">Tentang & Kontak</h1>
+          	<p class="breadcrumbs"><span class="mr-2"><a href="{{ url_for('index') }}" data-i18n="contact.hero.breadcrumb_home">Beranda</a> <i class="fa fa-angle-right"></i></span> <span data-i18n="contact.hero.breadcrumb_current">Tentang & Kontak</span> <i class="fa fa-angle-right"></i></p>
+            <h1 class="mb-3 bread" data-i18n="contact.hero.title">Tentang & Kontak</h1>
           </div>
         </div>
       </div>
@@ -310,7 +310,7 @@
                   <div class="icon">
                     <span class="fa fa-map-marker"></span>
                   </div>
-                  <p><span>Alamat</span> Bandung, Jawa Barat — Kantor & Garasi Operasional</p>
+                  <p><span data-i18n="contact.info.address_label">Alamat</span> <span data-i18n="contact.info.address_text">Bandung, Jawa Barat — Kantor & Garasi Operasional</span></p>
                 </div>
               </div>
     
@@ -319,7 +319,7 @@
                   <div class="icon">
                     <span class="fa fa-whatsapp"></span>
                   </div>
-                  <p><span>Telepon/WhatsApp</span> 
+                  <p><span data-i18n="contact.info.phone_label">Telepon/WhatsApp</span> 
                     <a href="https://wa.me/6281313256756" target="_blank">+62 813-1325-6756</a>
                   </p>
                 </div>
@@ -330,8 +330,8 @@
                   <div class="icon">
                     <span class="fa fa-envelope"></span>
                   </div>
-                  <p><span>Email</span> 
-                    <a href="mailto:admin@alextrans.com">admin@alextrans.com</a>
+                  <p><span data-i18n="contact.info.email_label">Email</span> 
+                    <a href="mailto:alextranstravel@gmail.com">alextranstravel@gmail.com</a>
                   </p>
                 </div>
               </div>
@@ -342,31 +342,31 @@
           <!-- About Us -->
           <div class="col-md-8 mb-md-5">
             <div class="about-content">
-              <h3>Tentang Kami</h3>
-              <p>
+              <h3 data-i18n="contact.about.title">Tentang Kami</h3>
+              <p data-i18n-html="contact.about.paragraph1">
                 Kami adalah penyedia layanan <strong>Rental Mobil Bandung</strong> dengan armada lengkap mulai dari city car, MPV, SUV, hingga Hiace & Big Bus untuk kebutuhan wisata, kantor, keluarga, dan perjalanan luar kota.
               </p>
-              <p>
+              <p data-i18n-html="contact.about.paragraph2">
                 Semua armada terawat, bersih, AC dingin, dan selalu dicek sebelum digunakan. Didukung oleh sopir profesional yang ramah, berpengalaman, dan memahami rute Bandung hingga luar kota dengan baik.
               </p>
-              <p>
+              <p data-i18n="contact.about.paragraph3">
               Kami menyediakan layanan:
             </p>
             <ul>
-              <li>Rental Mobil Lepas Kunci / Dengan Sopir</li>
-              <li>Airport Transfer Bandara Husein Sastranegara</li>
-              <li>City Tour Bandung</li>
-              <li>Drop Off Dalam & Luar Kota</li>
-              <li>Sewa Hiace / Elf / Bus Pariwisata</li>
+              <li data-i18n="contact.about.service1">Rental Mobil Lepas Kunci / Dengan Sopir</li>
+              <li data-i18n="contact.about.service2">Airport Transfer Bandara Husein Sastranegara</li>
+              <li data-i18n="contact.about.service3">City Tour Bandung</li>
+              <li data-i18n="contact.about.service4">Drop Off Dalam & Luar Kota</li>
+              <li data-i18n="contact.about.service5">Sewa Hiace / Elf / Bus Pariwisata</li>
             </ul>
     
-            <h4 class="mt-4" style="color: #001830; font-weight: 700;">Kenapa Pilih Kami?</h4>
+            <h4 class="mt-4" style="color: #001830; font-weight: 700;" data-i18n="contact.about.why_title">Kenapa Pilih Kami?</h4>
             <ul style="color: #64748b; line-height: 1.8;">
-              <li>Harga transparan tanpa biaya tersembunyi</li>
-              <li>Unit bersih, nyaman, dan rutin service</li>
-              <li>Driver profesional & ramah</li>
-              <li>Pemesanan cepat via WhatsApp</li>
-              <li>Siap antar–jemput area Bandung</li>
+              <li data-i18n="contact.about.why1">Harga transparan tanpa biaya tersembunyi</li>
+              <li data-i18n="contact.about.why2">Unit bersih, nyaman, dan rutin service</li>
+              <li data-i18n="contact.about.why3">Driver profesional & ramah</li>
+              <li data-i18n="contact.about.why4">Pemesanan cepat via WhatsApp</li>
+              <li data-i18n="contact.about.why5">Siap antar–jemput area Bandung</li>
             </ul>
             </div>
           </div>
@@ -377,7 +377,7 @@
         <div class="row justify-content-center mt-5">
           <div class="col-12">
             <div class="map-container">
-              <h3 class="text-center mb-4" style="color: #001830; font-weight: 800;">Lokasi Kami</h3>
+              <h3 class="text-center mb-4" style="color: #001830; font-weight: 800;" data-i18n="contact.map.title">Lokasi Kami</h3>
               <div class="map-wrapper">
                 <iframe
                   width="100%"
@@ -385,8 +385,9 @@
                   style="border:0; border-radius: 12px;"
                   loading="lazy"
                   allowfullscreen
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3178.33!2d107.6187!3d-6.9025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e68a4f7b1f1f%3A0x...!2sGedung%20Sate%2C%20Bandung!5e0!3m2!1sen!2sid!4vYOURTIMESTAMP">
+                  src="https://www.google.com/maps?q=Jl.+Rancabentang+No.+104+Bandung+Indonesia&output=embed">
                 </iframe>
+
               </div>
             </div>
           </div>
@@ -430,13 +431,13 @@
             <!-- Quick Links -->
             <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
               <div class="footer-widget">
-                <h4 class="footer-title">Menu</h4>
+                <h4 class="footer-title" data-i18n="footer.menu_title">Menu</h4>
                 <ul class="footer-links">
-                  <li><a href="{{ url_for('index') }}"><i class="fa fa-angle-right mr-2"></i>Beranda</a></li>
-                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i>Layanan</a></li>
-                  <li><a href="{{ url_for('gallery') }}"><i class="fa fa-angle-right mr-2"></i>Galeri</a></li>
-                  <li><a href="{{ url_for('contact') }}"><i class="fa fa-angle-right mr-2"></i>Tentang & Kontak</a></li>
-                  <li><a href="{{ url_for('index') }}#layanan"><i class="fa fa-angle-right mr-2"></i>Cek Harga</a></li>
+                  <li><a href="{{ url_for('index') }}"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.menu_home">Beranda</span></a></li>
+                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.menu_services">Layanan</span></a></li>
+                  <li><a href="{{ url_for('gallery') }}"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.menu_gallery">Galeri</span></a></li>
+                  <li><a href="{{ url_for('contact') }}"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.menu_contact">Tentang & Kontak</span></a></li>
+                  <li><a href="{{ url_for('index') }}#layanan"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.menu_check_price">Cek Harga</span></a></li>
                 </ul>
               </div>
             </div>
@@ -444,12 +445,12 @@
             <!-- Services -->
             <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
               <div class="footer-widget">
-                <h4 class="footer-title">Layanan Kami</h4>
+                <h4 class="footer-title" data-i18n="footer.services_title">Layanan Kami</h4>
                 <ul class="footer-links">
-                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i>Rental Lepas Kunci</a></li>
-                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i>Rental dengan Supir</a></li>
-                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i>Antar Jemput Bandara</a></li>
-                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i>City Tour Bandung</a></li>
+                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.service1">Rental Lepas Kunci</span></a></li>
+                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.service2">Rental dengan Supir</span></a></li>
+                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.service3">Antar Jemput Bandara</span></a></li>
+                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.service4">City Tour Bandung</span></a></li>
                 </ul>
               </div>
             </div>
@@ -457,11 +458,11 @@
             <!-- Contact Info -->
             <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
               <div class="footer-widget">
-                <h4 class="footer-title">Hubungi Kami</h4>
+                <h4 class="footer-title" data-i18n="footer.contact_title">Hubungi Kami</h4>
                 <ul class="footer-contact">
                   <li>
                     <i class="fa fa-map-marker"></i>
-                    <span>Bandung, Jawa Barat<br>Indonesia</span>
+                    <span><span data-i18n="footer.address">Jl. Rancabentang No. 104 RT 4 RW 14</span><br><span data-i18n="footer.address_line2">Brilink Angelicha, Bandung</span><br><span data-i18n="footer.country">Indonesia</span></span>
                   </li>
                   <li>
                     <i class="fa fa-phone"></i>
@@ -469,11 +470,11 @@
                   </li>
                   <li>
                     <i class="fa fa-whatsapp"></i>
-                    <span><a href="https://wa.me/6281313256756" target="_blank">WhatsApp Chat</a></span>
+                    <span><a href="https://wa.me/6281313256756" target="_blank" data-i18n="footer.whatsapp_chat">WhatsApp Chat</a></span>
                   </li>
                   <li>
                     <i class="fa fa-clock-o"></i>
-                    <span>24/7 Support</span>
+                    <span data-i18n="footer.support">24/7 Support</span>
                   </li>
                 </ul>
               </div>
@@ -489,12 +490,12 @@
           <div class="row align-items-center">
             <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
               <p class="footer-copyright">
-                &copy; <script>document.write(new Date().getFullYear());</script> <strong>ALEXTRANS</strong>. All rights reserved.
+                &copy; <script>document.write(new Date().getFullYear());</script> <strong>ALEXTRANS</strong>. <span data-i18n="footer.copyright">All rights reserved.</span>
               </p>
             </div>
             <div class="col-md-6 text-center text-md-right">
               <p class="footer-credit">
-                Made with <i class="fa fa-heart" style="color: #e74c3c;"></i> kitabuat.web.id
+                <span data-i18n="footer.made_with">Made with</span> <i class="fa fa-heart" style="color: #e74c3c;"></i> <span data-i18n="footer.by">kitabuat.web.id</span>
               </p>
             </div>
           </div>
@@ -526,6 +527,164 @@
   <a class="wa-float" href="https://wa.me/6281313256756?text=hai%20saya%20mau%20cari%20mobil%20ka" target="_blank" rel="noopener" aria-label="WhatsApp Chat">
     <img src="{{ url_for('static', filename='assets/images/icon-wa.png') }}" alt="WA">
   </a>
+
+  <!-- Language Switcher -->
+  <div class="lang-switcher" style="position: fixed; right: 18px; bottom: 90px; z-index: 9999; display: flex; flex-direction: column; gap: 8px;">
+    <button type="button" class="lang-btn" data-lang="id" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid #fff; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.15); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; padding: 0;">
+      <img src="{{ url_for('static', filename='assets/images/indonesia-flag.png') }}" alt="ID" style="width: 28px; height: 28px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span style="display: none; font-weight: 600; font-size: 12px; color: #333;">ID</span>
+    </button>
+    <button type="button" class="lang-btn" data-lang="en" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid #fff; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.15); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; padding: 0;">
+      <img src="{{ url_for('static', filename='assets/images/uk-flag.png') }}" alt="EN" style="width: 28px; height: 28px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span style="display: none; font-weight: 600; font-size: 12px; color: #333;">EN</span>
+    </button>
+  </div>
+
+  <style>
+    .lang-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2) !important;
+    }
+    .lang-btn.active {
+      border-color: #25D366 !important;
+      box-shadow: 0 6px 16px rgba(37,211,102,0.4) !important;
+    }
+  </style>
+
+  <!-- Multi-Language Translation Script -->
+  <script>
+    (function() {
+      var LOCALE_PATH = "{{ url_for('static', filename='json_file/data_') }}";
+      var currentLang = 'id';
+      var translations = {};
+
+      function detectPreferredLanguage() {
+        try {
+          var navLangs = (navigator.languages && navigator.languages.length) 
+            ? navigator.languages 
+            : [navigator.language || navigator.userLanguage || ''];
+          
+          for (var i = 0; i < navLangs.length; i++) {
+            var l = (navLangs[i] || '').toLowerCase();
+            if (l === 'id' || l.indexOf('id-') === 0 || l === 'in' || l.indexOf('in-') === 0) {
+              return 'id';
+            }
+            if (l === 'en' || l.indexOf('en-') === 0) {
+              return 'en';
+            }
+          }
+          
+          var tz = (Intl && Intl.DateTimeFormat && Intl.DateTimeFormat().resolvedOptions().timeZone) || '';
+          var indoTZ = ['Asia/Jakarta','Asia/Pontianak','Asia/Makassar','Asia/Jayapura'];
+          if (indoTZ.indexOf(tz) !== -1) return 'id';
+        } catch (e) {}
+        return 'id';
+      }
+
+      function getByPath(obj, path) {
+        if (!path || !obj) return null;
+        return path.split('.').reduce(function(o, k) {
+          return (o && o[k] != null) ? o[k] : null;
+        }, obj);
+      }
+
+      function applyTranslations() {
+        var textNodes = document.querySelectorAll('[data-i18n]');
+        for (var i = 0; i < textNodes.length; i++) {
+          var el = textNodes[i];
+          var key = el.getAttribute('data-i18n');
+          var val = getByPath(translations, key);
+          if (val != null) {
+            el.textContent = val;
+          }
+        }
+
+        var htmlNodes = document.querySelectorAll('[data-i18n-html]');
+        for (var j = 0; j < htmlNodes.length; j++) {
+          var el = htmlNodes[j];
+          var key = el.getAttribute('data-i18n-html');
+          var val = getByPath(translations, key);
+          if (val != null) {
+            el.innerHTML = val;
+          }
+        }
+
+        var placeholderNodes = document.querySelectorAll('[data-i18n-placeholder]');
+        for (var k = 0; k < placeholderNodes.length; k++) {
+          var el = placeholderNodes[k];
+          var key = el.getAttribute('data-i18n-placeholder');
+          var val = getByPath(translations, key);
+          if (val != null) {
+            el.setAttribute('placeholder', val);
+          }
+        }
+
+        var titleNodes = document.querySelectorAll('[data-i18n-title]');
+        for (var m = 0; m < titleNodes.length; m++) {
+          var el = titleNodes[m];
+          var key = el.getAttribute('data-i18n-title');
+          var val = getByPath(translations, key);
+          if (val != null) {
+            el.setAttribute('title', val);
+          }
+        }
+      }
+
+      function setActiveButton(lng) {
+        var btns = document.querySelectorAll('.lang-btn');
+        for (var i = 0; i < btns.length; i++) {
+          var btn = btns[i];
+          if (btn.getAttribute('data-lang') === lng) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        }
+      }
+
+      function loadLanguage(lng) {
+        currentLang = lng;
+        localStorage.setItem('lang', lng);
+        
+        fetch(LOCALE_PATH + lng + '.json', { cache: 'no-store' })
+          .then(function(r) {
+            if (!r.ok) throw new Error('Failed to load language file');
+            return r.json();
+          })
+          .then(function(json) {
+            translations = json || {};
+            applyTranslations();
+            setActiveButton(lng);
+          })
+          .catch(function(err) {
+            console.error('Language load error:', err);
+          });
+      }
+
+      function initLanguage() {
+        var stored = localStorage.getItem('lang');
+        var preferred = stored || detectPreferredLanguage();
+        loadLanguage(preferred);
+
+        var btns = document.querySelectorAll('.lang-btn');
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener('click', function(e) {
+            e.preventDefault();
+            var lang = this.getAttribute('data-lang');
+            if (lang && lang !== currentLang) {
+              loadLanguage(lang);
+            }
+          });
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initLanguage);
+      } else {
+        initLanguage();
+      }
+    })();
+  </script>
   <script>
     (function() {
       function updateNavbarOnScroll() {

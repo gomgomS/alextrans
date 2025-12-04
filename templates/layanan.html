@@ -323,14 +323,14 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link">Beranda</a></li>
-	          <li class="nav-item active"><a href="{{ url_for('layanan') }}" class="nav-link">Layanan</a></li>
-	          <li class="nav-item"><a href="{{ url_for('gallery') }}" class="nav-link">Galeri</a></li>
-	          <li class="nav-item"><a href="{{ url_for('contact') }}" class="nav-link">Tentang & Kontak</a></li>
+	          <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link" data-i18n="nav.home">Beranda</a></li>
+	          <li class="nav-item active"><a href="{{ url_for('layanan') }}" class="nav-link" data-i18n="nav.services">Layanan</a></li>
+	          <li class="nav-item"><a href="{{ url_for('gallery') }}" class="nav-link" data-i18n="nav.gallery">Galeri</a></li>
+	          <li class="nav-item"><a href="{{ url_for('contact') }}" class="nav-link" data-i18n="nav.about_contact">Tentang & Kontak</a></li>
               <li class="nav-item nav-wa-booking">
                 <a href="https://wa.me/6281313256756?text=hai%20saya%20mau%20cari%20mobil%20ka" target="_blank" rel="noopener" class="nav-link nav-link-wa">
                   <i class="fa fa-whatsapp"></i>
-                  <span>Chat Sekarang</span>
+                  <span data-i18n="nav.chat_now">Chat Sekarang</span>
                 </a>
               </li>
 	        </ul>
@@ -344,8 +344,8 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
           <div class="col-lg-6 col-md-8 col-12 ftco-animate pb-5">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="{{ url_for('index') }}">Beranda <i class="fa fa-angle-right"></i></a></span> <span>Layanan <i class="fa fa-angle-right"></i></span></p>
-            <h1 class="mb-3 bread">Pilih Layanan & Armada</h1>
+          	<p class="breadcrumbs"><span class="mr-2"><a href="{{ url_for('index') }}" data-i18n="layanan.hero.breadcrumb_home">Beranda</a> <i class="fa fa-angle-right"></i></span> <span data-i18n="layanan.hero.breadcrumb_current">Layanan</span> <i class="fa fa-angle-right"></i></p>
+            <h1 class="mb-3 bread" data-i18n="layanan.hero.title">Pilih Layanan & Armada</h1>
           </div>
         </div>
       </div>
@@ -361,17 +361,17 @@
             <ul class="nav nav-pills" id="serviceTabs" style="background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: inline-flex;">
               <li class="nav-item">
                 <a href="#lepaskunci" class="nav-link active" data-toggle="pill">
-                  <i class="fa fa-key mr-2"></i>Lepas Kunci
+                  <i class="fa fa-key mr-2"></i><span data-i18n="layanan.service_tabs.lepas_kunci">Lepas Kunci</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#bandara" class="nav-link" data-toggle="pill">
-                  <i class="fa fa-plane mr-2"></i>Antar Jemput Bandara
+                  <i class="fa fa-plane mr-2"></i><span data-i18n="layanan.service_tabs.bandara">Antar Jemput Bandara</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#citytour" class="nav-link" data-toggle="pill">
-                  <i class="fa fa-map-marker mr-2"></i>City Tour
+                  <i class="fa fa-map-marker mr-2"></i><span data-i18n="layanan.service_tabs.citytour">City Tour</span>
                 </a>
               </li>
             </ul>
@@ -388,10 +388,10 @@
               <div class="container">
                 <div class="row justify-content-start align-items-center" style="min-height: 220px;">
                   <div class="col-md-6 col-lg-5 heading-section heading-section-white ftco-animate">
-                    <span class="d-inline-block px-2 py-1 mb-2" style="background: rgba(255,255,255,.2); color:#ffffff; font-weight:600; border-radius:4px; font-size: 12px;">Layanan Unggulan</span>
-                    <h2 class="mb-2" style="font-weight:800; font-size: 24px; line-height: 1.3;">Rental Mobil Lepas Kunci Tanpa Survei</h2>
-                    <p class="mb-3 d-inline-block px-3 py-2" style="background: rgba(0,0,0,.5); color:#ffffff; font-size: 14px; line-height: 1.5; border-radius:6px;">Nikmati kebebasan berkendara tanpa survei! Alextrans Rental hadir dengan layanan Rental Mobil Lepas Kunci, praktis dan efisien.</p>
-                    <a href="https://wa.me/6281313256756?text=hai%20saya%20mau%20rental%20lepas%20kunci" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Booking Sekarang</a>
+                    <span class="d-inline-block px-2 py-1 mb-2" style="background: rgba(255,255,255,.2); color:#ffffff; font-weight:600; border-radius:4px; font-size: 12px;" data-i18n="layanan.lepas_kunci.badge">Layanan Unggulan</span>
+                    <h2 class="mb-2" style="font-weight:800; font-size: 24px; line-height: 1.3;" data-i18n="layanan.lepas_kunci.title">Rental Mobil Lepas Kunci Tanpa Survei</h2>
+                    <p class="mb-3 d-inline-block px-3 py-2" style="background: rgba(0,0,0,.5); color:#ffffff; font-size: 14px; line-height: 1.5; border-radius:6px;" data-i18n="layanan.lepas_kunci.description">Nikmati kebebasan berkendara tanpa survei! Alextrans Rental hadir dengan layanan Rental Mobil Lepas Kunci, praktis dan efisien.</p>
+                    <a href="https://wa.me/6281313256756?text=hai%20saya%20mau%20rental%20lepas%20kunci" target="_blank" rel="noopener" class="btn btn-primary btn-sm" data-i18n="layanan.lepas_kunci.cta">Booking Sekarang</a>
                   </div>
                 </div>
               </div>
@@ -405,10 +405,10 @@
               <div class="container">
                 <div class="row justify-content-start align-items-center" style="min-height: 220px;">
                   <div class="col-md-6 col-lg-5 heading-section heading-section-white ftco-animate">
-                    <span class="d-inline-block px-2 py-1 mb-2" style="background: rgba(255,255,255,.2); color:#ffffff; font-weight:600; border-radius:4px; font-size: 12px;">Layanan Bandara</span>
-                    <h2 class="mb-2" style="font-weight:800; font-size: 24px; line-height: 1.3;">Antar Jemput Bandara</h2>
-                    <p class="mb-3 d-inline-block px-3 py-2" style="background: rgba(0,0,0,.5); color:#ffffff; font-size: 14px; line-height: 1.5; border-radius:6px;">Layanan antar jemput ke/dari Bandara Soekarno-Hatta &amp; Halim Perdanakusuma Jakarta. Tepat waktu, nyaman, dan terpercaya untuk perjalanan Anda di Jakarta.</p>
-                    <a href="https://wa.me/6281313256756?text=hai%20saya%20mau%20pesan%20antar%20jemput%20bandara%20Jakarta" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Booking Sekarang</a>
+                    <span class="d-inline-block px-2 py-1 mb-2" style="background: rgba(255,255,255,.2); color:#ffffff; font-weight:600; border-radius:4px; font-size: 12px;" data-i18n="layanan.bandara.badge">Layanan Bandara</span>
+                    <h2 class="mb-2" style="font-weight:800; font-size: 24px; line-height: 1.3;" data-i18n="layanan.bandara.title">Antar Jemput Bandara</h2>
+                    <p class="mb-3 d-inline-block px-3 py-2" style="background: rgba(0,0,0,.5); color:#ffffff; font-size: 14px; line-height: 1.5; border-radius:6px;" data-i18n="layanan.bandara.description">Layanan antar jemput ke/dari Bandara Soekarno-Hatta &amp; Halim Perdanakusuma Jakarta. Tepat waktu, nyaman, dan terpercaya untuk perjalanan Anda di Jakarta.</p>
+                    <a href="https://wa.me/6281313256756?text=hai%20saya%20mau%20pesan%20antar%20jemput%20bandara%20Jakarta" target="_blank" rel="noopener" class="btn btn-primary btn-sm" data-i18n="layanan.bandara.cta">Booking Sekarang</a>
                   </div>
                 </div>
               </div>
@@ -422,10 +422,10 @@
               <div class="container">
                 <div class="row justify-content-start align-items-center" style="min-height: 220px;">
                   <div class="col-md-6 col-lg-5 heading-section heading-section-white ftco-animate">
-                    <span class="d-inline-block px-2 py-1 mb-2" style="background: rgba(255,255,255,.2); color:#ffffff; font-weight:600; border-radius:4px; font-size: 12px;">Wisata Bandung</span>
-                    <h2 class="mb-2" style="font-weight:800; font-size: 24px; line-height: 1.3;">City Tour Bandung</h2>
-                    <p class="mb-3 d-inline-block px-3 py-2" style="background: rgba(0,0,0,.5); color:#ffffff; font-size: 14px; line-height: 1.5; border-radius:6px;">Jelajahi keindahan Bandung dengan paket city tour kami. Driver berpengalaman siap menemani perjalanan wisata Anda.</p>
-                    <a href="https://wa.me/6281313256756?text=hai%20saya%20mau%20pesan%20city%20tour" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Booking Sekarang</a>
+                    <span class="d-inline-block px-2 py-1 mb-2" style="background: rgba(255,255,255,.2); color:#ffffff; font-weight:600; border-radius:4px; font-size: 12px;" data-i18n="layanan.citytour.badge">Wisata Bandung</span>
+                    <h2 class="mb-2" style="font-weight:800; font-size: 24px; line-height: 1.3;" data-i18n="layanan.citytour.title">City Tour Bandung</h2>
+                    <p class="mb-3 d-inline-block px-3 py-2" style="background: rgba(0,0,0,.5); color:#ffffff; font-size: 14px; line-height: 1.5; border-radius:6px;" data-i18n="layanan.citytour.description">Jelajahi keindahan Bandung dengan paket city tour kami. Driver berpengalaman siap menemani perjalanan wisata Anda.</p>
+                    <a href="https://wa.me/6281313256756?text=hai%20saya%20mau%20pesan%20city%20tour" target="_blank" rel="noopener" class="btn btn-primary btn-sm" data-i18n="layanan.citytour.cta">Booking Sekarang</a>
                   </div>
                 </div>
               </div>
@@ -437,16 +437,16 @@
           <div class="col-12 d-flex justify-content-center" id="armadaTabsWrapper">
             <ul class="nav nav-pills" id="armadaTabs" style="background: #fff; padding: 12px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: inline-flex; flex-wrap: nowrap;">
               <li class="nav-item">
-                <a href="#" class="nav-link active" data-cat="all">Semua</a>
+                <a href="#" class="nav-link active" data-cat="all" data-i18n="layanan.fleet_tabs.all">Semua</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link" data-cat="mobil">Mobil</a>
+                <a href="#" class="nav-link" data-cat="mobil" data-i18n="layanan.fleet_tabs.car">Mobil</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link" data-cat="minibus">Minibus</a>
+                <a href="#" class="nav-link" data-cat="minibus" data-i18n="layanan.fleet_tabs.minibus">Minibus</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link" data-cat="bus">Bus</a>
+                <a href="#" class="nav-link" data-cat="bus" data-i18n="layanan.fleet_tabs.bus">Bus</a>
               </li>
             </ul>
           </div>
@@ -464,9 +464,9 @@
 			<div class="container">
 				<div class="row justify-content-center mb-5">
           <div class="col-md-8 text-center heading-section ftco-animate">
-          	<span class="subheading d-inline-block px-3 py-1 rounded" style="background: rgba(37,211,102,.12); color:#25D366; font-weight:600;">Keunggulan</span>
-            <h2 class="mb-2" style="font-weight:800;">Mengapa Memilih Rental Mobil Kami</h2>
-            <p class="text-muted mb-0">Layanan rental mobil Bandung terbaik dengan harga transparan dan armada terawat. Tersedia lepas kunci maupun dengan sopir.</p>
+          	<span class="subheading d-inline-block px-3 py-1 rounded" style="background: rgba(37,211,102,.12); color:#25D366; font-weight:600;" data-i18n="layanan.advantages.badge">Keunggulan</span>
+            <h2 class="mb-2" style="font-weight:800;" data-i18n="layanan.advantages.title">Mengapa Memilih Rental Mobil Kami</h2>
+            <p class="text-muted mb-0" data-i18n="layanan.advantages.subtitle">Layanan rental mobil Bandung terbaik dengan harga transparan dan armada terawat. Tersedia lepas kunci maupun dengan sopir.</p>
           </div>
         </div>
 				<div class="row">
@@ -476,8 +476,8 @@
                 <span class="fa fa-car" style="font-size:28px;"></span>
               </div>
             	<div class="text w-100">
-                <h3 class="heading mb-2" style="font-weight:700; font-size: 18px;">Armada Lengkap & Terawat</h3>
-                <p class="mb-0">Pilihan mobil beragam: Avanza, Innova, Alphard, Hiace, hingga Bus. Semua armada bersih dan siap untuk perjalanan jauh maupun city tour.</p>
+                <h3 class="heading mb-2" style="font-weight:700; font-size: 18px;" data-i18n="index.advantages.feature1_title">Armada Lengkap & Terawat</h3>
+                <p class="mb-0" data-i18n="index.advantages.feature1_desc">Pilihan mobil beragam: Avanza, Innova, Alphard, Hiace, hingga Bus. Semua armada bersih dan siap untuk perjalanan jauh maupun city tour.</p>
               </div>
             </div>
 					</div>
@@ -487,8 +487,8 @@
                 <span class="fa fa-user" style="font-size:28px;"></span>
               </div>
             	<div class="text w-100">
-                <h3 class="heading mb-2" style="font-weight:700; font-size: 18px;">Sopir Profesional</h3>
-                <p class="mb-0">Driver berpengalaman, ramah, dan paham rute wisata Bandung. Tersedia untuk layanan dengan sopir maupun city tour.</p>
+                <h3 class="heading mb-2" style="font-weight:700; font-size: 18px;" data-i18n="index.advantages.feature2_title">Sopir Profesional</h3>
+                <p class="mb-0" data-i18n="index.advantages.feature2_desc">Driver berpengalaman, ramah, dan paham rute wisata Bandung. Tersedia untuk layanan dengan sopir maupun city tour.</p>
               </div>
             </div>
 					</div>
@@ -498,8 +498,8 @@
                 <span class="fa fa-tags" style="font-size:28px;"></span>
               </div>
             	<div class="text w-100">
-                <h3 class="heading mb-2" style="font-weight:700; font-size: 18px;">Harga Transparan</h3>
-                <p class="mb-0">Tanpa biaya tersembunyi, semua jelas di awal. Harga sewa mobil Bandung terjangkau mulai Rp 350.000/hari.</p>
+                <h3 class="heading mb-2" style="font-weight:700; font-size: 18px;" data-i18n="index.advantages.feature3_title">Harga Transparan</h3>
+                <p class="mb-0" data-i18n="index.advantages.feature3_desc">Tanpa biaya tersembunyi, semua jelas di awal. Harga sewa mobil Bandung terjangkau mulai Rp 350.000/hari.</p>
               </div>
             </div>
 					</div>
@@ -509,14 +509,14 @@
                 <span class="fa fa-headphones" style="font-size:28px;"></span>
               </div>
             	<div class="text w-100">
-                <h3 class="heading mb-2" style="font-weight:700; font-size: 18px;">Layanan 24 Jam</h3>
-                <p class="mb-0">Rental mobil Bandung 24 jam siap melayani. Booking kapan saja via WhatsApp dengan respon cepat.</p>
+                <h3 class="heading mb-2" style="font-weight:700; font-size: 18px;" data-i18n="index.advantages.feature4_title">Layanan 24 Jam</h3>
+                <p class="mb-0" data-i18n="index.advantages.feature4_desc">Rental mobil Bandung 24 jam siap melayani. Booking kapan saja via WhatsApp dengan respon cepat.</p>
               </div>
             </div>
 					</div>
 				</div>
         <div class="text-center mt-2">
-          <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20tertarik%20rental%20mobil%20Bandung.%20Mohon%20info%20harga%20dan%20armada.%20Terima%20kasih!" target="_blank" rel="noopener" class="btn btn-primary px-4 py-3">Booking Sekarang</a>
+          <a href="https://wa.me/6281313256756?text=Halo%2C%20saya%20tertarik%20rental%20mobil%20Bandung.%20Mohon%20info%20harga%20dan%20armada.%20Terima%20kasih!" target="_blank" rel="noopener" class="btn btn-primary px-4 py-3" data-i18n="index.advantages.cta">Booking Sekarang</a>
         </div>
 			</div>
 		</section>
@@ -557,13 +557,13 @@
             <!-- Quick Links -->
             <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
               <div class="footer-widget">
-                <h4 class="footer-title">Menu</h4>
+                <h4 class="footer-title" data-i18n="footer.menu_title">Menu</h4>
                 <ul class="footer-links">
-                  <li><a href="{{ url_for('index') }}"><i class="fa fa-angle-right mr-2"></i>Beranda</a></li>
-                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i>Layanan</a></li>
-                  <li><a href="{{ url_for('gallery') }}"><i class="fa fa-angle-right mr-2"></i>Galeri</a></li>
-                  <li><a href="{{ url_for('contact') }}"><i class="fa fa-angle-right mr-2"></i>Tentang & Kontak</a></li>
-                  <li><a href="{{ url_for('index') }}#layanan"><i class="fa fa-angle-right mr-2"></i>Cek Harga</a></li>
+                  <li><a href="{{ url_for('index') }}"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.menu_home">Beranda</span></a></li>
+                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.menu_services">Layanan</span></a></li>
+                  <li><a href="{{ url_for('gallery') }}"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.menu_gallery">Galeri</span></a></li>
+                  <li><a href="{{ url_for('contact') }}"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.menu_contact">Tentang & Kontak</span></a></li>
+                  <li><a href="{{ url_for('index') }}#layanan"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.menu_check_price">Cek Harga</span></a></li>
                 </ul>
               </div>
             </div>
@@ -571,12 +571,12 @@
             <!-- Services -->
             <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
               <div class="footer-widget">
-                <h4 class="footer-title">Layanan Kami</h4>
+                <h4 class="footer-title" data-i18n="footer.services_title">Layanan Kami</h4>
                 <ul class="footer-links">
-                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i>Rental Lepas Kunci</a></li>
-                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i>Rental dengan Supir</a></li>
-                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i>Antar Jemput Bandara</a></li>
-                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i>City Tour Bandung</a></li>
+                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.service1">Rental Lepas Kunci</span></a></li>
+                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.service2">Rental dengan Supir</span></a></li>
+                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.service3">Antar Jemput Bandara</span></a></li>
+                  <li><a href="{{ url_for('layanan') }}"><i class="fa fa-angle-right mr-2"></i><span data-i18n="footer.service4">City Tour Bandung</span></a></li>
                 </ul>
               </div>
             </div>
@@ -584,11 +584,11 @@
             <!-- Contact Info -->
             <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
               <div class="footer-widget">
-                <h4 class="footer-title">Hubungi Kami</h4>
+                <h4 class="footer-title" data-i18n="footer.contact_title">Hubungi Kami</h4>
                 <ul class="footer-contact">
                   <li>
                     <i class="fa fa-map-marker"></i>
-                    <span>Bandung, Jawa Barat<br>Indonesia</span>
+                    <span><span data-i18n="footer.address">Jl. Rancabentang No. 104 RT 4 RW 14</span><br><span data-i18n="footer.address_line2">Brilink Angelicha, Bandung</span><br><span data-i18n="footer.country">Indonesia</span></span>
                   </li>
                   <li>
                     <i class="fa fa-phone"></i>
@@ -596,11 +596,11 @@
                   </li>
                   <li>
                     <i class="fa fa-whatsapp"></i>
-                    <span><a href="https://wa.me/6281313256756" target="_blank">WhatsApp Chat</a></span>
+                    <span><a href="https://wa.me/6281313256756" target="_blank" data-i18n="footer.whatsapp_chat">WhatsApp Chat</a></span>
                   </li>
                   <li>
                     <i class="fa fa-clock-o"></i>
-                    <span>24/7 Support</span>
+                    <span data-i18n="footer.support">24/7 Support</span>
                   </li>
                 </ul>
               </div>
@@ -616,12 +616,12 @@
           <div class="row align-items-center">
             <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
               <p class="footer-copyright">
-                &copy; <script>document.write(new Date().getFullYear());</script> <strong>ALEXTRANS</strong>. All rights reserved.
+                &copy; <script>document.write(new Date().getFullYear());</script> <strong>ALEXTRANS</strong>. <span data-i18n="footer.copyright">All rights reserved.</span>
               </p>
             </div>
             <div class="col-md-6 text-center text-md-right">
               <p class="footer-credit">
-                Made with <i class="fa fa-heart" style="color: #e74c3c;"></i> kitabuat.web.id
+                <span data-i18n="footer.made_with">Made with</span> <i class="fa fa-heart" style="color: #e74c3c;"></i> <span data-i18n="footer.by">kitabuat.web.id</span>
               </p>
             </div>
           </div>
@@ -766,6 +766,29 @@
     <img src="{{ url_for('static', filename='assets/images/icon-wa.png') }}" alt="WA">
   </a>
 
+  <!-- Language Switcher -->
+  <div class="lang-switcher" style="position: fixed; right: 18px; bottom: 90px; z-index: 9999; display: flex; flex-direction: column; gap: 8px;">
+    <button type="button" class="lang-btn" data-lang="id" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid #fff; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.15); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; padding: 0;">
+      <img src="{{ url_for('static', filename='assets/images/indonesia-flag.png') }}" alt="ID" style="width: 28px; height: 28px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span style="display: none; font-weight: 600; font-size: 12px; color: #333;">ID</span>
+    </button>
+    <button type="button" class="lang-btn" data-lang="en" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid #fff; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.15); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; padding: 0;">
+      <img src="{{ url_for('static', filename='assets/images/uk-flag.png') }}" alt="EN" style="width: 28px; height: 28px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span style="display: none; font-weight: 600; font-size: 12px; color: #333;">EN</span>
+    </button>
+  </div>
+
+  <style>
+    .lang-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2) !important;
+    }
+    .lang-btn.active {
+      border-color: #25D366 !important;
+      box-shadow: 0 6px 16px rgba(37,211,102,0.4) !important;
+    }
+  </style>
+
   <!-- WhatsApp Car Card Buttons -->
   <script>
     (function() {
@@ -818,6 +841,141 @@
       window.addEventListener('resize', updateNavbarOnScroll);
       document.addEventListener('DOMContentLoaded', updateNavbarOnScroll);
       updateNavbarOnScroll();
+    })();
+  </script>
+
+  <!-- Multi-Language Translation Script -->
+  <script>
+    (function() {
+      var LOCALE_PATH = "{{ url_for('static', filename='json_file/data_') }}";
+      var currentLang = 'id';
+      var translations = {};
+
+      function detectPreferredLanguage() {
+        try {
+          var navLangs = (navigator.languages && navigator.languages.length) 
+            ? navigator.languages 
+            : [navigator.language || navigator.userLanguage || ''];
+          
+          for (var i = 0; i < navLangs.length; i++) {
+            var l = (navLangs[i] || '').toLowerCase();
+            if (l === 'id' || l.indexOf('id-') === 0 || l === 'in' || l.indexOf('in-') === 0) {
+              return 'id';
+            }
+            if (l === 'en' || l.indexOf('en-') === 0) {
+              return 'en';
+            }
+          }
+          
+          var tz = (Intl && Intl.DateTimeFormat && Intl.DateTimeFormat().resolvedOptions().timeZone) || '';
+          var indoTZ = ['Asia/Jakarta','Asia/Pontianak','Asia/Makassar','Asia/Jayapura'];
+          if (indoTZ.indexOf(tz) !== -1) return 'id';
+        } catch (e) {}
+        return 'id';
+      }
+
+      function getByPath(obj, path) {
+        if (!path || !obj) return null;
+        return path.split('.').reduce(function(o, k) {
+          return (o && o[k] != null) ? o[k] : null;
+        }, obj);
+      }
+
+      function applyTranslations() {
+        var textNodes = document.querySelectorAll('[data-i18n]');
+        for (var i = 0; i < textNodes.length; i++) {
+          var el = textNodes[i];
+          var key = el.getAttribute('data-i18n');
+          var val = getByPath(translations, key);
+          if (val != null) {
+            el.textContent = val;
+          }
+        }
+
+        var htmlNodes = document.querySelectorAll('[data-i18n-html]');
+        for (var j = 0; j < htmlNodes.length; j++) {
+          var el = htmlNodes[j];
+          var key = el.getAttribute('data-i18n-html');
+          var val = getByPath(translations, key);
+          if (val != null) {
+            el.innerHTML = val;
+          }
+        }
+
+        var placeholderNodes = document.querySelectorAll('[data-i18n-placeholder]');
+        for (var k = 0; k < placeholderNodes.length; k++) {
+          var el = placeholderNodes[k];
+          var key = el.getAttribute('data-i18n-placeholder');
+          var val = getByPath(translations, key);
+          if (val != null) {
+            el.setAttribute('placeholder', val);
+          }
+        }
+
+        var titleNodes = document.querySelectorAll('[data-i18n-title]');
+        for (var m = 0; m < titleNodes.length; m++) {
+          var el = titleNodes[m];
+          var key = el.getAttribute('data-i18n-title');
+          var val = getByPath(translations, key);
+          if (val != null) {
+            el.setAttribute('title', val);
+          }
+        }
+      }
+
+      function setActiveButton(lng) {
+        var btns = document.querySelectorAll('.lang-btn');
+        for (var i = 0; i < btns.length; i++) {
+          var btn = btns[i];
+          if (btn.getAttribute('data-lang') === lng) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        }
+      }
+
+      function loadLanguage(lng) {
+        currentLang = lng;
+        localStorage.setItem('lang', lng);
+        
+        fetch(LOCALE_PATH + lng + '.json', { cache: 'no-store' })
+          .then(function(r) {
+            if (!r.ok) throw new Error('Failed to load language file');
+            return r.json();
+          })
+          .then(function(json) {
+            translations = json || {};
+            applyTranslations();
+            setActiveButton(lng);
+          })
+          .catch(function(err) {
+            console.error('Language load error:', err);
+          });
+      }
+
+      function initLanguage() {
+        var stored = localStorage.getItem('lang');
+        var preferred = stored || detectPreferredLanguage();
+        loadLanguage(preferred);
+
+        var btns = document.querySelectorAll('.lang-btn');
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener('click', function(e) {
+            e.preventDefault();
+            var lang = this.getAttribute('data-lang');
+            if (lang && lang !== currentLang) {
+              loadLanguage(lang);
+            }
+          });
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initLanguage);
+      } else {
+        initLanguage();
+      }
     })();
   </script>
     

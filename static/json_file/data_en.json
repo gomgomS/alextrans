@@ -1,7 +1,310 @@
 {
-    "pageTitle": "Welcome to My Website!",
-    "pageContent": "This is the default content in English.",
-    "buttonText": "Switch Language",
-    "sign_up":"Sign Up",
-    "login":"Login"
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "gallery": "Gallery",
+    "about_contact": "About & Contact",
+    "chat_now": "Chat Now"
+  },
+  "index": {
+    "meta": {
+      "title": "Cheap Car Rental Bandung 24 Hours | Self Drive & With Driver",
+      "description": "Rent a car in Bandung cheap starting from 350k/day. Available self drive & with driver. 24-hour service, city tour, airport transfer. Easy & fast booking via WA!"
+    },
+    "hero": {
+      "title": "Cheap Car Rental Bandung - Self Drive & With Driver",
+      "subtitle": "Rent a car in Bandung 24 hours with a complete fleet. Available self drive and with professional driver. Transparent prices starting from Rp 350,000/day. Perfect for city tours, tourism, and airport transfers.",
+      "cta": "Order Now via WhatsApp"
+    },
+    "booking_form": {
+      "title": "Check Fleet Price",
+      "subtitle": "Choose fleet, set time, get instant estimate.",
+      "select_fleet": "Choose Fleet",
+      "with_driver": "With Driver",
+      "with_driver_label": "With Driver / City Tour",
+      "driver_mandatory": "Driver is mandatory for this fleet.",
+      "start_rental": "Start Rental",
+      "end_rental": "End Rental",
+      "date_label": "Date:",
+      "time_label": "Time:",
+      "check_price": "Check Price",
+      "booking_summary": "Booking Summary",
+      "price_estimate": "Price Estimate",
+      "days": "Days",
+      "fleet": "Fleet",
+      "driver_option": "Driver Option",
+      "with_driver_yes": "With Driver",
+      "without_driver": "Without Driver",
+      "start": "Start",
+      "end": "End",
+      "price_per_day": "Price/day + Driver",
+      "price_per_day_only": "Price/day",
+      "duration": "Duration",
+      "total_price": "Total Price",
+      "note": "Note:",
+      "note_text": "Prices may vary for city tour packages or weekly/monthly rentals.",
+      "contact_admin": "Contact admin for the best offer.",
+      "terms_apply": "T&C apply.",
+      "chat_whatsapp": "Chat WhatsApp"
+    },
+    "why_choose": {
+      "title": "Why Choose Alextrans?",
+      "subtitle": "Trusted transportation solution in Bandung",
+      "feature1_title": "Complete & Well-Maintained Fleet",
+      "feature1_desc": "Cars, minibuses, to buses clean and ready for long trips",
+      "feature2_title": "Professional Drivers",
+      "feature2_desc": "Friendly, experienced drivers who know tourist routes",
+      "feature3_title": "Transparent Pricing",
+      "feature3_desc": "No hidden fees, everything clear upfront",
+      "feature4_title": "Easy Booking",
+      "feature4_desc": "Fast process via WhatsApp, response within minutes",
+      "check_price_now": "Check Price Now",
+      "chat_admin": "Chat Admin"
+    },
+    "about": {
+      "badge": "About Us",
+      "title": "Trusted Car Rental Bandung",
+      "paragraph1": "ALEXTRANS is a trusted Bandung car rental service provider with 24-hour service. We provide cheap Bandung car rental for various needs - both self-drive car rental (self drive) and rental with professional driver.",
+      "paragraph2": "Our fleet includes Avanza, Innova, Alphard, Hiace, to Buses for families or groups. Suitable for Bandung city tour, tour packages, airport transfers, business trips, and family events.",
+      "paragraph3": "With transparent prices starting from Rp 350,000/day, easy booking process via WhatsApp, and friendly service, ALEXTRANS is the main choice for car rentals in Bandung. We are ready to serve you anytime with well-maintained fleet and experienced drivers."
+    },
+    "services": {
+      "badge": "Our Services",
+      "title": "Bandung Car Rental Services",
+      "subtitle": "Complete Bandung car rental services: self drive, with driver, city tour, and airport transfer. Well-maintained fleet, transparent prices, easy process."
+    },
+    "service_lepas_kunci": {
+      "badge": "Featured Service",
+      "title": "Bandung Self-Drive Car Rental Without Survey",
+      "description": "Enjoy the freedom of driving with Bandung self-drive car rental service. Rent a car without a driver (self drive) for maximum flexibility. Easy process without survey, well-maintained fleet, affordable prices. Perfect for personal trips, family vacations, or your daily mobility needs in Bandung.",
+      "cta": "Check Price & Availability"
+    },
+    "service_bandara": {
+      "badge": "Featured Service",
+      "title": "Jakarta Airport Transfer Soekarno-Hatta & Halim",
+      "description": "Fast and comfortable Jakarta airport transfer service (Soekarno-Hatta & Halim Perdanakusuma). We are ready to pick up or drop you off at the airport on time. Various fleet options available from sedans to family cars. Professional drivers, flat rates, no hidden fees. Perfect your trip with trusted airport transfer service in Jakarta.",
+      "cta": "Easy Booking via WA"
+    },
+    "service_citytour": {
+      "badge": "Featured Service",
+      "title": "Bandung City Tour Package with Experienced Driver",
+      "description": "Explore Bandung tourist destinations with comfortable and affordable city tour package. Rent Bandung tourist car with friendly driver who knows the best tourist routes. Suitable for families, groups, or personal trips. Flexible Bandung tour packages according to your needs - from natural tourism, culinary, to shopping. Friendly prices, unforgettable experiences.",
+      "cta": "Order Tour Package"
+    },
+    "fleet": {
+      "badge": "Fleet Options",
+      "title": "Bandung Car Rental Price List",
+      "subtitle": "Complete choice of Bandung car rental fleet: cars, minibuses, to buses. Transparent prices starting from Rp 350,000/day for your various needs.",
+      "car": "Car",
+      "minibus": "Minibus",
+      "bus": "Bus",
+      "seats": "seats",
+      "driver_mandatory": "driver mandatory",
+      "driver_optional": "Driver optional",
+      "starting_from": "Starting",
+      "per_day": "/day",
+      "check_price": "Check Price",
+      "order_now": "Order Now"
+    },
+    "advantages": {
+      "badge": "Advantages",
+      "title": "Why Choose Our Car Rental",
+      "subtitle": "Best Bandung car rental service with transparent prices and well-maintained fleet. Available self-drive and with driver.",
+      "feature1_title": "Complete & Well-Maintained Fleet",
+      "feature1_desc": "Diverse car choices: Avanza, Innova, Alphard, Hiace, to Buses. All fleets are clean and ready for long trips or city tours.",
+      "feature2_title": "Professional Drivers",
+      "feature2_desc": "Experienced, friendly drivers who know Bandung tourist routes. Available for services with driver or city tour.",
+      "feature3_title": "Transparent Pricing",
+      "feature3_desc": "No hidden fees, everything clear upfront. Bandung car rental prices are affordable starting from Rp 350,000/day.",
+      "feature4_title": "24-Hour Service",
+      "feature4_desc": "Bandung 24-hour car rental ready to serve. Book anytime via WhatsApp with fast response.",
+      "cta": "Book Now"
+    },
+    "cta_banner": {
+      "title": "Rent Bandung Car Now - Limited Fleet!",
+      "description": "Don't run out of fleet during holidays or peak season. Book your Bandung car rental now for the best price!",
+      "cta": "Book Now"
+    },
+    "testimonials": {
+      "badge": "TESTIMONIALS",
+      "title": "Customer Trust",
+      "subtitle": "Thousands of customers have trusted our car rental service for safe and comfortable trips",
+      "testimonial1_text": "Rented Avanza for homecoming, the process was very easy via WA. The car was clean, AC was cold, and fuel efficient. Very satisfied, will definitely use Alextrans again.",
+      "testimonial1_name": "Budi Santoso",
+      "testimonial1_service": "Self-Drive Avanza Rental",
+      "testimonial2_text": "Used Hiace Commuter for family group to Lembang. The driver was friendly and knew the route, the car was spacious and comfortable. Recommended!",
+      "testimonial2_name": "Siti Nurhaliza",
+      "testimonial2_service": "Hiace Commuter Rental + Driver",
+      "testimonial3_text": "Alphard for family event, the service was very premium. Luxurious interior, professional driver, on time. Worth it for important events.",
+      "testimonial3_name": "Rudi Hermawan",
+      "testimonial3_service": "Alphard Rental with Driver",
+      "testimonial4_text": "Innova Reborn for city tour, very satisfied. Well-maintained car, cold AC, and reasonable price. Responsive admin, fast booking process.",
+      "testimonial4_name": "Denny Prakoso",
+      "testimonial4_service": "Innova Reborn Rental + Driver",
+      "testimonial5_text": "Rush self-drive for weekend getaway, the car was great. Smooth engine, neat interior, no hassle survey. Thank you Alextrans!",
+      "testimonial5_name": "Andi Wijaya",
+      "testimonial5_service": "Self-Drive Rush Rental",
+      "testimonial6_text": "Fortuner for trip to Pangandaran, very comfortable and safe. Experienced driver, knew shortcuts. Satisfied with the service.",
+      "testimonial6_name": "Lisa Permata",
+      "testimonial6_service": "Fortuner Rental with Driver",
+      "cta_title": "Ready to Experience the Best?",
+      "cta_subtitle": "Join thousands of our satisfied customers",
+      "cta_button": "Order Now"
+    },
+    "stats": {
+      "title": "Alextrans in Numbers",
+      "subtitle": "Trusted by hundreds of customers with professional service",
+      "years_title": "Years Established",
+      "years_desc": "Trusted experience",
+      "fleet_title": "Available Fleet",
+      "fleet_desc": "Well-maintained vehicles",
+      "customers_title": "Satisfied Customers",
+      "customers_desc": "Guaranteed satisfaction",
+      "drivers_title": "Professional Drivers",
+      "drivers_desc": "Friendly & experienced"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions About Bandung Car Rental",
+      "subtitle": "Important information about our car rental service",
+      "question1": "How much is Bandung car rental per day?",
+      "answer1": "Bandung car rental prices start from Rp 350,000/day for economical cars like Avanza. Prices vary depending on fleet type and rental duration. For minibuses like Hiace starting from Rp 600,000/day, with or without driver depending on the chosen package. Contact us for the best offer.",
+      "question2": "Is self-drive car rental without survey available?",
+      "answer2": "Yes, we provide Bandung self-drive car rental service without survey. Fast and easy process, just complete the documents (ID card, driver's license, family card) and collateral according to regulations. Perfect for those who want to drive themselves (self drive) with full flexibility.",
+      "question3": "How to book Bandung car rental?",
+      "answer3": "Booking is very easy! Contact us via WhatsApp at +62 813-1325-6756, or use the \"Check Price\" form on this website. Our team will respond quickly and help choose the right fleet for your needs. Booking process only takes a few minutes.",
+      "question4": "Is there a Bandung city tour package?",
+      "answer4": "Sure! We provide Bandung city tour packages with experienced drivers who know tourist routes. Popular destinations include Lembang, Dago, Kawah Putih, Tangkuban Perahu, and other tourist attractions. Packages can be customized to your needs and budget. Prices start from Rp 950,000 for 12 hours.",
+      "question5": "Do you provide airport transfer?",
+      "answer5": "Yes, we provide Soekarno-Hatta & Halim airport transfer service Jakarta 24 hours. The driver will pick up or drop you off on time. Flat price with no hidden fees. Airport transfer service is available for various types of fleet, from sedans to minibuses for groups.",
+      "question6": "Is Bandung car rental available 24 hours?",
+      "answer6": "Yes, our Bandung 24-hour car rental is ready to serve anytime. Our customer service is standby via WhatsApp to help your rental needs, both at night and on weekends. Booking can be done anytime according to your urgent needs.",
+      "still_have_questions": "Still have questions? Contact us now!",
+      "cta": "Chat via WhatsApp"
+    }
+  },
+  "layanan": {
+    "meta": {
+      "title": "Services - Alextranstravel.com"
+    },
+    "hero": {
+      "breadcrumb_home": "Home",
+      "breadcrumb_current": "Services",
+      "title": "Choose Service & Fleet"
+    },
+    "service_tabs": {
+      "lepas_kunci": "Self Drive",
+      "bandara": "Airport Transfer",
+      "citytour": "City Tour"
+    },
+    "lepas_kunci": {
+      "badge": "Featured Service",
+      "title": "Self-Drive Car Rental Without Survey",
+      "description": "Enjoy the freedom of driving without survey! Alextrans Rental is here with Self-Drive Car Rental service, practical and efficient.",
+      "cta": "Book Now"
+    },
+    "bandara": {
+      "badge": "Airport Service",
+      "title": "Airport Transfer",
+      "description": "Transfer service to/from Soekarno-Hatta & Halim Perdanakusuma Airport Jakarta. On time, comfortable, and reliable for your trip in Jakarta.",
+      "cta": "Book Now"
+    },
+    "citytour": {
+      "badge": "Bandung Tourism",
+      "title": "Bandung City Tour",
+      "description": "Explore the beauty of Bandung with our city tour package. Experienced driver ready to accompany your tourist trip.",
+      "cta": "Book Now"
+    },
+    "fleet_tabs": {
+      "all": "All",
+      "car": "Car",
+      "minibus": "Minibus",
+      "bus": "Bus"
+    },
+    "advantages": {
+      "badge": "Advantages",
+      "title": "Why Choose Our Car Rental",
+      "subtitle": "Best Bandung car rental service with transparent prices and well-maintained fleet. Available self-drive and with driver."
+    }
+  },
+  "gallery": {
+    "meta": {
+      "title": "Gallery - Alextranstravel.com"
+    },
+    "hero": {
+      "breadcrumb_home": "Home",
+      "breadcrumb_current": "Gallery",
+      "title": "Photo Gallery"
+    },
+    "section": {
+      "badge": "Testimonial Gallery",
+      "title": "Journey Moments With Us",
+      "subtitle": "Customer satisfaction is our priority. See the journey documentation of ALEXTRANS happy customers."
+    },
+    "cta": {
+      "title": "Want to Be Part of Our Gallery?",
+      "subtitle": "Order now and get the best travel experience with ALEXTRANS!",
+      "button": "Book Now"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "About & Contact - Alextranstravel.com"
+    },
+    "hero": {
+      "breadcrumb_home": "Home",
+      "breadcrumb_current": "About & Contact",
+      "title": "About & Contact"
+    },
+    "info": {
+      "address_label": "Address",
+      "address_text": "Jl. Rancabentang No. 104 RT 4 RW 14, Brilink Angelicha (Landmark: Pasar Rancabentang), Bandung, West Java",
+      "phone_label": "Phone/WhatsApp",
+      "email_label": "Email"
+    },
+    "about": {
+      "title": "About Us",
+      "paragraph1": "We are a Bandung Car Rental service provider with a complete fleet ranging from city cars, MPVs, SUVs, to Hiace & Big Bus for tourism, office, family needs, and out-of-town trips.",
+      "paragraph2": "All fleets are well-maintained, clean, air-conditioned, and always checked before use. Supported by professional drivers who are friendly, experienced, and understand Bandung routes to out of town well.",
+      "paragraph3": "We provide services:",
+      "service1": "Self-Drive / With Driver Car Rental",
+      "service2": "Soekarno-Hatta & Halim Airport Transfer Jakarta",
+      "service3": "Bandung City Tour",
+      "service4": "In & Out of Town Drop Off",
+      "service5": "Hiace / Elf / Tourist Bus Rental",
+      "why_title": "Why Choose Us?",
+      "why1": "Transparent prices with no hidden fees",
+      "why2": "Clean, comfortable units with regular service",
+      "why3": "Professional & friendly drivers",
+      "why4": "Fast booking via WhatsApp",
+      "why5": "Ready to pick up and drop off in Bandung area"
+    },
+    "map": {
+      "title": "Our Location"
+    }
+  },
+  "footer": {
+    "description": "ALEXTRANS - Trusted Bandung car rental service provider. Self-drive service, with driver, city tour, and airport transfer. Cheap prices, complete fleet, 24-hour service.",
+    "menu_title": "Menu",
+    "menu_home": "Home",
+    "menu_services": "Services",
+    "menu_gallery": "Gallery",
+    "menu_contact": "About & Contact",
+    "menu_check_price": "Check Price",
+    "services_title": "Our Services",
+    "service1": "Self-Drive Car Rental",
+    "service2": "Car Rental with Driver",
+    "service3": "Airport Transfer",
+    "service4": "Bandung City Tour Package",
+    "service5": "Tourist Car Rental",
+    "contact_title": "Contact Us",
+    "address": "Jl. Rancabentang No. 104 RT 4 RW 14",
+    "address_line2": "Brilink Angelicha, Bandung",
+    "country": "Indonesia",
+    "support": "24/7 Support",
+    "whatsapp_chat": "WhatsApp Chat",
+    "copyright": "All rights reserved.",
+    "made_with": "Made with",
+    "by": "kitabuat.web.id"
+  }
 }
