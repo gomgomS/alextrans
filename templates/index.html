@@ -41,25 +41,21 @@
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/open-iconic-bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animate.css') }}">
     
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/owl.theme.default.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/magnific-popup.css') }}">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/aos.css') }}">
-
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/ionicons.min.css') }}">
+    <!-- Font Awesome - Local file for reliability -->
     <link rel="stylesheet" href="{{ url_for('static', filename='dashforge/css/font-awesome.min.css') }}">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap-datepicker.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/jquery.timepicker.css') }}">
-
-    
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/flaticon.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/icomoon.css') }}">
+    <!-- Main Stylesheet -->
+    <!-- Note: CSS warnings from vendor prefixes are harmless browser compatibility code -->
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+    
+    <!-- Preload critical images to prevent NS_BINDING_ABORTED -->
+    <link rel="preload" as="image" href="{{ url_for('static', filename='assets/images/home-poster.png') }}">
+    <link rel="preload" as="image" href="{{ url_for('static', filename='assets/images/icon-wa.png') }}">
     
     <!-- JSON-LD Schema Markup for SEO -->
     <script type="application/ld+json">
@@ -352,7 +348,7 @@
 	  </nav>
     <!-- END nav -->
     
-    <div class="hero-wrap ftco-degree-bg" style="background-image: url('{{ url_for('static', filename='assets/images/home-poster.png') }}'); background-repeat: no-repeat; background-size: contain; " data-stellar-background-ratio="0" role="img" aria-label="Rental mobil Bandung murah dengan layanan lepas kunci dan sopir profesional 24 jam">
+    <div class="hero-wrap ftco-degree-bg" style="background-image: url('{{ url_for('static', filename='assets/images/home-poster.png') }}'); background-repeat: no-repeat; background-size: contain; background-attachment: scroll;" data-stellar-background-ratio="0" role="img" aria-label="Rental mobil Bandung murah dengan layanan lepas kunci dan sopir profesional 24 jam">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text justify-content-start align-items-center">
@@ -702,7 +698,7 @@
   <section class="ftco-section ftco-about">
     <div class="container">
       <div class="row no-gutters">
-        <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url('{{ url_for('static', filename='assets/images/lepaskunci.png') }}'); background-size: contain; background-repeat: no-repeat; background-position: center;">
+        <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url('{{ url_for('static', filename='assets/images/lepaskunci.png') }}'); background-size: contain; background-repeat: no-repeat; background-position: center; background-attachment: scroll;">
         </div>
         <div class="col-md-6 wrap-about ftco-animate">
           <div class="heading-section heading-section-white pl-md-5">
@@ -734,7 +730,7 @@
             </p>
           </div>
         </div>
-        <div class="col-md-6 order-1 order-md-2 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url('{{ url_for('static', filename='assets/images/bandara.png') }}'); background-size: contain; background-repeat: no-repeat; background-position: center;">
+        <div class="col-md-6 order-1 order-md-2 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url('{{ url_for('static', filename='assets/images/bandara.png') }}'); background-size: contain; background-repeat: no-repeat; background-position: center; background-attachment: scroll;">
         </div>
       </div>
     </div>
@@ -742,7 +738,7 @@
   <section class="ftco-section ftco-about">
     <div class="container">
       <div class="row no-gutters">
-        <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url('{{ url_for('static', filename='assets/images/citytour.png') }}'); background-size: contain; background-repeat: no-repeat; background-position: center;">
+        <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url('{{ url_for('static', filename='assets/images/citytour.png') }}'); background-size: contain; background-repeat: no-repeat; background-position: center; background-attachment: scroll;">
         </div>
         <div class="col-md-6 wrap-about ftco-animate">
           <div class="heading-section heading-section-white pl-md-5">
@@ -810,7 +806,7 @@
                          data-car-capacity="{{ item.capacity }}"
                          data-car-price="{{ '{:,.0f}'.format(item.rent_fee) }}"
                          data-driver-mandatory="{% if item.driver_mandatory %}Ya{% else %}Tidak{% endif %}">
-                        <img src="{{ url_for('static', filename='assets/images/icon-wa.png') }}" alt="WA" style="height:16px; width:16px; margin-right:6px;"> Pesan Sekarang
+                        <img src="{{ url_for('static', filename='assets/images/icon-wa.png') }}" alt="WA" style="height:16px; width:16px; margin-right:6px;" loading="eager" fetchpriority="high"> Pesan Sekarang
                       </a>
                     </div>
                   </div>
@@ -1431,17 +1427,11 @@
   <script src="{{ url_for('static', filename='assets/js/jquery.waypoints.min.js') }}"></script>
   <script src="{{ url_for('static', filename='assets/js/jquery.stellar.min.js') }}"></script>
   <script src="{{ url_for('static', filename='assets/js/owl.carousel.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='assets/js/jquery.magnific-popup.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='assets/js/aos.js') }}"></script>
   <script src="{{ url_for('static', filename='assets/js/jquery.animateNumber.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='assets/js/bootstrap-datepicker.js') }}"></script>
-  <script src="{{ url_for('static', filename='assets/js/jquery.timepicker.min.js') }}"></script>
   <script src="{{ url_for('static', filename='assets/js/scrollax.min.js') }}"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="{{ url_for('static', filename='assets/js/google-map.js') }}"></script>
   <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
   <a class="wa-float" href="https://wa.me/6281313256756?text=hai%20saya%20mau%20cari%20mobil%20ka" target="_blank" rel="noopener" aria-label="WhatsApp Chat">
-    <img src="{{ url_for('static', filename='assets/images/icon-wa.png') }}" alt="WA">
+    <img src="{{ url_for('static', filename='assets/images/icon-wa.png') }}" alt="WA" loading="eager" fetchpriority="high">
   </a>
 
   <!-- Language Switcher -->
