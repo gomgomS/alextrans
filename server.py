@@ -68,6 +68,7 @@ from flask              import flash, get_flashed_messages
 from flask              import abort
 from flask              import jsonify 
 from flask              import send_from_directory
+from datetime           import timedelta
 
 from wtforms            import ValidationError
 
@@ -81,6 +82,21 @@ app                   = Flask( __name__, config.G_STATIC_URL_PATH )
 app.secret_key        = config.G_FLASK_SECRET
 app.session_interface = cookie_engine.MongoSessionInterface()
 csrf                  = CSRFProtect(app)
+
+# Cache headers for static files
+@app.after_request
+def set_cache_headers(response):
+    # Set cache headers for static assets (CSS, JS, images, fonts)
+    if request.endpoint == 'static' or '/static/' in request.path:
+        # Cache static assets for 1 year
+        response.cache_control.max_age = 31536000  # 1 year in seconds
+        response.cache_control.public = True
+        response.cache_control.immutable = True
+    # Set cache headers for HTML pages (shorter cache)
+    elif request.endpoint in ['index', 'layanan', 'contact', 'gallery']:
+        response.cache_control.max_age = 3600  # 1 hour
+        response.cache_control.public = True
+    return response
 
 app.config['WTF_CSRF_TIME_LIMIT'] = 86400
 
