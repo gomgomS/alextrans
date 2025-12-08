@@ -506,7 +506,7 @@
 	  					<div class="col-md-8 d-flex align-items-stretch">
 	  						
                   {% if calc %}
-                    <div class="booking-summary-modern w-100 h-100" id="booking-summary" data-days="{{ calc.days }}">
+                    <div class="booking-summary-modern w-100 h-100" id="booking-summary" data-days="{{ calc.days }}" data-with-driver="{{ '1' if (calc.with_driver or calc.mandatory) else '0' }}">
                       {% set ns = namespace(base=0, driver=0) %}
                       {% for p in pricing %}
                         {% if p.name == calc.car_name %}
@@ -520,11 +520,11 @@
                       <div class="summary-header">
                         <div class="d-flex justify-content-between align-items-center">
                           <div>
-                            <h3 class="mb-1 font-weight-bold">Ringkasan Booking</h3>
-                            <p class="mb-0 summary-subtitle">Estimasi Harga Sewa</p>
+                            <h3 class="mb-1 font-weight-bold" style="color: #fff;" data-i18n="index.booking_form.booking_summary">Ringkasan Booking</h3>
+                            <p class="mb-0 summary-subtitle" data-i18n="index.booking_form.price_estimate">Estimasi Harga Sewa</p>
                           </div>
                           <div class="duration-badge">
-                            <i class="fa fa-clock-o mr-1"></i>{{ calc.days }} Hari
+                            <i class="fa fa-clock-o mr-1"></i><span>{{ calc.days }}</span> <span data-i18n="index.booking_form.days">Hari</span>
                           </div>
                         </div>
                       </div>
@@ -542,22 +542,22 @@
                       <!-- Details Section -->
                       <div class="summary-details">
                         <div class="detail-row">
-                          <span class="detail-label"><i class="fa fa-car mr-2"></i>Armada</span>
+                          <span class="detail-label"><i class="fa fa-car mr-2"></i><span data-i18n="index.booking_form.fleet">Armada</span></span>
                           <span class="detail-value">
                             {{ calc.car_name }}
-                            {% if calc.mandatory %}<span class="mini-badge">wajib supir</span>{% endif %}
+                            {% if calc.mandatory %}<span class="mini-badge" data-i18n="index.fleet.driver_mandatory">wajib supir</span>{% endif %}
                           </span>
                         </div>
                         <div class="detail-row">
-                          <span class="detail-label"><i class="fa fa-user mr-2"></i>Opsi Supir</span>
-                          <span class="detail-value">{{ 'Dengan Supir' if (calc.with_driver or calc.mandatory) else 'Tanpa Supir' }}</span>
+                          <span class="detail-label"><i class="fa fa-user mr-2"></i><span data-i18n="index.booking_form.driver_option">Opsi Supir</span></span>
+                          <span class="detail-value" id="driver-option-display" data-with-driver="index.booking_form.with_driver_yes" data-without-driver="index.booking_form.without_driver">{{ 'Dengan Supir' if (calc.with_driver or calc.mandatory) else 'Tanpa Supir' }}</span>
                         </div>
                         <div class="detail-row">
-                          <span class="detail-label"><i class="fa fa-calendar mr-2"></i>Mulai</span>
+                          <span class="detail-label"><i class="fa fa-calendar mr-2"></i><span data-i18n="index.booking_form.start">Mulai</span></span>
                           <span class="detail-value"><strong id="start-display">{{ calc.start_display_id }}</strong><span id="start-time-display"></span></span>
                         </div>
                         <div class="detail-row">
-                          <span class="detail-label"><i class="fa fa-calendar-check-o mr-2"></i>Selesai</span>
+                          <span class="detail-label"><i class="fa fa-calendar-check-o mr-2"></i><span data-i18n="index.booking_form.end">Selesai</span></span>
                           <span class="detail-value"><strong id="end-display">{{ calc.end_display_id }}</strong><span id="end-time-display"></span></span>
                         </div>
                       </div>
@@ -565,27 +565,27 @@
                       <!-- Price Breakdown -->
                       <div class="price-breakdown">
                         <div class="price-row">
-                          <span>{% if daily_driver %}Harga/hari + Supir{% else %}Harga/hari{% endif %}</span>
+                          <span id="price-per-day-label" data-with-driver="index.booking_form.price_per_day" data-without-driver="index.booking_form.price_per_day_only">{% if daily_driver %}Harga/hari + Supir{% else %}Harga/hari{% endif %}</span>
                           <span>Rp {{ "{:,.0f}".format(ns.base + daily_driver if daily_driver else ns.base) }}</span>
                         </div>
                         <div class="price-row">
-                          <span>Durasi</span>
-                          <span>{{ calc.days }} hari</span>
+                          <span data-i18n="index.booking_form.duration">Durasi</span>
+                          <span><span>{{ calc.days }}</span> <span data-i18n="index.booking_form.days">hari</span></span>
                         </div>
                       </div>
 
                       <!-- Total Price -->
                       <div class="total-price">
-                        <span>Total Harga</span>
+                        <span data-i18n="index.booking_form.total_price">Total Harga</span>
                         <div class="price-amount">Rp {{ "{:,.0f}".format(calc.total_price) }}</div>
                       </div>
 
 <!-- Footer Note -->
                      <div class="summary-footer">
-                       <p class="mb-2"><i class="fa fa-info-circle mr-1"></i><strong>Catatan:</strong> Harga dapat berubah untuk paket city tour atau sewa mingguan/bulanan.</p>
-                       <p class="mb-3"><i class="fa fa-whatsapp mr-1"></i>Hubungi admin untuk penawaran terbaik. <em>S&K berlaku.</em></p>
+                       <p class="mb-2"><i class="fa fa-info-circle mr-1"></i><strong data-i18n="index.booking_form.note">Catatan:</strong> <span data-i18n="index.booking_form.note_text">Harga dapat berubah untuk paket city tour atau sewa mingguan/bulanan.</span></p>
+                       <p class="mb-3"><i class="fa fa-whatsapp mr-1"></i><span data-i18n="index.booking_form.contact_admin">Hubungi admin untuk penawaran terbaik.</span> <em data-i18n="index.booking_form.terms_apply">S&K berlaku.</em></p>
                        <a href="#" id="wa-booking-btn" target="_blank" rel="noopener" class="btn btn-success btn-sm px-3 py-2" style="background: #25D366; border-color: #25D366; border-radius: 8px; font-weight: 600; font-size: 14px;">
-                        <i class="fa fa-whatsapp mr-1"></i>Chat WhatsApp
+                        <i class="fa fa-whatsapp mr-1"></i><span data-i18n="index.booking_form.chat_whatsapp">Chat WhatsApp</span>
                        </a>
                      </div>
                       
@@ -799,14 +799,18 @@
                     <div style="position:relative; height:0; padding-top:56%;">
                       <div style="position:absolute; inset:0; background-image: url('{{ url_for('static', filename=('assets/' ~ item.img)) if item.img and (not item.img.startswith('assets/')) and (not item.img.startswith('http')) else item.img }}'); background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
                     </div>
-                    <div style="position:absolute; top:8px; left:8px; background: rgba(255,255,255,.95); color:#000; padding:3px 8px; border-radius: 12px; font-size: 12px; font-weight:600; box-shadow: 0 1px 2px rgba(0,0,0,.08);">
+                    <div style="position:absolute; top:8px; left:8px; background: rgba(255,255,255,.95); color:#000; padding:3px 8px; border-radius: 12px; font-size: 12px; font-weight:600; box-shadow: 0 1px 2px rgba(0,0,0,.08);" 
+                         data-category="{{ item.category }}"
+                         data-i18n-bus="index.fleet.bus"
+                         data-i18n-minibus="index.fleet.minibus"
+                         data-i18n-car="index.fleet.car">
                       {% if item.category == 'bigbus' %}Bus{% elif item.category == 'minibus' %}Minibus{% else %}Mobil{% endif %}
                     </div>
                     <div style="position:absolute; top:8px; right:8px; background: rgba(255,255,255,.95); color:#000; padding:3px 8px; border-radius: 12px; font-size: 12px; font-weight:600; box-shadow: 0 1px 2px rgba(0,0,0,.08);">
-                      {{ item.capacity }} kursi
+                      <span>{{ item.capacity }}</span> <span data-i18n="index.fleet.seats">kursi</span>
                     </div>
                     {% if item.driver_mandatory %}
-                    <div style="position:absolute; bottom:8px; right:8px; background:#ffc107; color:#221; padding:3px 8px; border-radius: 12px; font-size: 12px; font-weight:600;">
+                    <div style="position:absolute; bottom:8px; right:8px; background:#ffc107; color:#221; padding:3px 8px; border-radius: 12px; font-size: 12px; font-weight:600;" data-i18n="index.fleet.driver_mandatory">
                       wajib supir
                     </div>
                     {% endif %}
@@ -814,13 +818,16 @@
                   <div class="text p-3">
                     <h3 class="mb-1"><a href="#layanan" class="font-weight-bold" style="font-weight:700;">{{ item.name }}</a></h3>
                     <div class="d-flex align-items-center mb-2">
-                      <span class="cat">
+                      <span class="cat" 
+                            data-driver-mandatory="{{ '1' if item.driver_mandatory else '0' }}"
+                            data-i18n-mandatory="index.fleet.driver_mandatory_label"
+                            data-i18n-optional="index.fleet.driver_optional">
                         {% if item.driver_mandatory %}Supir wajib{% else %}Supir opsional{% endif %}
                       </span>
-                      <span class="ml-auto price">Mulai Rp {{ "{:,.0f}".format(item.rent_fee) }} <span>/hari</span></span>
+                      <span class="ml-auto price"><span data-i18n="index.fleet.starting_from">Mulai</span> Rp {{ "{:,.0f}".format(item.rent_fee) }} <span data-i18n="index.fleet.per_day">/hari</span></span>
                     </div>
                     <div class="d-flex align-items-stretch">
-                      <a href="#layanan" class="btn btn-sm mr-2 flex-fill text-white" style="background: var(--color-primary-bg); border-color: var(--color-primary-bg);">
+                      <a href="#layanan" class="btn btn-sm mr-2 flex-fill text-white" style="background: var(--color-primary-bg); border-color: var(--color-primary-bg);" data-i18n="index.fleet.check_price">
                         Cek Harga
                       </a>
                       <a href="#" class="car-wa-btn btn btn-sm flex-fill text-white" style="background:#25D366; border-color:#25D366;"
@@ -829,7 +836,7 @@
                          data-car-capacity="{{ item.capacity }}"
                          data-car-price="{{ '{:,.0f}'.format(item.rent_fee) }}"
                          data-driver-mandatory="{% if item.driver_mandatory %}Ya{% else %}Tidak{% endif %}">
-                        <img src="{{ url_for('static', filename='assets/images/icon-wa.png') }}" alt="WA" style="height:16px; width:16px; margin-right:6px;" loading="eager" fetchpriority="high"> Pesan Sekarang
+                        <img src="{{ url_for('static', filename='assets/images/icon-wa.png') }}" alt="WA" style="height:16px; width:16px; margin-right:6px;" loading="eager" fetchpriority="high"> <span data-i18n="index.fleet.order_now">Pesan Sekarang</span>
                       </a>
                     </div>
                   </div>
@@ -1969,6 +1976,72 @@
           var val = getByPath(translations, key);
           if (val != null) {
             el.setAttribute('value', val);
+          }
+        }
+
+        // Dynamic content based on driver option
+        var bookingSummary = document.getElementById('booking-summary');
+        var withDriver = bookingSummary && bookingSummary.getAttribute('data-with-driver') === '1';
+        
+        var driverOptionEl = document.getElementById('driver-option-display');
+        if (driverOptionEl) {
+          var withDriverKey = driverOptionEl.getAttribute('data-with-driver');
+          var withoutDriverKey = driverOptionEl.getAttribute('data-without-driver');
+          var withDriverText = getByPath(translations, withDriverKey);
+          var withoutDriverText = getByPath(translations, withoutDriverKey);
+          if (withDriver && withDriverText) {
+            driverOptionEl.textContent = withDriverText;
+          } else if (!withDriver && withoutDriverText) {
+            driverOptionEl.textContent = withoutDriverText;
+          }
+        }
+
+        // Dynamic price per day label
+        var pricePerDayEl = document.getElementById('price-per-day-label');
+        if (pricePerDayEl) {
+          var withDriverKey = pricePerDayEl.getAttribute('data-with-driver');
+          var withoutDriverKey = pricePerDayEl.getAttribute('data-without-driver');
+          var withDriverText = getByPath(translations, withDriverKey);
+          var withoutDriverText = getByPath(translations, withoutDriverKey);
+          if (withDriver && withDriverText) {
+            pricePerDayEl.textContent = withDriverText;
+          } else if (!withDriver && withoutDriverText) {
+            pricePerDayEl.textContent = withoutDriverText;
+          }
+        }
+
+        // Dynamic category labels in fleet cards
+        var categoryLabels = document.querySelectorAll('[data-category]');
+        for (var i = 0; i < categoryLabels.length; i++) {
+          var el = categoryLabels[i];
+          var category = el.getAttribute('data-category');
+          var key = null;
+          if (category === 'bigbus') {
+            key = el.getAttribute('data-i18n-bus');
+          } else if (category === 'minibus') {
+            key = el.getAttribute('data-i18n-minibus');
+          } else {
+            key = el.getAttribute('data-i18n-car');
+          }
+          if (key) {
+            var val = getByPath(translations, key);
+            if (val != null) {
+              el.textContent = val;
+            }
+          }
+        }
+
+        // Dynamic driver status labels in fleet cards
+        var driverStatusLabels = document.querySelectorAll('.cat[data-driver-mandatory]');
+        for (var j = 0; j < driverStatusLabels.length; j++) {
+          var el = driverStatusLabels[j];
+          var isMandatory = el.getAttribute('data-driver-mandatory') === '1';
+          var key = isMandatory ? el.getAttribute('data-i18n-mandatory') : el.getAttribute('data-i18n-optional');
+          if (key) {
+            var val = getByPath(translations, key);
+            if (val != null) {
+              el.textContent = val;
+            }
           }
         }
       }

@@ -675,33 +675,33 @@
         try {
           var html = (Array.isArray(items) ? items : []).map(function(item, idx) {
             var imgUrl = normalizeImgPath(item.img);
-            var catLabel = (item.category === 'bigbus') ? 'Bus' : (item.category === 'minibus' ? 'Minibus' : 'Mobil');
-            var driverLabel = item.driver_mandatory ? 'Supir wajib' : 'Supir opsional';
             var price = (item.rent_fee || 0).toLocaleString('id-ID');
+            var category = item.category || '';
+            var catKey = (category === 'bigbus') ? 'index.fleet.bus' : (category === 'minibus' ? 'index.fleet.minibus' : 'index.fleet.car');
             return ''
-              + '<div class="col-lg-4 col-md-6 d-flex mb-4" data-category="' + (item.category || '') + '">'
+              + '<div class="col-lg-4 col-md-6 d-flex mb-4" data-category="' + category + '">'
             + '  <div class="car-wrap rounded w-100 shadow-sm" style="overflow: hidden;">'
               + '    <div class="position-relative" style="background:#fff; border-bottom: 1px solid rgba(0,0,0,.05); overflow:hidden; border-top-left-radius:.25rem; border-top-right-radius:.25rem;">'
               + '      <img src="' + imgUrl + '" alt="' + (item.name || '') + '" style="display:block; width:100%; height:220px; object-fit:contain; background:#fff;">'
-              + '      <div style="position:absolute; top:8px; left:8px; background: rgba(255,255,255,.95); color:#000; padding:3px 8px; border-radius: 12px; font-size: 12px; font-weight:600; box-shadow: 0 1px 2px rgba(0,0,0,.08);">' + catLabel + '</div>'
-              + '      <div style="position:absolute; top:8px; right:8px; background: rgba(255,255,255,.95); color:#000; padding:3px 8px; border-radius: 12px; font-size: 12px; font-weight:600; box-shadow: 0 1px 2px rgba(0,0,0,.08);">' + (item.capacity || '') + ' kursi</div>'
-              + (item.driver_mandatory ? '<div style="position:absolute; bottom:8px; right:8px; background:#ffc107; color:#221; padding:3px 8px; border-radius: 12px; font-size: 12px; font-weight:600;">wajib supir</div>' : '')
+              + '      <div style="position:absolute; top:8px; left:8px; background: rgba(255,255,255,.95); color:#000; padding:3px 8px; border-radius: 12px; font-size: 12px; font-weight:600; box-shadow: 0 1px 2px rgba(0,0,0,.08);" data-i18n="' + catKey + '" data-i18n-bus="index.fleet.bus" data-i18n-minibus="index.fleet.minibus" data-i18n-car="index.fleet.car">' + ((category === 'bigbus') ? 'Bus' : (category === 'minibus' ? 'Minibus' : 'Mobil')) + '</div>'
+              + '      <div style="position:absolute; top:8px; right:8px; background: rgba(255,255,255,.95); color:#000; padding:3px 8px; border-radius: 12px; font-size: 12px; font-weight:600; box-shadow: 0 1px 2px rgba(0,0,0,.08);"><span>' + (item.capacity || '') + '</span> <span data-i18n="index.fleet.seats">kursi</span></div>'
+              + (item.driver_mandatory ? '<div style="position:absolute; bottom:8px; right:8px; background:#ffc107; color:#221; padding:3px 8px; border-radius: 12px; font-size: 12px; font-weight:600;" data-i18n="index.fleet.driver_mandatory">wajib supir</div>' : '')
               + '    </div>'
               + '    <div class="text p-3">'
               + '      <h3 class="mb-1"><a href="' + INDEX_LAYANAN_HASH + '" class="font-weight-bold" style="font-weight:700;">' + (item.name || '') + '</a></h3>'
               + '      <div class="d-flex align-items-center mb-2">'
-              + '        <span class="cat">' + driverLabel + '</span>'
-              + '        <span class="ml-auto price">Mulai Rp ' + price + ' <span>/hari</span></span>'
+              + '        <span class="cat" data-driver-mandatory="' + (item.driver_mandatory ? '1' : '0') + '" data-i18n-mandatory="index.fleet.driver_mandatory_label" data-i18n-optional="index.fleet.driver_optional">' + (item.driver_mandatory ? 'Supir wajib' : 'Supir opsional') + '</span>'
+              + '        <span class="ml-auto price"><span data-i18n="index.fleet.starting_from">Mulai</span> Rp ' + price + ' <span data-i18n="index.fleet.per_day">/hari</span></span>'
               + '      </div>'
               + '      <div class="d-flex align-items-stretch">'
-              + '        <a href="' + INDEX_LAYANAN_HASH + '" class="btn btn-sm mr-2 flex-fill text-white" style="background: var(--color-primary-bg); border-color: var(--color-primary-bg);">Cek Harga</a>'
+              + '        <a href="' + INDEX_LAYANAN_HASH + '" class="btn btn-sm mr-2 flex-fill text-white" style="background: var(--color-primary-bg); border-color: var(--color-primary-bg);" data-i18n="index.fleet.check_price">Cek Harga</a>'
               + '        <a href="#" class="car-wa-btn btn btn-sm flex-fill text-white" style="background:#25D366; border-color:#25D366;"'
               + '           data-car-name="' + (item.name || '') + '"'
-              + '           data-car-category="' + catLabel + '"'
+              + '           data-car-category="' + ((category === 'bigbus') ? 'Bus' : (category === 'minibus' ? 'Minibus' : 'Mobil')) + '"'
               + '           data-car-capacity="' + (item.capacity || '') + '"'
               + '           data-car-price="' + price + '"'
               + '           data-driver-mandatory="' + (item.driver_mandatory ? 'Ya' : 'Tidak') + '">'
-              + '          <img src="' + STATIC_BASE + 'assets/images/icon-wa.png" alt="WA" style="height:16px; width:16px; margin-right:6px;"> Pesan Sekarang'
+              + '          <img src="' + STATIC_BASE + 'assets/images/icon-wa.png" alt="WA" style="height:16px; width:16px; margin-right:6px;"> <span data-i18n="index.fleet.order_now">Pesan Sekarang</span>'
               + '        </a>'
               + '      </div>'
               + '    </div>'
@@ -710,6 +710,20 @@
           }).join('');
           grid.innerHTML = html;
           console.log('renderCards(): rendered', (Array.isArray(items) ? items.length : 0), 'cards. Grid children:', grid.children.length);
+          // Apply translations to the newly rendered cards
+          // Use setTimeout to ensure translation system is initialized
+          setTimeout(function() {
+            if (window.applyTranslations && typeof window.applyTranslations === 'function') {
+              window.applyTranslations();
+            } else {
+              // If not available yet, try again after a short delay
+              setTimeout(function() {
+                if (window.applyTranslations && typeof window.applyTranslations === 'function') {
+                  window.applyTranslations();
+                }
+              }, 200);
+            }
+          }, 50);
         } catch (err) {
           console.error('renderCards() error:', err);
         }
@@ -882,6 +896,8 @@
       }
 
       function applyTranslations() {
+        // Make function globally accessible
+        window.applyTranslations = applyTranslations;
         var textNodes = document.querySelectorAll('[data-i18n]');
         for (var i = 0; i < textNodes.length; i++) {
           var el = textNodes[i];
@@ -919,6 +935,41 @@
           var val = getByPath(translations, key);
           if (val != null) {
             el.setAttribute('title', val);
+          }
+        }
+
+        // Dynamic category labels in fleet cards
+        var categoryLabels = document.querySelectorAll('[data-category][data-i18n-bus]');
+        for (var n = 0; n < categoryLabels.length; n++) {
+          var el = categoryLabels[n];
+          var category = el.getAttribute('data-category');
+          var key = null;
+          if (category === 'bigbus') {
+            key = el.getAttribute('data-i18n-bus');
+          } else if (category === 'minibus') {
+            key = el.getAttribute('data-i18n-minibus');
+          } else {
+            key = el.getAttribute('data-i18n-car');
+          }
+          if (key) {
+            var val = getByPath(translations, key);
+            if (val != null) {
+              el.textContent = val;
+            }
+          }
+        }
+
+        // Dynamic driver status labels in fleet cards
+        var driverStatusLabels = document.querySelectorAll('.cat[data-driver-mandatory]');
+        for (var p = 0; p < driverStatusLabels.length; p++) {
+          var el = driverStatusLabels[p];
+          var isMandatory = el.getAttribute('data-driver-mandatory') === '1';
+          var key = isMandatory ? el.getAttribute('data-i18n-mandatory') : el.getAttribute('data-i18n-optional');
+          if (key) {
+            var val = getByPath(translations, key);
+            if (val != null) {
+              el.textContent = val;
+            }
           }
         }
       }

@@ -100,6 +100,7 @@
       "bus": "Bus",
       "seats": "seats",
       "driver_mandatory": "driver mandatory",
+      "driver_mandatory_label": "Driver mandatory",
       "driver_optional": "Driver optional",
       "starting_from": "Starting",
       "per_day": "/day",
